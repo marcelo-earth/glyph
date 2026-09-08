@@ -42,11 +42,27 @@ def main():
     p.add_argument("--seed", type=int, default=42)
     p.add_argument("--tok-dir", default="tokenizers")
     p.add_argument("--out", default="results.json")
+    p.add_argument("--streaming", action="store_true",
+                   help="pull data lazily (needs the sample caps set)")
+    p.add_argument("--no-equal-tokens", action="store_true",
+                   help="do not cap both runs to the same training token count")
+    p.add_argument("--smoke", action="store_true",
+                   help="tiny everything: checks the pipeline runs end to end, "
+                        "numbers are not meaningful")
     args = p.parse_args()
 
     if args.train_corpus == args.general_corpus:
         raise SystemExit("train-corpus and general-corpus must differ, or there "
                          "is no contrast to measure")
+
+    if args.smoke:
+        args.streaming = True
+        args.vocab_size = min(args.vocab_size, 4000)
+        args.tok_max_samples = min(args.tok_max_samples, 4000)
+        args.max_train_samples = min(args.max_train_samples, 3000)
+        args.seq_len = min(args.seq_len, 128)
+        args.epochs = 1
+        args.target_params = min(args.target_params, 4_000_000)
 
     os.makedirs(args.tok_dir, exist_ok=True)
     fit_path = os.path.join(args.tok_dir, f"fit_{args.train_corpus}_v{args.vocab_size}.json")
@@ -54,12 +70,31 @@ def main():
 
     if not os.path.exists(fit_path):
         print(f"building fit tokenizer on {args.train_corpus}")
-        build_bpe(load_corpus(args.train_corpus, max_samples=args.tok_max_samples),
+        build_bpe(load_corpus(args.train_corpus, max_samples=args.tok_max_samples,
+                              streaming=args.streaming),
                   args.vocab_size, fit_path)
     if not os.path.exists(gen_path):
         print(f"building general tokenizer on {args.general_corpus}")
-        build_bpe(load_corpus(args.general_corpus, max_samples=args.tok_max_samples),
+        build_bpe(load_corpus(args.general_corpus, max_samples=args.tok_max_samples,
+                              streaming=args.streaming),
                   args.vocab_size, gen_path)
+
+    # Equal token budget: encode the training docs with each tokenizer, cap both
+    # runs to the smaller count. Otherwise the coarser tokenizer produces more
+    # tokens from the same text and quietly trains for more steps.
+    max_train_tokens = None
+    if not args.no_equal_tokens:
+        from tokenizers import Tokenizer
+        from train import encode_corpus
+        n_docs = args.max_train_samples
+        docs = load_corpus(args.train_corpus, split="train", max_samples=n_docs,
+                           streaming=args.streaming)
+        counts = {p: len(encode_corpus(Tokenizer.from_file(p), docs))
+                  for p in (fit_path, gen_path)}
+        max_train_tokens = min(counts.values())
+        print(f"token counts on train corpus: "
+              f"fit={counts[fit_path]:,} general={counts[gen_path]:,}  "
+              f"-> capping both at {max_train_tokens:,}")
 
     common = dict(
         corpus=args.train_corpus,
@@ -68,9 +103,11 @@ def main():
         epochs=args.epochs,
         lr=args.lr,
         max_train_samples=args.max_train_samples,
+        max_train_tokens=max_train_tokens,
         target_params=args.target_params,
         device=args.device,
         seed=args.seed,
+        streaming=args.streaming,
     )
 
     results = []

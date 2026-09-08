@@ -75,11 +75,13 @@ def train(
     lr=3e-4,
     max_train_samples=40_000,
     max_val_samples=2_000,
+    max_train_tokens=None,
     target_params=40_000_000,
     device=None,
     save_dir="checkpoints",
     seed=42,
     label=None,
+    streaming=False,
 ):
     """Train a model and return a metrics dict."""
     set_seed(seed)
@@ -94,13 +96,19 @@ def train(
     tokenizer = Tokenizer.from_file(tokenizer_path)
     vocab_size = tokenizer.get_vocab_size()
 
-    train_texts = load_corpus(corpus, split="train", max_samples=max_train_samples)
-    try:
-        val_texts = load_corpus(corpus, split="validation", max_samples=max_val_samples)
-    except (ValueError, KeyError):
-        # some corpora ship only a train split; carve a held-out tail off it
-        cut = max(1, len(train_texts) - max_val_samples)
-        train_texts, val_texts = train_texts[:cut], train_texts[cut:]
+    n_train = max_train_samples + max_val_samples if streaming else max_train_samples
+    all_texts = load_corpus(corpus, split="train", max_samples=n_train, streaming=streaming)
+    if streaming:
+        # one stream, split by position: the tail is the held-out set
+        train_texts, val_texts = all_texts[:-max_val_samples], all_texts[-max_val_samples:]
+    else:
+        train_texts = all_texts
+        try:
+            val_texts = load_corpus(corpus, split="validation", max_samples=max_val_samples)
+        except (ValueError, KeyError):
+            # some corpora ship only a train split; carve a held-out tail off it
+            cut = max(1, len(train_texts) - max_val_samples)
+            train_texts, val_texts = train_texts[:cut], train_texts[cut:]
     print(f"train docs={len(train_texts)}  val docs={len(val_texts)}")
 
     train_tokens = encode_corpus(tokenizer, train_texts)
@@ -109,11 +117,20 @@ def train(
     # fertility: characters of raw text per token. Lower means the tokenizer
     # packs more text into each token on this corpus. This is where a
     # corpus-fit tokenizer is expected to win; the question is whether the
-    # model also gets better, or only the sequences get shorter.
-    train_chars = sum(len(t) for t in train_texts)
-    val_chars = sum(len(t) for t in val_texts)
-    train_fertility = train_chars / len(train_tokens)
-    val_fertility = val_chars / len(val_tokens)
+    # model also gets better, or only the sequences get shorter. Measured on the
+    # full stream, before any token-budget cap.
+    train_fertility = sum(len(t) for t in train_texts) / len(train_tokens)
+    val_fertility = sum(len(t) for t in val_texts) / len(val_tokens)
+
+    # A coarser tokenizer turns the same documents into more tokens, so without
+    # this the two runs would differ in gradient steps and tokens seen, not just
+    # in tokenization. Capping both runs to the same token budget makes the
+    # comparison "same compute, whatever text fits" instead of "same text,
+    # whatever compute". run_experiment.py sets this to the smaller of the two.
+    if max_train_tokens and len(train_tokens) > max_train_tokens:
+        print(f"capping train tokens {len(train_tokens):,} -> {max_train_tokens:,}")
+        train_tokens = train_tokens[:max_train_tokens]
+
     print(f"train tokens={len(train_tokens):,}  fertility={train_fertility:.2f} chars/token")
 
     train_loader = DataLoader(TokenWindows(train_tokens, seq_len),
@@ -145,6 +162,7 @@ def train(
         "train_fertility": train_fertility,
         "val_fertility": val_fertility,
         "train_tokens": len(train_tokens),
+        "train_tokens_cap": max_train_tokens,
         "val_tokens": len(val_tokens),
         "train_losses": [],
         "val_losses": [],
@@ -213,9 +231,13 @@ if __name__ == "__main__":
     p.add_argument("--epochs", type=int, default=3)
     p.add_argument("--lr", type=float, default=3e-4)
     p.add_argument("--max-train-samples", type=int, default=40_000)
+    p.add_argument("--max-train-tokens", type=int, default=None,
+                   help="cap the training token stream to this many tokens")
     p.add_argument("--target-params", type=int, default=40_000_000)
     p.add_argument("--device", default=None)
     p.add_argument("--seed", type=int, default=42)
+    p.add_argument("--streaming", action="store_true",
+                   help="pull data lazily and split a held-out tail off the stream")
     args = p.parse_args()
 
     train(
@@ -226,7 +248,9 @@ if __name__ == "__main__":
         epochs=args.epochs,
         lr=args.lr,
         max_train_samples=args.max_train_samples,
+        max_train_tokens=args.max_train_tokens,
         target_params=args.target_params,
         device=args.device,
         seed=args.seed,
+        streaming=args.streaming,
     )

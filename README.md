@@ -24,6 +24,10 @@ Reading the result:
 - `fit` and `general` land at the same bits per character, `fit` has lower fertility -> the fit tokenizer only bought shorter sequences.
 - `fit` also has lower bits per character -> the fit tokenizer did real work.
 
+## Equal token budget
+
+The coarser tokenizer turns the same documents into more tokens, so left alone the two runs would differ in gradient steps and tokens seen, not only in tokenization. `run_experiment.py` encodes the training text with both tokenizers up front and caps both runs to the smaller token count. The comparison is then "same compute, whatever text fits each tokenizer" rather than "same text, whatever compute". Pass `--no-equal-tokens` to turn this off.
+
 ## Setup
 
 ```bash
@@ -34,6 +38,9 @@ python run_experiment.py
 
 # defaults: model trains on Python code, general tokenizer is trained on WikiText
 python run_experiment.py --train-corpus python --general-corpus wikitext --vocab-size 32000
+
+# check the whole pipeline runs end to end in a few minutes (numbers not meaningful)
+python run_experiment.py --smoke --train-corpus tinystories --general-corpus wikitext2
 ```
 
 Single pieces:
@@ -47,7 +54,7 @@ python train.py --tokenizer tokenizers/fit.json --corpus python
 
 | File | What it does |
 |------|-------------|
-| `data.py` | Named corpora (`python`, `wikitext`, `tinystories`) |
+| `data.py` | Named corpora (`python`, `wikitext`, `wikitext2`, `tinystories`), optional lazy streaming |
 | `build_tokenizer.py` | Train a byte-level BPE at a fixed vocab size |
 | `model.py` | `GlyphGPT`, a small tied-embedding decoder, shared by both runs |
 | `train.py` | Train one model with one tokenizer, report bits per character |
@@ -55,4 +62,4 @@ python train.py --tokenizer tokenizers/fit.json --corpus python
 
 ## Status
 
-Scaffold. No runs yet. Numbers go here once `run_experiment.py` has finished a real run.
+Pipeline runs end to end (`--smoke`, TinyStories vs WikiText-2, ~4M params). Numbers from a real run go here once one has finished.
