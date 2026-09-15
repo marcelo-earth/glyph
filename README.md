@@ -33,6 +33,14 @@ One corrected TinyStories pilot is complete: 2.59M parameters, 500 updates, seed
 
 A larger advantage is already present in the static unigram baseline. **This early pilot does not establish an extra benefit from contextual learning.** Multiple seeds, longer training and the primary Python experiment are still required. The full [experiment log](research/EXPERIMENT_LOG.md) records decisions and limitations.
 
+### Python pilot
+
+The 500-update Python pair gives 3.240 vs 3.709 bits/byte with raw text and context controlled, and 3.133 vs 3.617 with equal packed-token budgets (fit vs mismatched). Its static unigram gap is larger than either trained-model gap. The fit model barely improves on the unigram at this budget, so longer training is underway before replication and final evaluation.
+
+![Python pilot learning curves and gains over unigram](plots/python-pilot.svg)
+
+The plot uses 50 validation files from 43 repository families. [Source-level analysis](experiments/python-pilot/analysis.json) includes paired repository-bootstrap intervals; those intervals do not capture training-seed uncertainty. Rebuild the figure with `python plot_results.py --root experiments/python-pilot --out plots/python-pilot`.
+
 ## Reproduce the corrected pipeline
 
 ```bash

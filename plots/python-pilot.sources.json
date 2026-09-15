@@ -1,0 +1,251 @@
+{
+  "source_sha256": {
+    "experiments/python-pilot/raw-fit-s42/evidence.json": "b78147a4da13af259b08307bde706ba0c10f8b76004fc46628d98be81729bfe4",
+    "experiments/python-pilot/raw-general-s42/evidence.json": "b0f9acd1023157562a81dc6c1108371331b2819f5cdb43e423aa16476a4a6a37",
+    "experiments/python-pilot/token-fit-s42/evidence.json": "2fd4396186579433ad8175b45886df66c2f8977688f3297dc59ea06b7a62a531",
+    "experiments/python-pilot/token-general-s42/evidence.json": "30adb26f0c9a91ad216362aa7701391a41446e6a3bc57a633a747b27a9950666"
+  },
+  "diagnostics_sha256": "fb3d563eafa898d50842ed86cc183a6d031c787c8d9d6d761383d3dee0cfe3c0",
+  "rows": [
+    {
+      "regime": "raw",
+      "arm": "fit",
+      "seed": 42,
+      "step": 0,
+      "bits_per_utf8_byte": 4.120096538219004,
+      "full_train_unigram_bpb": 3.295420885833066,
+      "model_gain_over_unigram_bpb": -0.8246756523859378,
+      "validation_bytes": 273747
+    },
+    {
+      "regime": "raw",
+      "arm": "fit",
+      "seed": 42,
+      "step": 100,
+      "bits_per_utf8_byte": 3.317303150767509,
+      "full_train_unigram_bpb": 3.295420885833066,
+      "model_gain_over_unigram_bpb": -0.021882264934443008,
+      "validation_bytes": 273747
+    },
+    {
+      "regime": "raw",
+      "arm": "fit",
+      "seed": 42,
+      "step": 200,
+      "bits_per_utf8_byte": 3.305459601798139,
+      "full_train_unigram_bpb": 3.295420885833066,
+      "model_gain_over_unigram_bpb": -0.010038715965072775,
+      "validation_bytes": 273747
+    },
+    {
+      "regime": "raw",
+      "arm": "fit",
+      "seed": 42,
+      "step": 300,
+      "bits_per_utf8_byte": 3.270458613596809,
+      "full_train_unigram_bpb": 3.295420885833066,
+      "model_gain_over_unigram_bpb": 0.02496227223625702,
+      "validation_bytes": 273747
+    },
+    {
+      "regime": "raw",
+      "arm": "fit",
+      "seed": 42,
+      "step": 400,
+      "bits_per_utf8_byte": 3.246349372649926,
+      "full_train_unigram_bpb": 3.295420885833066,
+      "model_gain_over_unigram_bpb": 0.04907151318314007,
+      "validation_bytes": 273747
+    },
+    {
+      "regime": "raw",
+      "arm": "fit",
+      "seed": 42,
+      "step": 500,
+      "bits_per_utf8_byte": 3.2403632249648475,
+      "full_train_unigram_bpb": 3.295420885833066,
+      "model_gain_over_unigram_bpb": 0.055057660868218505,
+      "validation_bytes": 273747
+    },
+    {
+      "regime": "raw",
+      "arm": "general",
+      "seed": 42,
+      "step": 0,
+      "bits_per_utf8_byte": 7.371146941960714,
+      "full_train_unigram_bpb": 4.306803511743346,
+      "model_gain_over_unigram_bpb": -3.0643434302173684,
+      "validation_bytes": 273747
+    },
+    {
+      "regime": "raw",
+      "arm": "general",
+      "seed": 42,
+      "step": 100,
+      "bits_per_utf8_byte": 4.012054642906702,
+      "full_train_unigram_bpb": 4.306803511743346,
+      "model_gain_over_unigram_bpb": 0.29474886883664375,
+      "validation_bytes": 273747
+    },
+    {
+      "regime": "raw",
+      "arm": "general",
+      "seed": 42,
+      "step": 200,
+      "bits_per_utf8_byte": 3.8513248442530577,
+      "full_train_unigram_bpb": 4.306803511743346,
+      "model_gain_over_unigram_bpb": 0.4554786674902882,
+      "validation_bytes": 273747
+    },
+    {
+      "regime": "raw",
+      "arm": "general",
+      "seed": 42,
+      "step": 300,
+      "bits_per_utf8_byte": 3.768059523349264,
+      "full_train_unigram_bpb": 4.306803511743346,
+      "model_gain_over_unigram_bpb": 0.5387439883940819,
+      "validation_bytes": 273747
+    },
+    {
+      "regime": "raw",
+      "arm": "general",
+      "seed": 42,
+      "step": 400,
+      "bits_per_utf8_byte": 3.7201634877393337,
+      "full_train_unigram_bpb": 4.306803511743346,
+      "model_gain_over_unigram_bpb": 0.5866400240040122,
+      "validation_bytes": 273747
+    },
+    {
+      "regime": "raw",
+      "arm": "general",
+      "seed": 42,
+      "step": 500,
+      "bits_per_utf8_byte": 3.7086173403022777,
+      "full_train_unigram_bpb": 4.306803511743346,
+      "model_gain_over_unigram_bpb": 0.5981861714410681,
+      "validation_bytes": 273747
+    },
+    {
+      "regime": "token",
+      "arm": "fit",
+      "seed": 42,
+      "step": 0,
+      "bits_per_utf8_byte": 4.120096538219004,
+      "full_train_unigram_bpb": 3.295420885833066,
+      "model_gain_over_unigram_bpb": -0.8246756523859378,
+      "validation_bytes": 273747
+    },
+    {
+      "regime": "token",
+      "arm": "fit",
+      "seed": 42,
+      "step": 100,
+      "bits_per_utf8_byte": 3.3143032643401393,
+      "full_train_unigram_bpb": 3.295420885833066,
+      "model_gain_over_unigram_bpb": -0.018882378507073305,
+      "validation_bytes": 273747
+    },
+    {
+      "regime": "token",
+      "arm": "fit",
+      "seed": 42,
+      "step": 200,
+      "bits_per_utf8_byte": 3.2638812164875444,
+      "full_train_unigram_bpb": 3.295420885833066,
+      "model_gain_over_unigram_bpb": 0.03153966934552166,
+      "validation_bytes": 273747
+    },
+    {
+      "regime": "token",
+      "arm": "fit",
+      "seed": 42,
+      "step": 300,
+      "bits_per_utf8_byte": 3.1762345834538324,
+      "full_train_unigram_bpb": 3.295420885833066,
+      "model_gain_over_unigram_bpb": 0.11918630237923367,
+      "validation_bytes": 273747
+    },
+    {
+      "regime": "token",
+      "arm": "fit",
+      "seed": 42,
+      "step": 400,
+      "bits_per_utf8_byte": 3.1406414814538297,
+      "full_train_unigram_bpb": 3.295420885833066,
+      "model_gain_over_unigram_bpb": 0.15477940437923632,
+      "validation_bytes": 273747
+    },
+    {
+      "regime": "token",
+      "arm": "fit",
+      "seed": 42,
+      "step": 500,
+      "bits_per_utf8_byte": 3.1333428600291855,
+      "full_train_unigram_bpb": 3.295420885833066,
+      "model_gain_over_unigram_bpb": 0.16207802580388053,
+      "validation_bytes": 273747
+    },
+    {
+      "regime": "token",
+      "arm": "general",
+      "seed": 42,
+      "step": 0,
+      "bits_per_utf8_byte": 7.371146941960714,
+      "full_train_unigram_bpb": 4.306803511743346,
+      "model_gain_over_unigram_bpb": -3.0643434302173684,
+      "validation_bytes": 273747
+    },
+    {
+      "regime": "token",
+      "arm": "general",
+      "seed": 42,
+      "step": 100,
+      "bits_per_utf8_byte": 3.9721706217753887,
+      "full_train_unigram_bpb": 4.306803511743346,
+      "model_gain_over_unigram_bpb": 0.33463288996795715,
+      "validation_bytes": 273747
+    },
+    {
+      "regime": "token",
+      "arm": "general",
+      "seed": 42,
+      "step": 200,
+      "bits_per_utf8_byte": 3.8045109447483623,
+      "full_train_unigram_bpb": 4.306803511743346,
+      "model_gain_over_unigram_bpb": 0.5022925669949836,
+      "validation_bytes": 273747
+    },
+    {
+      "regime": "token",
+      "arm": "general",
+      "seed": 42,
+      "step": 300,
+      "bits_per_utf8_byte": 3.6824602186426802,
+      "full_train_unigram_bpb": 4.306803511743346,
+      "model_gain_over_unigram_bpb": 0.6243432931006656,
+      "validation_bytes": 273747
+    },
+    {
+      "regime": "token",
+      "arm": "general",
+      "seed": 42,
+      "step": 400,
+      "bits_per_utf8_byte": 3.6241337045010464,
+      "full_train_unigram_bpb": 4.306803511743346,
+      "model_gain_over_unigram_bpb": 0.6826698072422994,
+      "validation_bytes": 273747
+    },
+    {
+      "regime": "token",
+      "arm": "general",
+      "seed": 42,
+      "step": 500,
+      "bits_per_utf8_byte": 3.6170824466709925,
+      "full_train_unigram_bpb": 4.306803511743346,
+      "model_gain_over_unigram_bpb": 0.6897210650723533,
+      "validation_bytes": 273747
+    }
+  ]
+}
