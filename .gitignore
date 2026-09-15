@@ -15,3 +15,5 @@ tokenizers/
 wandb/
 plots/*.png
 !plots/.gitkeep
+experiments/**/checkpoint.tmp
+experiments/**/run.log
