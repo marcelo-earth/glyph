@@ -123,6 +123,14 @@
       "model_gain_over_full_training_unigram_bpb": {
         "fit": 0.16207802580388053,
         "general": 0.6897210650723533
+      },
+      "exposure_matched_unigram_bpb": {
+        "fit": 3.302868660179479,
+        "general": 4.310801043074926
+      },
+      "model_gain_over_exposure_unigram_bpb": {
+        "fit": 0.16952580015029373,
+        "general": 0.6937185964039339
       }
     }
   ],
