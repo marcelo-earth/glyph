@@ -17,3 +17,6 @@ plots/*.png
 !plots/.gitkeep
 experiments/**/checkpoint.tmp
 experiments/**/run.log
+
+# Source-level evidence.json is tracked; bulky per-block histories stay local.
+experiments/**/metrics.json

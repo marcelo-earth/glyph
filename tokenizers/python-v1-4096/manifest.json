@@ -1,0 +1,19 @@
+{
+  "snapshot_sha256": "00486d0a44d5bc7fb40340d53165a595b8e2bdd31d665fd1fd5ac9b402abd09b",
+  "vocab_size": 4096,
+  "settings": {
+    "min_frequency": 2,
+    "byte_level": true,
+    "add_prefix_space": false
+  },
+  "fit": {
+    "sha256": "2e5bcadcda2d15616d7f4510cf6153fcaa24e92d4cf9c4eeba8e84e87ef5c129",
+    "training_chars": 4000000,
+    "training_bytes": 4001559
+  },
+  "general": {
+    "sha256": "5bb00d4d98cffb41d942533e8261e2a843b631c54efaecf9f85e54277345cea8",
+    "training_chars": 4000000,
+    "training_bytes": 4007911
+  }
+}

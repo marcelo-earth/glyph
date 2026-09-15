@@ -1,0 +1,3243 @@
+{
+  "config": {
+    "label": "general",
+    "regime": "raw",
+    "seed": 42,
+    "dim": 192,
+    "layers": 4,
+    "heads": 4,
+    "seq_len": 128,
+    "batch_size": 16,
+    "steps": 500,
+    "lr": 0.0003,
+    "eval_every": 100,
+    "val_docs": 50,
+    "vocab_size": 4096,
+    "dropout": 0.1,
+    "snapshot_sha256": "00486d0a44d5bc7fb40340d53165a595b8e2bdd31d665fd1fd5ac9b402abd09b",
+    "tokenizer_sha256": "5bb00d4d98cffb41d942533e8261e2a843b631c54efaecf9f85e54277345cea8",
+    "loss_normalization": "raw_bytes",
+    "device": "mps",
+    "torch_version": "2.8.0",
+    "implementation_sha256": {
+      "experiment.py": "d6128ddd55c7add702ab68f9a74925829673dc488ee1f5f992cef0fb30661a12",
+      "model.py": "f1e83b78b2dde089cb2beaa867e405f51612ac1db3b37855165bd02cbb963417",
+      "evaluation.py": "96b7391c55da887bcdb35203db737b68f5866cf1b66be4d7441c1d3525d78623",
+      "corpus_snapshot.py": "65ac55baf262337d502e1f15d1f110f515cba8d57a0b84a6d1a71b9136b2aa7b"
+    }
+  },
+  "config_hash": "0ee6309ab0b95bb286b26d72b3812d040d80fe213486623d10434f49518536cb",
+  "status": "complete",
+  "initial_weights_sha256": "943a49a9f08c6b705a4ef77f65b43b5ec2d8c5fb7759af117913ccdfff657662",
+  "parameters": 2590848,
+  "device": "mps",
+  "torch_version": "2.8.0",
+  "python_version": "3.11.12",
+  "git_commit": "2f24dde1bc4ca396a9923ca721911640605488f4",
+  "git_dirty": true,
+  "train_examples": 399792,
+  "history": [
+    {
+      "step": 0,
+      "exposure": {
+        "raw_chars": 0,
+        "raw_bytes": 0,
+        "target_tokens": 0,
+        "padded_positions": 0
+      },
+      "training_seconds": 0.0,
+      "validation": {
+        "metric": "canonical_token_sequence_nll",
+        "include_eos": false,
+        "document_count": 2167,
+        "nll_nats": 1398652.7330665588,
+        "scored_tokens": 169544,
+        "text_tokens": 169544,
+        "characters": 273529,
+        "utf8_bytes": 273747,
+        "nats_per_token": 8.249497080796482,
+        "perplexity": 3825.701318885633,
+        "bits_per_character": 7.377021675657497,
+        "bits_per_utf8_byte": 7.371146941960714,
+        "characters_per_token": 1.6133216156278016,
+        "context_policy": "chunks",
+        "context_length": 128,
+        "window_count": 2167,
+        "raw_block_bytes": 128,
+        "source_documents": [
+          {
+            "index": 0,
+            "sha256": "64842ba326be8949cabe43338a0480e7179700cdcce8338a7ec6ba7912780d42",
+            "nll_nats": 14306.392146587372,
+            "scored_tokens": 1738,
+            "text_tokens": 1738,
+            "characters": 2730,
+            "utf8_bytes": 2730,
+            "blocks": 22
+          },
+          {
+            "index": 1,
+            "sha256": "69d228c257b1de4a789d9a7aa9c276c1db9f09220037de655db5a462c0dc4b97",
+            "nll_nats": 42019.591516017914,
+            "scored_tokens": 5090,
+            "text_tokens": 5090,
+            "characters": 8702,
+            "utf8_bytes": 8702,
+            "blocks": 68
+          },
+          {
+            "index": 2,
+            "sha256": "41d49c3e8f26434dedbf0c668c5fb920d16f856b1279882a57460d635697a4d3",
+            "nll_nats": 29151.982714653015,
+            "scored_tokens": 3527,
+            "text_tokens": 3527,
+            "characters": 6686,
+            "utf8_bytes": 6686,
+            "blocks": 53
+          },
+          {
+            "index": 3,
+            "sha256": "7dd86486dccadd530862870c0e9d5332eee31e3f3fa2764a96f0e078be0a11ed",
+            "nll_nats": 27702.03870010376,
+            "scored_tokens": 3363,
+            "text_tokens": 3363,
+            "characters": 4985,
+            "utf8_bytes": 4985,
+            "blocks": 39
+          },
+          {
+            "index": 4,
+            "sha256": "d9cfa9511ce2cbec7482c7789ea49e9f2001a12e1bb612cbf962786a30143bf6",
+            "nll_nats": 26585.21848011017,
+            "scored_tokens": 3238,
+            "text_tokens": 3238,
+            "characters": 5028,
+            "utf8_bytes": 5028,
+            "blocks": 40
+          },
+          {
+            "index": 5,
+            "sha256": "db9ea4f16342f2fe8783e45093ee21de0e422ec07187b3e4f7718ecc14e846a7",
+            "nll_nats": 63306.02886772156,
+            "scored_tokens": 7716,
+            "text_tokens": 7716,
+            "characters": 12297,
+            "utf8_bytes": 12297,
+            "blocks": 97
+          },
+          {
+            "index": 6,
+            "sha256": "d61cfee9d8745745771e9b226ac18f33b0dc61ab0c3b2b3c75eeee675fcf805e",
+            "nll_nats": 11257.026803016663,
+            "scored_tokens": 1367,
+            "text_tokens": 1367,
+            "characters": 2271,
+            "utf8_bytes": 2272,
+            "blocks": 18
+          },
+          {
+            "index": 7,
+            "sha256": "a2b3878b37ddc864f1e0537c6086baae17a6640e92a6ed0b509722e32c7d40a0",
+            "nll_nats": 24149.09343290329,
+            "scored_tokens": 2918,
+            "text_tokens": 2918,
+            "characters": 5046,
+            "utf8_bytes": 5046,
+            "blocks": 40
+          },
+          {
+            "index": 8,
+            "sha256": "715f827f7032bf13c8230e4384e130b4a69efa325ba39396d15addeec543a11d",
+            "nll_nats": 8078.584844589233,
+            "scored_tokens": 991,
+            "text_tokens": 991,
+            "characters": 1485,
+            "utf8_bytes": 1485,
+            "blocks": 12
+          },
+          {
+            "index": 9,
+            "sha256": "2cb2434e12e8174e7e7be6cc7b643f6fadc56ae95f4271a2fb131bf404eaca89",
+            "nll_nats": 5723.705153942108,
+            "scored_tokens": 693,
+            "text_tokens": 693,
+            "characters": 1310,
+            "utf8_bytes": 1310,
+            "blocks": 11
+          },
+          {
+            "index": 10,
+            "sha256": "c179902eb6517f833258dca0d26de1f359bd22784b47b189d34da6208661fbca",
+            "nll_nats": 9011.699851512909,
+            "scored_tokens": 1096,
+            "text_tokens": 1096,
+            "characters": 1775,
+            "utf8_bytes": 1775,
+            "blocks": 14
+          },
+          {
+            "index": 11,
+            "sha256": "37d7ad747698956ce5628f2d9df8b61a8989cb7d4c432cdb8134bc9b56509785",
+            "nll_nats": 16127.589342594147,
+            "scored_tokens": 1949,
+            "text_tokens": 1949,
+            "characters": 3019,
+            "utf8_bytes": 3019,
+            "blocks": 24
+          },
+          {
+            "index": 12,
+            "sha256": "1aa8684320c2c95ffa24e23e19e900593894de5b2036e316e0c4f885aeecb5fb",
+            "nll_nats": 51722.01924800873,
+            "scored_tokens": 6327,
+            "text_tokens": 6327,
+            "characters": 9741,
+            "utf8_bytes": 9741,
+            "blocks": 77
+          },
+          {
+            "index": 13,
+            "sha256": "40153d6d095803c9d8428e12aafa99eb9ce979c1134160d18585e4eb55cdb72a",
+            "nll_nats": 48786.27311897278,
+            "scored_tokens": 5913,
+            "text_tokens": 5913,
+            "characters": 9474,
+            "utf8_bytes": 9474,
+            "blocks": 75
+          },
+          {
+            "index": 14,
+            "sha256": "3be06a880cfab71f9339d1005fbb2dffda0378589819ff4071876171704af1ff",
+            "nll_nats": 6120.256245136261,
+            "scored_tokens": 742,
+            "text_tokens": 742,
+            "characters": 1089,
+            "utf8_bytes": 1089,
+            "blocks": 9
+          },
+          {
+            "index": 15,
+            "sha256": "9443f5f130017c2f9ed4d4c04cfb1f1943a1f43c44f739ac043ad5ca001686cf",
+            "nll_nats": 6399.740931987762,
+            "scored_tokens": 775,
+            "text_tokens": 775,
+            "characters": 1412,
+            "utf8_bytes": 1412,
+            "blocks": 12
+          },
+          {
+            "index": 16,
+            "sha256": "ed3f522a325b1905543bcaf162b752b05ba8b8d609b3172c513c56408d3bef18",
+            "nll_nats": 12819.261100769043,
+            "scored_tokens": 1550,
+            "text_tokens": 1550,
+            "characters": 2778,
+            "utf8_bytes": 2778,
+            "blocks": 22
+          },
+          {
+            "index": 17,
+            "sha256": "0d14ded758a33468adc77e5322a2dd5ab6147889476c877dc529d362eb9ef8a3",
+            "nll_nats": 5878.342237949371,
+            "scored_tokens": 715,
+            "text_tokens": 715,
+            "characters": 1185,
+            "utf8_bytes": 1185,
+            "blocks": 10
+          },
+          {
+            "index": 18,
+            "sha256": "81362ea86c39b52e71a670fd5de41f9609a0b8cc6ddff47dffca53d862352c56",
+            "nll_nats": 50578.91737651825,
+            "scored_tokens": 6105,
+            "text_tokens": 6105,
+            "characters": 10785,
+            "utf8_bytes": 10785,
+            "blocks": 85
+          },
+          {
+            "index": 19,
+            "sha256": "b83240567ceec6e42ed7db229b4d3f0754d706cbae5ff381103d0c7e5fb74348",
+            "nll_nats": 70005.85379552841,
+            "scored_tokens": 8458,
+            "text_tokens": 8458,
+            "characters": 10687,
+            "utf8_bytes": 10822,
+            "blocks": 85
+          },
+          {
+            "index": 20,
+            "sha256": "8971694006f1621e51f17f9ea96407798865aa4ab28a71278c6f01826db90747",
+            "nll_nats": 11639.571910858154,
+            "scored_tokens": 1406,
+            "text_tokens": 1406,
+            "characters": 2467,
+            "utf8_bytes": 2467,
+            "blocks": 20
+          },
+          {
+            "index": 21,
+            "sha256": "2ba082b36718a967f1e7e471b7968f06323379da783a51a8af3ea387ff053484",
+            "nll_nats": 19543.637315273285,
+            "scored_tokens": 2362,
+            "text_tokens": 2362,
+            "characters": 4080,
+            "utf8_bytes": 4080,
+            "blocks": 32
+          },
+          {
+            "index": 22,
+            "sha256": "d14f2c2c93686714fb5d6a7f4ad14e3949d09d8b4a7b8e2f1fa96b01f9701993",
+            "nll_nats": 52524.43457841873,
+            "scored_tokens": 6393,
+            "text_tokens": 6393,
+            "characters": 11474,
+            "utf8_bytes": 11478,
+            "blocks": 90
+          },
+          {
+            "index": 23,
+            "sha256": "b5eb812b90aa9be8833f35091a78b290501392a23c8b733b0a0637909db59f26",
+            "nll_nats": 11646.867551326752,
+            "scored_tokens": 1410,
+            "text_tokens": 1410,
+            "characters": 2214,
+            "utf8_bytes": 2214,
+            "blocks": 18
+          },
+          {
+            "index": 24,
+            "sha256": "8550ed86da9cf42f8e25fb28d6a12bfd9937f2d5397a27d8fbd8df633950704e",
+            "nll_nats": 7247.131841182709,
+            "scored_tokens": 880,
+            "text_tokens": 880,
+            "characters": 1425,
+            "utf8_bytes": 1425,
+            "blocks": 12
+          },
+          {
+            "index": 25,
+            "sha256": "ade0c71aea063a4957d86c11bce993352ff95456b63d7d294d216c42826e54e8",
+            "nll_nats": 7067.788411617279,
+            "scored_tokens": 856,
+            "text_tokens": 856,
+            "characters": 1680,
+            "utf8_bytes": 1680,
+            "blocks": 14
+          },
+          {
+            "index": 26,
+            "sha256": "568ef9633889c94d6c303f5f1b58274e04a19d3059d88000a0721f237c7558a0",
+            "nll_nats": 22527.646861553192,
+            "scored_tokens": 2732,
+            "text_tokens": 2732,
+            "characters": 4527,
+            "utf8_bytes": 4527,
+            "blocks": 36
+          },
+          {
+            "index": 27,
+            "sha256": "db37d7c262eb4081423fd51160f961ff3f0c69e7d6a5c62956eea5a1175424e3",
+            "nll_nats": 5911.713920593262,
+            "scored_tokens": 718,
+            "text_tokens": 718,
+            "characters": 1300,
+            "utf8_bytes": 1300,
+            "blocks": 11
+          },
+          {
+            "index": 28,
+            "sha256": "17b9acdc557927ef6cb362c91ec0b98486764a5ffbd847332dae4aa739bdf7f1",
+            "nll_nats": 64100.08151388168,
+            "scored_tokens": 7781,
+            "text_tokens": 7781,
+            "characters": 11858,
+            "utf8_bytes": 11858,
+            "blocks": 93
+          },
+          {
+            "index": 29,
+            "sha256": "fa8905a904ec661b88158229bb21636aeac17c2d8b3f5be97ef68a2e5e1ab970",
+            "nll_nats": 7497.631757736206,
+            "scored_tokens": 906,
+            "text_tokens": 906,
+            "characters": 1666,
+            "utf8_bytes": 1666,
+            "blocks": 14
+          },
+          {
+            "index": 30,
+            "sha256": "9db9c1aec98b065bf52a2ecfa979b9f5175737e19923ba346bacb1669190d12e",
+            "nll_nats": 11371.62494134903,
+            "scored_tokens": 1381,
+            "text_tokens": 1381,
+            "characters": 2259,
+            "utf8_bytes": 2259,
+            "blocks": 18
+          },
+          {
+            "index": 31,
+            "sha256": "25316f79744c258e4c29f26a8a36028a6e86c8e6e5a2c7e442ab5fecfe2f7de1",
+            "nll_nats": 72833.40257024765,
+            "scored_tokens": 8852,
+            "text_tokens": 8852,
+            "characters": 14475,
+            "utf8_bytes": 14475,
+            "blocks": 114
+          },
+          {
+            "index": 32,
+            "sha256": "983f09dfd2a824c642962e79b55d28178fb1c600de6520ce8047466ac610c411",
+            "nll_nats": 19351.4801735878,
+            "scored_tokens": 2334,
+            "text_tokens": 2334,
+            "characters": 4045,
+            "utf8_bytes": 4045,
+            "blocks": 32
+          },
+          {
+            "index": 33,
+            "sha256": "f967698f0772fd45bfeb821476a30f3cbdc545b76d7d952208219f124ae0f168",
+            "nll_nats": 5045.492537498474,
+            "scored_tokens": 613,
+            "text_tokens": 613,
+            "characters": 1239,
+            "utf8_bytes": 1239,
+            "blocks": 10
+          },
+          {
+            "index": 34,
+            "sha256": "ecdc75246f0a56000faae974420f5e2c56268215578852217f8f17a6797fefd4",
+            "nll_nats": 8839.612337589264,
+            "scored_tokens": 1073,
+            "text_tokens": 1073,
+            "characters": 1586,
+            "utf8_bytes": 1586,
+            "blocks": 13
+          },
+          {
+            "index": 35,
+            "sha256": "98e02ce579c3285d55f256bfceba30a4bafc11e4d6d0709d5cfd19bd6901f6e2",
+            "nll_nats": 15857.527602672577,
+            "scored_tokens": 1918,
+            "text_tokens": 1918,
+            "characters": 3292,
+            "utf8_bytes": 3292,
+            "blocks": 26
+          },
+          {
+            "index": 36,
+            "sha256": "cdd6a218bc7d629c1b8199abcae7caab3c155a6fb1b0c57b20e525a25e3966c4",
+            "nll_nats": 27026.48575401306,
+            "scored_tokens": 3264,
+            "text_tokens": 3264,
+            "characters": 7157,
+            "utf8_bytes": 7157,
+            "blocks": 56
+          },
+          {
+            "index": 37,
+            "sha256": "315716870ed7da08467e28cedc90274d3350284905684d6b026aaed296638ea7",
+            "nll_nats": 17560.156796455383,
+            "scored_tokens": 2134,
+            "text_tokens": 2134,
+            "characters": 3404,
+            "utf8_bytes": 3404,
+            "blocks": 27
+          },
+          {
+            "index": 38,
+            "sha256": "7ec7bd5cb19d1e01759f739c115f46e7b18659aaf62dce3f9d001520ed79e129",
+            "nll_nats": 15754.367805957794,
+            "scored_tokens": 1889,
+            "text_tokens": 1889,
+            "characters": 3368,
+            "utf8_bytes": 3368,
+            "blocks": 27
+          },
+          {
+            "index": 39,
+            "sha256": "48ededf64fe117efc7aa28118b48c3da0cc10fa459a79c8f45f3794a2fe4769c",
+            "nll_nats": 6305.769089221954,
+            "scored_tokens": 766,
+            "text_tokens": 766,
+            "characters": 1112,
+            "utf8_bytes": 1112,
+            "blocks": 9
+          },
+          {
+            "index": 40,
+            "sha256": "7c1ad43f8754aa5b8d8dc8dd9b60c403a3e19a2e34b18203955e619bf70b44d5",
+            "nll_nats": 70324.31117582321,
+            "scored_tokens": 8491,
+            "text_tokens": 8491,
+            "characters": 14991,
+            "utf8_bytes": 14991,
+            "blocks": 118
+          },
+          {
+            "index": 41,
+            "sha256": "bb58a49a61c9c807a3cd97abfaa0f22cce1df2d3551a7d0b1b1b16094d1ae5fe",
+            "nll_nats": 40599.3560218811,
+            "scored_tokens": 4940,
+            "text_tokens": 4940,
+            "characters": 8138,
+            "utf8_bytes": 8138,
+            "blocks": 64
+          },
+          {
+            "index": 42,
+            "sha256": "0d595a393babd9c3177bb515f43d235dd03ceed56d50c782b760f3053eb22e65",
+            "nll_nats": 24868.313421726227,
+            "scored_tokens": 3015,
+            "text_tokens": 3015,
+            "characters": 5076,
+            "utf8_bytes": 5076,
+            "blocks": 40
+          },
+          {
+            "index": 43,
+            "sha256": "81dd53b58899e2b3a815babe32083d37f21b96ae7212f9203055561d076eb67e",
+            "nll_nats": 38069.22960090637,
+            "scored_tokens": 4620,
+            "text_tokens": 4620,
+            "characters": 7070,
+            "utf8_bytes": 7070,
+            "blocks": 56
+          },
+          {
+            "index": 44,
+            "sha256": "7827307e09e3f59c320aab28b4ab6d0ab26e64558aaaf565604201d9fb1a0369",
+            "nll_nats": 21454.078041553497,
+            "scored_tokens": 2607,
+            "text_tokens": 2607,
+            "characters": 4287,
+            "utf8_bytes": 4287,
+            "blocks": 34
+          },
+          {
+            "index": 45,
+            "sha256": "ffd5fb617310f1905ff7f2085ba6619a674133659c54759ae906f6833dc797c8",
+            "nll_nats": 96312.83040904999,
+            "scored_tokens": 11664,
+            "text_tokens": 11664,
+            "characters": 16828,
+            "utf8_bytes": 16906,
+            "blocks": 133
+          },
+          {
+            "index": 46,
+            "sha256": "8699d1c957022c41e35bd320dc0fc408c90568e9ed52c110ad953aa79986a4f0",
+            "nll_nats": 17001.307794094086,
+            "scored_tokens": 2048,
+            "text_tokens": 2048,
+            "characters": 3416,
+            "utf8_bytes": 3416,
+            "blocks": 27
+          },
+          {
+            "index": 47,
+            "sha256": "c0d3704491b9ca84ec75a3e66ec2143255859c42b677ef5473b099e2d0de3300",
+            "nll_nats": 66144.46653652191,
+            "scored_tokens": 8016,
+            "text_tokens": 8016,
+            "characters": 12316,
+            "utf8_bytes": 12316,
+            "blocks": 97
+          },
+          {
+            "index": 48,
+            "sha256": "1d4d93f918c4cbf2b3ce6de88068089fde1a4e1e96602b03371a5e5f1b865e98",
+            "nll_nats": 64307.51829004288,
+            "scored_tokens": 7771,
+            "text_tokens": 7771,
+            "characters": 10630,
+            "utf8_bytes": 10630,
+            "blocks": 84
+          },
+          {
+            "index": 49,
+            "sha256": "03fb3878ee412176288eab94bdeb8ede55dc2a623095cf8a39ac9c54510c02db",
+            "nll_nats": 20189.28059530258,
+            "scored_tokens": 2433,
+            "text_tokens": 2433,
+            "characters": 3664,
+            "utf8_bytes": 3664,
+            "blocks": 29
+          }
+        ]
+      }
+    },
+    {
+      "step": 100,
+      "exposure": {
+        "raw_chars": 203147,
+        "raw_bytes": 203219,
+        "target_tokens": 121846,
+        "padded_positions": 204800
+      },
+      "training_seconds": 6.060966169112362,
+      "validation": {
+        "metric": "canonical_token_sequence_nll",
+        "include_eos": false,
+        "document_count": 2167,
+        "nll_nats": 761275.1768073142,
+        "scored_tokens": 169544,
+        "text_tokens": 169544,
+        "characters": 273529,
+        "utf8_bytes": 273747,
+        "nats_per_token": 4.4901333978631754,
+        "perplexity": 89.13333528209485,
+        "bits_per_character": 4.015252212130271,
+        "bits_per_utf8_byte": 4.012054642906702,
+        "characters_per_token": 1.6133216156278016,
+        "context_policy": "chunks",
+        "context_length": 128,
+        "window_count": 2167,
+        "raw_block_bytes": 128,
+        "source_documents": [
+          {
+            "index": 0,
+            "sha256": "64842ba326be8949cabe43338a0480e7179700cdcce8338a7ec6ba7912780d42",
+            "nll_nats": 7415.333445847034,
+            "scored_tokens": 1738,
+            "text_tokens": 1738,
+            "characters": 2730,
+            "utf8_bytes": 2730,
+            "blocks": 22
+          },
+          {
+            "index": 1,
+            "sha256": "69d228c257b1de4a789d9a7aa9c276c1db9f09220037de655db5a462c0dc4b97",
+            "nll_nats": 23744.599079877138,
+            "scored_tokens": 5090,
+            "text_tokens": 5090,
+            "characters": 8702,
+            "utf8_bytes": 8702,
+            "blocks": 68
+          },
+          {
+            "index": 2,
+            "sha256": "41d49c3e8f26434dedbf0c668c5fb920d16f856b1279882a57460d635697a4d3",
+            "nll_nats": 17254.124023228884,
+            "scored_tokens": 3527,
+            "text_tokens": 3527,
+            "characters": 6686,
+            "utf8_bytes": 6686,
+            "blocks": 53
+          },
+          {
+            "index": 3,
+            "sha256": "7dd86486dccadd530862870c0e9d5332eee31e3f3fa2764a96f0e078be0a11ed",
+            "nll_nats": 13818.151775360107,
+            "scored_tokens": 3363,
+            "text_tokens": 3363,
+            "characters": 4985,
+            "utf8_bytes": 4985,
+            "blocks": 39
+          },
+          {
+            "index": 4,
+            "sha256": "d9cfa9511ce2cbec7482c7789ea49e9f2001a12e1bb612cbf962786a30143bf6",
+            "nll_nats": 12221.927569717169,
+            "scored_tokens": 3238,
+            "text_tokens": 3238,
+            "characters": 5028,
+            "utf8_bytes": 5028,
+            "blocks": 40
+          },
+          {
+            "index": 5,
+            "sha256": "db9ea4f16342f2fe8783e45093ee21de0e422ec07187b3e4f7718ecc14e846a7",
+            "nll_nats": 33086.229328751564,
+            "scored_tokens": 7716,
+            "text_tokens": 7716,
+            "characters": 12297,
+            "utf8_bytes": 12297,
+            "blocks": 97
+          },
+          {
+            "index": 6,
+            "sha256": "d61cfee9d8745745771e9b226ac18f33b0dc61ab0c3b2b3c75eeee675fcf805e",
+            "nll_nats": 6064.0821153223515,
+            "scored_tokens": 1367,
+            "text_tokens": 1367,
+            "characters": 2271,
+            "utf8_bytes": 2272,
+            "blocks": 18
+          },
+          {
+            "index": 7,
+            "sha256": "a2b3878b37ddc864f1e0537c6086baae17a6640e92a6ed0b509722e32c7d40a0",
+            "nll_nats": 14119.700770795345,
+            "scored_tokens": 2918,
+            "text_tokens": 2918,
+            "characters": 5046,
+            "utf8_bytes": 5046,
+            "blocks": 40
+          },
+          {
+            "index": 8,
+            "sha256": "715f827f7032bf13c8230e4384e130b4a69efa325ba39396d15addeec543a11d",
+            "nll_nats": 4726.095128923655,
+            "scored_tokens": 991,
+            "text_tokens": 991,
+            "characters": 1485,
+            "utf8_bytes": 1485,
+            "blocks": 12
+          },
+          {
+            "index": 9,
+            "sha256": "2cb2434e12e8174e7e7be6cc7b643f6fadc56ae95f4271a2fb131bf404eaca89",
+            "nll_nats": 3594.8114420175552,
+            "scored_tokens": 693,
+            "text_tokens": 693,
+            "characters": 1310,
+            "utf8_bytes": 1310,
+            "blocks": 11
+          },
+          {
+            "index": 10,
+            "sha256": "c179902eb6517f833258dca0d26de1f359bd22784b47b189d34da6208661fbca",
+            "nll_nats": 4234.485474795103,
+            "scored_tokens": 1096,
+            "text_tokens": 1096,
+            "characters": 1775,
+            "utf8_bytes": 1775,
+            "blocks": 14
+          },
+          {
+            "index": 11,
+            "sha256": "37d7ad747698956ce5628f2d9df8b61a8989cb7d4c432cdb8134bc9b56509785",
+            "nll_nats": 7977.762085020542,
+            "scored_tokens": 1949,
+            "text_tokens": 1949,
+            "characters": 3019,
+            "utf8_bytes": 3019,
+            "blocks": 24
+          },
+          {
+            "index": 12,
+            "sha256": "1aa8684320c2c95ffa24e23e19e900593894de5b2036e316e0c4f885aeecb5fb",
+            "nll_nats": 25334.652474939823,
+            "scored_tokens": 6327,
+            "text_tokens": 6327,
+            "characters": 9741,
+            "utf8_bytes": 9741,
+            "blocks": 77
+          },
+          {
+            "index": 13,
+            "sha256": "40153d6d095803c9d8428e12aafa99eb9ce979c1134160d18585e4eb55cdb72a",
+            "nll_nats": 25974.94678887725,
+            "scored_tokens": 5913,
+            "text_tokens": 5913,
+            "characters": 9474,
+            "utf8_bytes": 9474,
+            "blocks": 75
+          },
+          {
+            "index": 14,
+            "sha256": "3be06a880cfab71f9339d1005fbb2dffda0378589819ff4071876171704af1ff",
+            "nll_nats": 3220.393035173416,
+            "scored_tokens": 742,
+            "text_tokens": 742,
+            "characters": 1089,
+            "utf8_bytes": 1089,
+            "blocks": 9
+          },
+          {
+            "index": 15,
+            "sha256": "9443f5f130017c2f9ed4d4c04cfb1f1943a1f43c44f739ac043ad5ca001686cf",
+            "nll_nats": 3501.924256950617,
+            "scored_tokens": 775,
+            "text_tokens": 775,
+            "characters": 1412,
+            "utf8_bytes": 1412,
+            "blocks": 12
+          },
+          {
+            "index": 16,
+            "sha256": "ed3f522a325b1905543bcaf162b752b05ba8b8d609b3172c513c56408d3bef18",
+            "nll_nats": 7560.242499828339,
+            "scored_tokens": 1550,
+            "text_tokens": 1550,
+            "characters": 2778,
+            "utf8_bytes": 2778,
+            "blocks": 22
+          },
+          {
+            "index": 17,
+            "sha256": "0d14ded758a33468adc77e5322a2dd5ab6147889476c877dc529d362eb9ef8a3",
+            "nll_nats": 2745.330668836832,
+            "scored_tokens": 715,
+            "text_tokens": 715,
+            "characters": 1185,
+            "utf8_bytes": 1185,
+            "blocks": 10
+          },
+          {
+            "index": 18,
+            "sha256": "81362ea86c39b52e71a670fd5de41f9609a0b8cc6ddff47dffca53d862352c56",
+            "nll_nats": 30113.706336557865,
+            "scored_tokens": 6105,
+            "text_tokens": 6105,
+            "characters": 10785,
+            "utf8_bytes": 10785,
+            "blocks": 85
+          },
+          {
+            "index": 19,
+            "sha256": "b83240567ceec6e42ed7db229b4d3f0754d706cbae5ff381103d0c7e5fb74348",
+            "nll_nats": 42480.70118150115,
+            "scored_tokens": 8458,
+            "text_tokens": 8458,
+            "characters": 10687,
+            "utf8_bytes": 10822,
+            "blocks": 85
+          },
+          {
+            "index": 20,
+            "sha256": "8971694006f1621e51f17f9ea96407798865aa4ab28a71278c6f01826db90747",
+            "nll_nats": 6874.643073737621,
+            "scored_tokens": 1406,
+            "text_tokens": 1406,
+            "characters": 2467,
+            "utf8_bytes": 2467,
+            "blocks": 20
+          },
+          {
+            "index": 21,
+            "sha256": "2ba082b36718a967f1e7e471b7968f06323379da783a51a8af3ea387ff053484",
+            "nll_nats": 10522.879863381386,
+            "scored_tokens": 2362,
+            "text_tokens": 2362,
+            "characters": 4080,
+            "utf8_bytes": 4080,
+            "blocks": 32
+          },
+          {
+            "index": 22,
+            "sha256": "d14f2c2c93686714fb5d6a7f4ad14e3949d09d8b4a7b8e2f1fa96b01f9701993",
+            "nll_nats": 27413.635839164257,
+            "scored_tokens": 6393,
+            "text_tokens": 6393,
+            "characters": 11474,
+            "utf8_bytes": 11478,
+            "blocks": 90
+          },
+          {
+            "index": 23,
+            "sha256": "b5eb812b90aa9be8833f35091a78b290501392a23c8b733b0a0637909db59f26",
+            "nll_nats": 6226.783705085516,
+            "scored_tokens": 1410,
+            "text_tokens": 1410,
+            "characters": 2214,
+            "utf8_bytes": 2214,
+            "blocks": 18
+          },
+          {
+            "index": 24,
+            "sha256": "8550ed86da9cf42f8e25fb28d6a12bfd9937f2d5397a27d8fbd8df633950704e",
+            "nll_nats": 4103.8225656449795,
+            "scored_tokens": 880,
+            "text_tokens": 880,
+            "characters": 1425,
+            "utf8_bytes": 1425,
+            "blocks": 12
+          },
+          {
+            "index": 25,
+            "sha256": "ade0c71aea063a4957d86c11bce993352ff95456b63d7d294d216c42826e54e8",
+            "nll_nats": 4125.86928191781,
+            "scored_tokens": 856,
+            "text_tokens": 856,
+            "characters": 1680,
+            "utf8_bytes": 1680,
+            "blocks": 14
+          },
+          {
+            "index": 26,
+            "sha256": "568ef9633889c94d6c303f5f1b58274e04a19d3059d88000a0721f237c7558a0",
+            "nll_nats": 10550.157650649548,
+            "scored_tokens": 2732,
+            "text_tokens": 2732,
+            "characters": 4527,
+            "utf8_bytes": 4527,
+            "blocks": 36
+          },
+          {
+            "index": 27,
+            "sha256": "db37d7c262eb4081423fd51160f961ff3f0c69e7d6a5c62956eea5a1175424e3",
+            "nll_nats": 3205.7477523982525,
+            "scored_tokens": 718,
+            "text_tokens": 718,
+            "characters": 1300,
+            "utf8_bytes": 1300,
+            "blocks": 11
+          },
+          {
+            "index": 28,
+            "sha256": "17b9acdc557927ef6cb362c91ec0b98486764a5ffbd847332dae4aa739bdf7f1",
+            "nll_nats": 34936.06082582474,
+            "scored_tokens": 7781,
+            "text_tokens": 7781,
+            "characters": 11858,
+            "utf8_bytes": 11858,
+            "blocks": 93
+          },
+          {
+            "index": 29,
+            "sha256": "fa8905a904ec661b88158229bb21636aeac17c2d8b3f5be97ef68a2e5e1ab970",
+            "nll_nats": 4682.870044469833,
+            "scored_tokens": 906,
+            "text_tokens": 906,
+            "characters": 1666,
+            "utf8_bytes": 1666,
+            "blocks": 14
+          },
+          {
+            "index": 30,
+            "sha256": "9db9c1aec98b065bf52a2ecfa979b9f5175737e19923ba346bacb1669190d12e",
+            "nll_nats": 5848.769982308149,
+            "scored_tokens": 1381,
+            "text_tokens": 1381,
+            "characters": 2259,
+            "utf8_bytes": 2259,
+            "blocks": 18
+          },
+          {
+            "index": 31,
+            "sha256": "25316f79744c258e4c29f26a8a36028a6e86c8e6e5a2c7e442ab5fecfe2f7de1",
+            "nll_nats": 35778.72661843896,
+            "scored_tokens": 8852,
+            "text_tokens": 8852,
+            "characters": 14475,
+            "utf8_bytes": 14475,
+            "blocks": 114
+          },
+          {
+            "index": 32,
+            "sha256": "983f09dfd2a824c642962e79b55d28178fb1c600de6520ce8047466ac610c411",
+            "nll_nats": 10927.519115358591,
+            "scored_tokens": 2334,
+            "text_tokens": 2334,
+            "characters": 4045,
+            "utf8_bytes": 4045,
+            "blocks": 32
+          },
+          {
+            "index": 33,
+            "sha256": "f967698f0772fd45bfeb821476a30f3cbdc545b76d7d952208219f124ae0f168",
+            "nll_nats": 3296.5389200150967,
+            "scored_tokens": 613,
+            "text_tokens": 613,
+            "characters": 1239,
+            "utf8_bytes": 1239,
+            "blocks": 10
+          },
+          {
+            "index": 34,
+            "sha256": "ecdc75246f0a56000faae974420f5e2c56268215578852217f8f17a6797fefd4",
+            "nll_nats": 4313.352276831865,
+            "scored_tokens": 1073,
+            "text_tokens": 1073,
+            "characters": 1586,
+            "utf8_bytes": 1586,
+            "blocks": 13
+          },
+          {
+            "index": 35,
+            "sha256": "98e02ce579c3285d55f256bfceba30a4bafc11e4d6d0709d5cfd19bd6901f6e2",
+            "nll_nats": 8392.86885356903,
+            "scored_tokens": 1918,
+            "text_tokens": 1918,
+            "characters": 3292,
+            "utf8_bytes": 3292,
+            "blocks": 26
+          },
+          {
+            "index": 36,
+            "sha256": "cdd6a218bc7d629c1b8199abcae7caab3c155a6fb1b0c57b20e525a25e3966c4",
+            "nll_nats": 20006.868781387806,
+            "scored_tokens": 3264,
+            "text_tokens": 3264,
+            "characters": 7157,
+            "utf8_bytes": 7157,
+            "blocks": 56
+          },
+          {
+            "index": 37,
+            "sha256": "315716870ed7da08467e28cedc90274d3350284905684d6b026aaed296638ea7",
+            "nll_nats": 9405.143512368202,
+            "scored_tokens": 2134,
+            "text_tokens": 2134,
+            "characters": 3404,
+            "utf8_bytes": 3404,
+            "blocks": 27
+          },
+          {
+            "index": 38,
+            "sha256": "7ec7bd5cb19d1e01759f739c115f46e7b18659aaf62dce3f9d001520ed79e129",
+            "nll_nats": 10975.15135294199,
+            "scored_tokens": 1889,
+            "text_tokens": 1889,
+            "characters": 3368,
+            "utf8_bytes": 3368,
+            "blocks": 27
+          },
+          {
+            "index": 39,
+            "sha256": "48ededf64fe117efc7aa28118b48c3da0cc10fa459a79c8f45f3794a2fe4769c",
+            "nll_nats": 2975.7465511262417,
+            "scored_tokens": 766,
+            "text_tokens": 766,
+            "characters": 1112,
+            "utf8_bytes": 1112,
+            "blocks": 9
+          },
+          {
+            "index": 40,
+            "sha256": "7c1ad43f8754aa5b8d8dc8dd9b60c403a3e19a2e34b18203955e619bf70b44d5",
+            "nll_nats": 40807.01169282198,
+            "scored_tokens": 8491,
+            "text_tokens": 8491,
+            "characters": 14991,
+            "utf8_bytes": 14991,
+            "blocks": 118
+          },
+          {
+            "index": 41,
+            "sha256": "bb58a49a61c9c807a3cd97abfaa0f22cce1df2d3551a7d0b1b1b16094d1ae5fe",
+            "nll_nats": 18897.9658151567,
+            "scored_tokens": 4940,
+            "text_tokens": 4940,
+            "characters": 8138,
+            "utf8_bytes": 8138,
+            "blocks": 64
+          },
+          {
+            "index": 42,
+            "sha256": "0d595a393babd9c3177bb515f43d235dd03ceed56d50c782b760f3053eb22e65",
+            "nll_nats": 14148.009120881557,
+            "scored_tokens": 3015,
+            "text_tokens": 3015,
+            "characters": 5076,
+            "utf8_bytes": 5076,
+            "blocks": 40
+          },
+          {
+            "index": 43,
+            "sha256": "81dd53b58899e2b3a815babe32083d37f21b96ae7212f9203055561d076eb67e",
+            "nll_nats": 17153.18099167943,
+            "scored_tokens": 4620,
+            "text_tokens": 4620,
+            "characters": 7070,
+            "utf8_bytes": 7070,
+            "blocks": 56
+          },
+          {
+            "index": 44,
+            "sha256": "7827307e09e3f59c320aab28b4ab6d0ab26e64558aaaf565604201d9fb1a0369",
+            "nll_nats": 10011.185669630766,
+            "scored_tokens": 2607,
+            "text_tokens": 2607,
+            "characters": 4287,
+            "utf8_bytes": 4287,
+            "blocks": 34
+          },
+          {
+            "index": 45,
+            "sha256": "ffd5fb617310f1905ff7f2085ba6619a674133659c54759ae906f6833dc797c8",
+            "nll_nats": 52538.178795576096,
+            "scored_tokens": 11664,
+            "text_tokens": 11664,
+            "characters": 16828,
+            "utf8_bytes": 16906,
+            "blocks": 133
+          },
+          {
+            "index": 46,
+            "sha256": "8699d1c957022c41e35bd320dc0fc408c90568e9ed52c110ad953aa79986a4f0",
+            "nll_nats": 10688.565098017454,
+            "scored_tokens": 2048,
+            "text_tokens": 2048,
+            "characters": 3416,
+            "utf8_bytes": 3416,
+            "blocks": 27
+          },
+          {
+            "index": 47,
+            "sha256": "c0d3704491b9ca84ec75a3e66ec2143255859c42b677ef5473b099e2d0de3300",
+            "nll_nats": 33848.31304356456,
+            "scored_tokens": 8016,
+            "text_tokens": 8016,
+            "characters": 12316,
+            "utf8_bytes": 12316,
+            "blocks": 97
+          },
+          {
+            "index": 48,
+            "sha256": "1d4d93f918c4cbf2b3ce6de88068089fde1a4e1e96602b03371a5e5f1b865e98",
+            "nll_nats": 36261.94307166338,
+            "scored_tokens": 7771,
+            "text_tokens": 7771,
+            "characters": 10630,
+            "utf8_bytes": 10630,
+            "blocks": 84
+          },
+          {
+            "index": 49,
+            "sha256": "03fb3878ee412176288eab94bdeb8ede55dc2a623095cf8a39ac9c54510c02db",
+            "nll_nats": 13168.467459380627,
+            "scored_tokens": 2433,
+            "text_tokens": 2433,
+            "characters": 3664,
+            "utf8_bytes": 3664,
+            "blocks": 29
+          }
+        ]
+      },
+      "train_loss_since_last_eval": 3.2204132795333864
+    },
+    {
+      "step": 200,
+      "exposure": {
+        "raw_chars": 406328,
+        "raw_bytes": 406559,
+        "target_tokens": 243640,
+        "padded_positions": 409600
+      },
+      "training_seconds": 11.586900714901276,
+      "validation": {
+        "metric": "canonical_token_sequence_nll",
+        "include_eos": false,
+        "document_count": 2167,
+        "nll_nats": 730777.1859325916,
+        "scored_tokens": 169544,
+        "text_tokens": 169544,
+        "characters": 273529,
+        "utf8_bytes": 273747,
+        "nats_per_token": 4.310250943310241,
+        "perplexity": 74.45917162710572,
+        "bits_per_character": 3.8543943133625382,
+        "bits_per_utf8_byte": 3.8513248442530577,
+        "characters_per_token": 1.6133216156278016,
+        "context_policy": "chunks",
+        "context_length": 128,
+        "window_count": 2167,
+        "raw_block_bytes": 128,
+        "source_documents": [
+          {
+            "index": 0,
+            "sha256": "64842ba326be8949cabe43338a0480e7179700cdcce8338a7ec6ba7912780d42",
+            "nll_nats": 7193.211202725768,
+            "scored_tokens": 1738,
+            "text_tokens": 1738,
+            "characters": 2730,
+            "utf8_bytes": 2730,
+            "blocks": 22
+          },
+          {
+            "index": 1,
+            "sha256": "69d228c257b1de4a789d9a7aa9c276c1db9f09220037de655db5a462c0dc4b97",
+            "nll_nats": 22912.125487804413,
+            "scored_tokens": 5090,
+            "text_tokens": 5090,
+            "characters": 8702,
+            "utf8_bytes": 8702,
+            "blocks": 68
+          },
+          {
+            "index": 2,
+            "sha256": "41d49c3e8f26434dedbf0c668c5fb920d16f856b1279882a57460d635697a4d3",
+            "nll_nats": 16722.0902684927,
+            "scored_tokens": 3527,
+            "text_tokens": 3527,
+            "characters": 6686,
+            "utf8_bytes": 6686,
+            "blocks": 53
+          },
+          {
+            "index": 3,
+            "sha256": "7dd86486dccadd530862870c0e9d5332eee31e3f3fa2764a96f0e078be0a11ed",
+            "nll_nats": 13073.130754292011,
+            "scored_tokens": 3363,
+            "text_tokens": 3363,
+            "characters": 4985,
+            "utf8_bytes": 4985,
+            "blocks": 39
+          },
+          {
+            "index": 4,
+            "sha256": "d9cfa9511ce2cbec7482c7789ea49e9f2001a12e1bb612cbf962786a30143bf6",
+            "nll_nats": 11799.597425505519,
+            "scored_tokens": 3238,
+            "text_tokens": 3238,
+            "characters": 5028,
+            "utf8_bytes": 5028,
+            "blocks": 40
+          },
+          {
+            "index": 5,
+            "sha256": "db9ea4f16342f2fe8783e45093ee21de0e422ec07187b3e4f7718ecc14e846a7",
+            "nll_nats": 31933.705939993262,
+            "scored_tokens": 7716,
+            "text_tokens": 7716,
+            "characters": 12297,
+            "utf8_bytes": 12297,
+            "blocks": 97
+          },
+          {
+            "index": 6,
+            "sha256": "d61cfee9d8745745771e9b226ac18f33b0dc61ab0c3b2b3c75eeee675fcf805e",
+            "nll_nats": 5862.606945335865,
+            "scored_tokens": 1367,
+            "text_tokens": 1367,
+            "characters": 2271,
+            "utf8_bytes": 2272,
+            "blocks": 18
+          },
+          {
+            "index": 7,
+            "sha256": "a2b3878b37ddc864f1e0537c6086baae17a6640e92a6ed0b509722e32c7d40a0",
+            "nll_nats": 13631.347223699093,
+            "scored_tokens": 2918,
+            "text_tokens": 2918,
+            "characters": 5046,
+            "utf8_bytes": 5046,
+            "blocks": 40
+          },
+          {
+            "index": 8,
+            "sha256": "715f827f7032bf13c8230e4384e130b4a69efa325ba39396d15addeec543a11d",
+            "nll_nats": 4420.547066554427,
+            "scored_tokens": 991,
+            "text_tokens": 991,
+            "characters": 1485,
+            "utf8_bytes": 1485,
+            "blocks": 12
+          },
+          {
+            "index": 9,
+            "sha256": "2cb2434e12e8174e7e7be6cc7b643f6fadc56ae95f4271a2fb131bf404eaca89",
+            "nll_nats": 3516.591943129897,
+            "scored_tokens": 693,
+            "text_tokens": 693,
+            "characters": 1310,
+            "utf8_bytes": 1310,
+            "blocks": 11
+          },
+          {
+            "index": 10,
+            "sha256": "c179902eb6517f833258dca0d26de1f359bd22784b47b189d34da6208661fbca",
+            "nll_nats": 4017.7572826892138,
+            "scored_tokens": 1096,
+            "text_tokens": 1096,
+            "characters": 1775,
+            "utf8_bytes": 1775,
+            "blocks": 14
+          },
+          {
+            "index": 11,
+            "sha256": "37d7ad747698956ce5628f2d9df8b61a8989cb7d4c432cdb8134bc9b56509785",
+            "nll_nats": 7707.4342118650675,
+            "scored_tokens": 1949,
+            "text_tokens": 1949,
+            "characters": 3019,
+            "utf8_bytes": 3019,
+            "blocks": 24
+          },
+          {
+            "index": 12,
+            "sha256": "1aa8684320c2c95ffa24e23e19e900593894de5b2036e316e0c4f885aeecb5fb",
+            "nll_nats": 23787.941243454814,
+            "scored_tokens": 6327,
+            "text_tokens": 6327,
+            "characters": 9741,
+            "utf8_bytes": 9741,
+            "blocks": 77
+          },
+          {
+            "index": 13,
+            "sha256": "40153d6d095803c9d8428e12aafa99eb9ce979c1134160d18585e4eb55cdb72a",
+            "nll_nats": 24878.37548826635,
+            "scored_tokens": 5913,
+            "text_tokens": 5913,
+            "characters": 9474,
+            "utf8_bytes": 9474,
+            "blocks": 75
+          },
+          {
+            "index": 14,
+            "sha256": "3be06a880cfab71f9339d1005fbb2dffda0378589819ff4071876171704af1ff",
+            "nll_nats": 3114.2421710044146,
+            "scored_tokens": 742,
+            "text_tokens": 742,
+            "characters": 1089,
+            "utf8_bytes": 1089,
+            "blocks": 9
+          },
+          {
+            "index": 15,
+            "sha256": "9443f5f130017c2f9ed4d4c04cfb1f1943a1f43c44f739ac043ad5ca001686cf",
+            "nll_nats": 3408.2545556873083,
+            "scored_tokens": 775,
+            "text_tokens": 775,
+            "characters": 1412,
+            "utf8_bytes": 1412,
+            "blocks": 12
+          },
+          {
+            "index": 16,
+            "sha256": "ed3f522a325b1905543bcaf162b752b05ba8b8d609b3172c513c56408d3bef18",
+            "nll_nats": 7355.479910343885,
+            "scored_tokens": 1550,
+            "text_tokens": 1550,
+            "characters": 2778,
+            "utf8_bytes": 2778,
+            "blocks": 22
+          },
+          {
+            "index": 17,
+            "sha256": "0d14ded758a33468adc77e5322a2dd5ab6147889476c877dc529d362eb9ef8a3",
+            "nll_nats": 2629.6062593460083,
+            "scored_tokens": 715,
+            "text_tokens": 715,
+            "characters": 1185,
+            "utf8_bytes": 1185,
+            "blocks": 10
+          },
+          {
+            "index": 18,
+            "sha256": "81362ea86c39b52e71a670fd5de41f9609a0b8cc6ddff47dffca53d862352c56",
+            "nll_nats": 29192.635027617216,
+            "scored_tokens": 6105,
+            "text_tokens": 6105,
+            "characters": 10785,
+            "utf8_bytes": 10785,
+            "blocks": 85
+          },
+          {
+            "index": 19,
+            "sha256": "b83240567ceec6e42ed7db229b4d3f0754d706cbae5ff381103d0c7e5fb74348",
+            "nll_nats": 41784.39149713516,
+            "scored_tokens": 8458,
+            "text_tokens": 8458,
+            "characters": 10687,
+            "utf8_bytes": 10822,
+            "blocks": 85
+          },
+          {
+            "index": 20,
+            "sha256": "8971694006f1621e51f17f9ea96407798865aa4ab28a71278c6f01826db90747",
+            "nll_nats": 6624.187009572983,
+            "scored_tokens": 1406,
+            "text_tokens": 1406,
+            "characters": 2467,
+            "utf8_bytes": 2467,
+            "blocks": 20
+          },
+          {
+            "index": 21,
+            "sha256": "2ba082b36718a967f1e7e471b7968f06323379da783a51a8af3ea387ff053484",
+            "nll_nats": 10188.32978489995,
+            "scored_tokens": 2362,
+            "text_tokens": 2362,
+            "characters": 4080,
+            "utf8_bytes": 4080,
+            "blocks": 32
+          },
+          {
+            "index": 22,
+            "sha256": "d14f2c2c93686714fb5d6a7f4ad14e3949d09d8b4a7b8e2f1fa96b01f9701993",
+            "nll_nats": 26266.467905923724,
+            "scored_tokens": 6393,
+            "text_tokens": 6393,
+            "characters": 11474,
+            "utf8_bytes": 11478,
+            "blocks": 90
+          },
+          {
+            "index": 23,
+            "sha256": "b5eb812b90aa9be8833f35091a78b290501392a23c8b733b0a0637909db59f26",
+            "nll_nats": 5990.524889141321,
+            "scored_tokens": 1410,
+            "text_tokens": 1410,
+            "characters": 2214,
+            "utf8_bytes": 2214,
+            "blocks": 18
+          },
+          {
+            "index": 24,
+            "sha256": "8550ed86da9cf42f8e25fb28d6a12bfd9937f2d5397a27d8fbd8df633950704e",
+            "nll_nats": 3926.4224555939436,
+            "scored_tokens": 880,
+            "text_tokens": 880,
+            "characters": 1425,
+            "utf8_bytes": 1425,
+            "blocks": 12
+          },
+          {
+            "index": 25,
+            "sha256": "ade0c71aea063a4957d86c11bce993352ff95456b63d7d294d216c42826e54e8",
+            "nll_nats": 4026.1783480346203,
+            "scored_tokens": 856,
+            "text_tokens": 856,
+            "characters": 1680,
+            "utf8_bytes": 1680,
+            "blocks": 14
+          },
+          {
+            "index": 26,
+            "sha256": "568ef9633889c94d6c303f5f1b58274e04a19d3059d88000a0721f237c7558a0",
+            "nll_nats": 10247.334354653955,
+            "scored_tokens": 2732,
+            "text_tokens": 2732,
+            "characters": 4527,
+            "utf8_bytes": 4527,
+            "blocks": 36
+          },
+          {
+            "index": 27,
+            "sha256": "db37d7c262eb4081423fd51160f961ff3f0c69e7d6a5c62956eea5a1175424e3",
+            "nll_nats": 3079.5677049160004,
+            "scored_tokens": 718,
+            "text_tokens": 718,
+            "characters": 1300,
+            "utf8_bytes": 1300,
+            "blocks": 11
+          },
+          {
+            "index": 28,
+            "sha256": "17b9acdc557927ef6cb362c91ec0b98486764a5ffbd847332dae4aa739bdf7f1",
+            "nll_nats": 33920.57420493662,
+            "scored_tokens": 7781,
+            "text_tokens": 7781,
+            "characters": 11858,
+            "utf8_bytes": 11858,
+            "blocks": 93
+          },
+          {
+            "index": 29,
+            "sha256": "fa8905a904ec661b88158229bb21636aeac17c2d8b3f5be97ef68a2e5e1ab970",
+            "nll_nats": 4522.768188804388,
+            "scored_tokens": 906,
+            "text_tokens": 906,
+            "characters": 1666,
+            "utf8_bytes": 1666,
+            "blocks": 14
+          },
+          {
+            "index": 30,
+            "sha256": "9db9c1aec98b065bf52a2ecfa979b9f5175737e19923ba346bacb1669190d12e",
+            "nll_nats": 5551.827143803239,
+            "scored_tokens": 1381,
+            "text_tokens": 1381,
+            "characters": 2259,
+            "utf8_bytes": 2259,
+            "blocks": 18
+          },
+          {
+            "index": 31,
+            "sha256": "25316f79744c258e4c29f26a8a36028a6e86c8e6e5a2c7e442ab5fecfe2f7de1",
+            "nll_nats": 34352.99251392484,
+            "scored_tokens": 8852,
+            "text_tokens": 8852,
+            "characters": 14475,
+            "utf8_bytes": 14475,
+            "blocks": 114
+          },
+          {
+            "index": 32,
+            "sha256": "983f09dfd2a824c642962e79b55d28178fb1c600de6520ce8047466ac610c411",
+            "nll_nats": 10533.194412991405,
+            "scored_tokens": 2334,
+            "text_tokens": 2334,
+            "characters": 4045,
+            "utf8_bytes": 4045,
+            "blocks": 32
+          },
+          {
+            "index": 33,
+            "sha256": "f967698f0772fd45bfeb821476a30f3cbdc545b76d7d952208219f124ae0f168",
+            "nll_nats": 3205.9610834270716,
+            "scored_tokens": 613,
+            "text_tokens": 613,
+            "characters": 1239,
+            "utf8_bytes": 1239,
+            "blocks": 10
+          },
+          {
+            "index": 34,
+            "sha256": "ecdc75246f0a56000faae974420f5e2c56268215578852217f8f17a6797fefd4",
+            "nll_nats": 4178.14690066874,
+            "scored_tokens": 1073,
+            "text_tokens": 1073,
+            "characters": 1586,
+            "utf8_bytes": 1586,
+            "blocks": 13
+          },
+          {
+            "index": 35,
+            "sha256": "98e02ce579c3285d55f256bfceba30a4bafc11e4d6d0709d5cfd19bd6901f6e2",
+            "nll_nats": 7874.4185306578875,
+            "scored_tokens": 1918,
+            "text_tokens": 1918,
+            "characters": 3292,
+            "utf8_bytes": 3292,
+            "blocks": 26
+          },
+          {
+            "index": 36,
+            "sha256": "cdd6a218bc7d629c1b8199abcae7caab3c155a6fb1b0c57b20e525a25e3966c4",
+            "nll_nats": 19171.97519350052,
+            "scored_tokens": 3264,
+            "text_tokens": 3264,
+            "characters": 7157,
+            "utf8_bytes": 7157,
+            "blocks": 56
+          },
+          {
+            "index": 37,
+            "sha256": "315716870ed7da08467e28cedc90274d3350284905684d6b026aaed296638ea7",
+            "nll_nats": 9163.074673444033,
+            "scored_tokens": 2134,
+            "text_tokens": 2134,
+            "characters": 3404,
+            "utf8_bytes": 3404,
+            "blocks": 27
+          },
+          {
+            "index": 38,
+            "sha256": "7ec7bd5cb19d1e01759f739c115f46e7b18659aaf62dce3f9d001520ed79e129",
+            "nll_nats": 10555.189319193363,
+            "scored_tokens": 1889,
+            "text_tokens": 1889,
+            "characters": 3368,
+            "utf8_bytes": 3368,
+            "blocks": 27
+          },
+          {
+            "index": 39,
+            "sha256": "48ededf64fe117efc7aa28118b48c3da0cc10fa459a79c8f45f3794a2fe4769c",
+            "nll_nats": 2871.078765332699,
+            "scored_tokens": 766,
+            "text_tokens": 766,
+            "characters": 1112,
+            "utf8_bytes": 1112,
+            "blocks": 9
+          },
+          {
+            "index": 40,
+            "sha256": "7c1ad43f8754aa5b8d8dc8dd9b60c403a3e19a2e34b18203955e619bf70b44d5",
+            "nll_nats": 37733.65292109549,
+            "scored_tokens": 8491,
+            "text_tokens": 8491,
+            "characters": 14991,
+            "utf8_bytes": 14991,
+            "blocks": 118
+          },
+          {
+            "index": 41,
+            "sha256": "bb58a49a61c9c807a3cd97abfaa0f22cce1df2d3551a7d0b1b1b16094d1ae5fe",
+            "nll_nats": 17941.899800777435,
+            "scored_tokens": 4940,
+            "text_tokens": 4940,
+            "characters": 8138,
+            "utf8_bytes": 8138,
+            "blocks": 64
+          },
+          {
+            "index": 42,
+            "sha256": "0d595a393babd9c3177bb515f43d235dd03ceed56d50c782b760f3053eb22e65",
+            "nll_nats": 13522.152818158269,
+            "scored_tokens": 3015,
+            "text_tokens": 3015,
+            "characters": 5076,
+            "utf8_bytes": 5076,
+            "blocks": 40
+          },
+          {
+            "index": 43,
+            "sha256": "81dd53b58899e2b3a815babe32083d37f21b96ae7212f9203055561d076eb67e",
+            "nll_nats": 16276.777521178126,
+            "scored_tokens": 4620,
+            "text_tokens": 4620,
+            "characters": 7070,
+            "utf8_bytes": 7070,
+            "blocks": 56
+          },
+          {
+            "index": 44,
+            "sha256": "7827307e09e3f59c320aab28b4ab6d0ab26e64558aaaf565604201d9fb1a0369",
+            "nll_nats": 9548.913274988532,
+            "scored_tokens": 2607,
+            "text_tokens": 2607,
+            "characters": 4287,
+            "utf8_bytes": 4287,
+            "blocks": 34
+          },
+          {
+            "index": 45,
+            "sha256": "ffd5fb617310f1905ff7f2085ba6619a674133659c54759ae906f6833dc797c8",
+            "nll_nats": 51020.26968641579,
+            "scored_tokens": 11664,
+            "text_tokens": 11664,
+            "characters": 16828,
+            "utf8_bytes": 16906,
+            "blocks": 133
+          },
+          {
+            "index": 46,
+            "sha256": "8699d1c957022c41e35bd320dc0fc408c90568e9ed52c110ad953aa79986a4f0",
+            "nll_nats": 10362.390677243471,
+            "scored_tokens": 2048,
+            "text_tokens": 2048,
+            "characters": 3416,
+            "utf8_bytes": 3416,
+            "blocks": 27
+          },
+          {
+            "index": 47,
+            "sha256": "c0d3704491b9ca84ec75a3e66ec2143255859c42b677ef5473b099e2d0de3300",
+            "nll_nats": 32467.857854560018,
+            "scored_tokens": 8016,
+            "text_tokens": 8016,
+            "characters": 12316,
+            "utf8_bytes": 12316,
+            "blocks": 97
+          },
+          {
+            "index": 48,
+            "sha256": "1d4d93f918c4cbf2b3ce6de88068089fde1a4e1e96602b03371a5e5f1b865e98",
+            "nll_nats": 33946.26846702397,
+            "scored_tokens": 7771,
+            "text_tokens": 7771,
+            "characters": 10630,
+            "utf8_bytes": 10630,
+            "blocks": 84
+          },
+          {
+            "index": 49,
+            "sha256": "03fb3878ee412176288eab94bdeb8ede55dc2a623095cf8a39ac9c54510c02db",
+            "nll_nats": 12765.71762278676,
+            "scored_tokens": 2433,
+            "text_tokens": 2433,
+            "characters": 3664,
+            "utf8_bytes": 3664,
+            "blocks": 29
+          }
+        ]
+      },
+      "train_loss_since_last_eval": 2.6459648752212526
+    },
+    {
+      "step": 300,
+      "exposure": {
+        "raw_chars": 609716,
+        "raw_bytes": 610107,
+        "target_tokens": 365711,
+        "padded_positions": 614400
+      },
+      "training_seconds": 17.561827383877244,
+      "validation": {
+        "metric": "canonical_token_sequence_nll",
+        "include_eos": false,
+        "document_count": 2167,
+        "nll_nats": 714977.8443146944,
+        "scored_tokens": 169544,
+        "text_tokens": 169544,
+        "characters": 273529,
+        "utf8_bytes": 273747,
+        "nats_per_token": 4.2170636785418205,
+        "perplexity": 67.8340091145667,
+        "bits_per_character": 3.771062630793411,
+        "bits_per_utf8_byte": 3.768059523349264,
+        "characters_per_token": 1.6133216156278016,
+        "context_policy": "chunks",
+        "context_length": 128,
+        "window_count": 2167,
+        "raw_block_bytes": 128,
+        "source_documents": [
+          {
+            "index": 0,
+            "sha256": "64842ba326be8949cabe43338a0480e7179700cdcce8338a7ec6ba7912780d42",
+            "nll_nats": 7112.444813936949,
+            "scored_tokens": 1738,
+            "text_tokens": 1738,
+            "characters": 2730,
+            "utf8_bytes": 2730,
+            "blocks": 22
+          },
+          {
+            "index": 1,
+            "sha256": "69d228c257b1de4a789d9a7aa9c276c1db9f09220037de655db5a462c0dc4b97",
+            "nll_nats": 22639.844526559114,
+            "scored_tokens": 5090,
+            "text_tokens": 5090,
+            "characters": 8702,
+            "utf8_bytes": 8702,
+            "blocks": 68
+          },
+          {
+            "index": 2,
+            "sha256": "41d49c3e8f26434dedbf0c668c5fb920d16f856b1279882a57460d635697a4d3",
+            "nll_nats": 16503.71319691837,
+            "scored_tokens": 3527,
+            "text_tokens": 3527,
+            "characters": 6686,
+            "utf8_bytes": 6686,
+            "blocks": 53
+          },
+          {
+            "index": 3,
+            "sha256": "7dd86486dccadd530862870c0e9d5332eee31e3f3fa2764a96f0e078be0a11ed",
+            "nll_nats": 12820.55585937202,
+            "scored_tokens": 3363,
+            "text_tokens": 3363,
+            "characters": 4985,
+            "utf8_bytes": 4985,
+            "blocks": 39
+          },
+          {
+            "index": 4,
+            "sha256": "d9cfa9511ce2cbec7482c7789ea49e9f2001a12e1bb612cbf962786a30143bf6",
+            "nll_nats": 11496.253486081958,
+            "scored_tokens": 3238,
+            "text_tokens": 3238,
+            "characters": 5028,
+            "utf8_bytes": 5028,
+            "blocks": 40
+          },
+          {
+            "index": 5,
+            "sha256": "db9ea4f16342f2fe8783e45093ee21de0e422ec07187b3e4f7718ecc14e846a7",
+            "nll_nats": 30777.670175909996,
+            "scored_tokens": 7716,
+            "text_tokens": 7716,
+            "characters": 12297,
+            "utf8_bytes": 12297,
+            "blocks": 97
+          },
+          {
+            "index": 6,
+            "sha256": "d61cfee9d8745745771e9b226ac18f33b0dc61ab0c3b2b3c75eeee675fcf805e",
+            "nll_nats": 5754.161799311638,
+            "scored_tokens": 1367,
+            "text_tokens": 1367,
+            "characters": 2271,
+            "utf8_bytes": 2272,
+            "blocks": 18
+          },
+          {
+            "index": 7,
+            "sha256": "a2b3878b37ddc864f1e0537c6086baae17a6640e92a6ed0b509722e32c7d40a0",
+            "nll_nats": 13198.20910385251,
+            "scored_tokens": 2918,
+            "text_tokens": 2918,
+            "characters": 5046,
+            "utf8_bytes": 5046,
+            "blocks": 40
+          },
+          {
+            "index": 8,
+            "sha256": "715f827f7032bf13c8230e4384e130b4a69efa325ba39396d15addeec543a11d",
+            "nll_nats": 4164.761254861951,
+            "scored_tokens": 991,
+            "text_tokens": 991,
+            "characters": 1485,
+            "utf8_bytes": 1485,
+            "blocks": 12
+          },
+          {
+            "index": 9,
+            "sha256": "2cb2434e12e8174e7e7be6cc7b643f6fadc56ae95f4271a2fb131bf404eaca89",
+            "nll_nats": 3442.7699290066957,
+            "scored_tokens": 693,
+            "text_tokens": 693,
+            "characters": 1310,
+            "utf8_bytes": 1310,
+            "blocks": 11
+          },
+          {
+            "index": 10,
+            "sha256": "c179902eb6517f833258dca0d26de1f359bd22784b47b189d34da6208661fbca",
+            "nll_nats": 3959.6758862137794,
+            "scored_tokens": 1096,
+            "text_tokens": 1096,
+            "characters": 1775,
+            "utf8_bytes": 1775,
+            "blocks": 14
+          },
+          {
+            "index": 11,
+            "sha256": "37d7ad747698956ce5628f2d9df8b61a8989cb7d4c432cdb8134bc9b56509785",
+            "nll_nats": 7531.243129476905,
+            "scored_tokens": 1949,
+            "text_tokens": 1949,
+            "characters": 3019,
+            "utf8_bytes": 3019,
+            "blocks": 24
+          },
+          {
+            "index": 12,
+            "sha256": "1aa8684320c2c95ffa24e23e19e900593894de5b2036e316e0c4f885aeecb5fb",
+            "nll_nats": 22784.114665552974,
+            "scored_tokens": 6327,
+            "text_tokens": 6327,
+            "characters": 9741,
+            "utf8_bytes": 9741,
+            "blocks": 77
+          },
+          {
+            "index": 13,
+            "sha256": "40153d6d095803c9d8428e12aafa99eb9ce979c1134160d18585e4eb55cdb72a",
+            "nll_nats": 24350.556907981634,
+            "scored_tokens": 5913,
+            "text_tokens": 5913,
+            "characters": 9474,
+            "utf8_bytes": 9474,
+            "blocks": 75
+          },
+          {
+            "index": 14,
+            "sha256": "3be06a880cfab71f9339d1005fbb2dffda0378589819ff4071876171704af1ff",
+            "nll_nats": 3062.893064081669,
+            "scored_tokens": 742,
+            "text_tokens": 742,
+            "characters": 1089,
+            "utf8_bytes": 1089,
+            "blocks": 9
+          },
+          {
+            "index": 15,
+            "sha256": "9443f5f130017c2f9ed4d4c04cfb1f1943a1f43c44f739ac043ad5ca001686cf",
+            "nll_nats": 3369.260181635618,
+            "scored_tokens": 775,
+            "text_tokens": 775,
+            "characters": 1412,
+            "utf8_bytes": 1412,
+            "blocks": 12
+          },
+          {
+            "index": 16,
+            "sha256": "ed3f522a325b1905543bcaf162b752b05ba8b8d609b3172c513c56408d3bef18",
+            "nll_nats": 7221.227831602097,
+            "scored_tokens": 1550,
+            "text_tokens": 1550,
+            "characters": 2778,
+            "utf8_bytes": 2778,
+            "blocks": 22
+          },
+          {
+            "index": 17,
+            "sha256": "0d14ded758a33468adc77e5322a2dd5ab6147889476c877dc529d362eb9ef8a3",
+            "nll_nats": 2591.93923664093,
+            "scored_tokens": 715,
+            "text_tokens": 715,
+            "characters": 1185,
+            "utf8_bytes": 1185,
+            "blocks": 10
+          },
+          {
+            "index": 18,
+            "sha256": "81362ea86c39b52e71a670fd5de41f9609a0b8cc6ddff47dffca53d862352c56",
+            "nll_nats": 28594.610380992293,
+            "scored_tokens": 6105,
+            "text_tokens": 6105,
+            "characters": 10785,
+            "utf8_bytes": 10785,
+            "blocks": 85
+          },
+          {
+            "index": 19,
+            "sha256": "b83240567ceec6e42ed7db229b4d3f0754d706cbae5ff381103d0c7e5fb74348",
+            "nll_nats": 40946.90056172013,
+            "scored_tokens": 8458,
+            "text_tokens": 8458,
+            "characters": 10687,
+            "utf8_bytes": 10822,
+            "blocks": 85
+          },
+          {
+            "index": 20,
+            "sha256": "8971694006f1621e51f17f9ea96407798865aa4ab28a71278c6f01826db90747",
+            "nll_nats": 6485.5406231582165,
+            "scored_tokens": 1406,
+            "text_tokens": 1406,
+            "characters": 2467,
+            "utf8_bytes": 2467,
+            "blocks": 20
+          },
+          {
+            "index": 21,
+            "sha256": "2ba082b36718a967f1e7e471b7968f06323379da783a51a8af3ea387ff053484",
+            "nll_nats": 10027.763209715486,
+            "scored_tokens": 2362,
+            "text_tokens": 2362,
+            "characters": 4080,
+            "utf8_bytes": 4080,
+            "blocks": 32
+          },
+          {
+            "index": 22,
+            "sha256": "d14f2c2c93686714fb5d6a7f4ad14e3949d09d8b4a7b8e2f1fa96b01f9701993",
+            "nll_nats": 25829.131650686264,
+            "scored_tokens": 6393,
+            "text_tokens": 6393,
+            "characters": 11474,
+            "utf8_bytes": 11478,
+            "blocks": 90
+          },
+          {
+            "index": 23,
+            "sha256": "b5eb812b90aa9be8833f35091a78b290501392a23c8b733b0a0637909db59f26",
+            "nll_nats": 5921.4262712448835,
+            "scored_tokens": 1410,
+            "text_tokens": 1410,
+            "characters": 2214,
+            "utf8_bytes": 2214,
+            "blocks": 18
+          },
+          {
+            "index": 24,
+            "sha256": "8550ed86da9cf42f8e25fb28d6a12bfd9937f2d5397a27d8fbd8df633950704e",
+            "nll_nats": 3773.2002810686827,
+            "scored_tokens": 880,
+            "text_tokens": 880,
+            "characters": 1425,
+            "utf8_bytes": 1425,
+            "blocks": 12
+          },
+          {
+            "index": 25,
+            "sha256": "ade0c71aea063a4957d86c11bce993352ff95456b63d7d294d216c42826e54e8",
+            "nll_nats": 3964.4566376805305,
+            "scored_tokens": 856,
+            "text_tokens": 856,
+            "characters": 1680,
+            "utf8_bytes": 1680,
+            "blocks": 14
+          },
+          {
+            "index": 26,
+            "sha256": "568ef9633889c94d6c303f5f1b58274e04a19d3059d88000a0721f237c7558a0",
+            "nll_nats": 10042.23285497725,
+            "scored_tokens": 2732,
+            "text_tokens": 2732,
+            "characters": 4527,
+            "utf8_bytes": 4527,
+            "blocks": 36
+          },
+          {
+            "index": 27,
+            "sha256": "db37d7c262eb4081423fd51160f961ff3f0c69e7d6a5c62956eea5a1175424e3",
+            "nll_nats": 3013.790561437607,
+            "scored_tokens": 718,
+            "text_tokens": 718,
+            "characters": 1300,
+            "utf8_bytes": 1300,
+            "blocks": 11
+          },
+          {
+            "index": 28,
+            "sha256": "17b9acdc557927ef6cb362c91ec0b98486764a5ffbd847332dae4aa739bdf7f1",
+            "nll_nats": 33340.258856385946,
+            "scored_tokens": 7781,
+            "text_tokens": 7781,
+            "characters": 11858,
+            "utf8_bytes": 11858,
+            "blocks": 93
+          },
+          {
+            "index": 29,
+            "sha256": "fa8905a904ec661b88158229bb21636aeac17c2d8b3f5be97ef68a2e5e1ab970",
+            "nll_nats": 4399.892261102796,
+            "scored_tokens": 906,
+            "text_tokens": 906,
+            "characters": 1666,
+            "utf8_bytes": 1666,
+            "blocks": 14
+          },
+          {
+            "index": 30,
+            "sha256": "9db9c1aec98b065bf52a2ecfa979b9f5175737e19923ba346bacb1669190d12e",
+            "nll_nats": 5440.40029796958,
+            "scored_tokens": 1381,
+            "text_tokens": 1381,
+            "characters": 2259,
+            "utf8_bytes": 2259,
+            "blocks": 18
+          },
+          {
+            "index": 31,
+            "sha256": "25316f79744c258e4c29f26a8a36028a6e86c8e6e5a2c7e442ab5fecfe2f7de1",
+            "nll_nats": 33599.62490054965,
+            "scored_tokens": 8852,
+            "text_tokens": 8852,
+            "characters": 14475,
+            "utf8_bytes": 14475,
+            "blocks": 114
+          },
+          {
+            "index": 32,
+            "sha256": "983f09dfd2a824c642962e79b55d28178fb1c600de6520ce8047466ac610c411",
+            "nll_nats": 10348.65945097804,
+            "scored_tokens": 2334,
+            "text_tokens": 2334,
+            "characters": 4045,
+            "utf8_bytes": 4045,
+            "blocks": 32
+          },
+          {
+            "index": 33,
+            "sha256": "f967698f0772fd45bfeb821476a30f3cbdc545b76d7d952208219f124ae0f168",
+            "nll_nats": 3139.3194626271725,
+            "scored_tokens": 613,
+            "text_tokens": 613,
+            "characters": 1239,
+            "utf8_bytes": 1239,
+            "blocks": 10
+          },
+          {
+            "index": 34,
+            "sha256": "ecdc75246f0a56000faae974420f5e2c56268215578852217f8f17a6797fefd4",
+            "nll_nats": 4121.204876601696,
+            "scored_tokens": 1073,
+            "text_tokens": 1073,
+            "characters": 1586,
+            "utf8_bytes": 1586,
+            "blocks": 13
+          },
+          {
+            "index": 35,
+            "sha256": "98e02ce579c3285d55f256bfceba30a4bafc11e4d6d0709d5cfd19bd6901f6e2",
+            "nll_nats": 7656.909034445882,
+            "scored_tokens": 1918,
+            "text_tokens": 1918,
+            "characters": 3292,
+            "utf8_bytes": 3292,
+            "blocks": 26
+          },
+          {
+            "index": 36,
+            "sha256": "cdd6a218bc7d629c1b8199abcae7caab3c155a6fb1b0c57b20e525a25e3966c4",
+            "nll_nats": 18651.922747135162,
+            "scored_tokens": 3264,
+            "text_tokens": 3264,
+            "characters": 7157,
+            "utf8_bytes": 7157,
+            "blocks": 56
+          },
+          {
+            "index": 37,
+            "sha256": "315716870ed7da08467e28cedc90274d3350284905684d6b026aaed296638ea7",
+            "nll_nats": 9075.574121624231,
+            "scored_tokens": 2134,
+            "text_tokens": 2134,
+            "characters": 3404,
+            "utf8_bytes": 3404,
+            "blocks": 27
+          },
+          {
+            "index": 38,
+            "sha256": "7ec7bd5cb19d1e01759f739c115f46e7b18659aaf62dce3f9d001520ed79e129",
+            "nll_nats": 10215.319309264421,
+            "scored_tokens": 1889,
+            "text_tokens": 1889,
+            "characters": 3368,
+            "utf8_bytes": 3368,
+            "blocks": 27
+          },
+          {
+            "index": 39,
+            "sha256": "48ededf64fe117efc7aa28118b48c3da0cc10fa459a79c8f45f3794a2fe4769c",
+            "nll_nats": 2825.8787761330605,
+            "scored_tokens": 766,
+            "text_tokens": 766,
+            "characters": 1112,
+            "utf8_bytes": 1112,
+            "blocks": 9
+          },
+          {
+            "index": 40,
+            "sha256": "7c1ad43f8754aa5b8d8dc8dd9b60c403a3e19a2e34b18203955e619bf70b44d5",
+            "nll_nats": 36348.363830789924,
+            "scored_tokens": 8491,
+            "text_tokens": 8491,
+            "characters": 14991,
+            "utf8_bytes": 14991,
+            "blocks": 118
+          },
+          {
+            "index": 41,
+            "sha256": "bb58a49a61c9c807a3cd97abfaa0f22cce1df2d3551a7d0b1b1b16094d1ae5fe",
+            "nll_nats": 17577.308512464166,
+            "scored_tokens": 4940,
+            "text_tokens": 4940,
+            "characters": 8138,
+            "utf8_bytes": 8138,
+            "blocks": 64
+          },
+          {
+            "index": 42,
+            "sha256": "0d595a393babd9c3177bb515f43d235dd03ceed56d50c782b760f3053eb22e65",
+            "nll_nats": 13035.830644518137,
+            "scored_tokens": 3015,
+            "text_tokens": 3015,
+            "characters": 5076,
+            "utf8_bytes": 5076,
+            "blocks": 40
+          },
+          {
+            "index": 43,
+            "sha256": "81dd53b58899e2b3a815babe32083d37f21b96ae7212f9203055561d076eb67e",
+            "nll_nats": 15856.328540071845,
+            "scored_tokens": 4620,
+            "text_tokens": 4620,
+            "characters": 7070,
+            "utf8_bytes": 7070,
+            "blocks": 56
+          },
+          {
+            "index": 44,
+            "sha256": "7827307e09e3f59c320aab28b4ab6d0ab26e64558aaaf565604201d9fb1a0369",
+            "nll_nats": 9363.801714614034,
+            "scored_tokens": 2607,
+            "text_tokens": 2607,
+            "characters": 4287,
+            "utf8_bytes": 4287,
+            "blocks": 34
+          },
+          {
+            "index": 45,
+            "sha256": "ffd5fb617310f1905ff7f2085ba6619a674133659c54759ae906f6833dc797c8",
+            "nll_nats": 50624.34939852357,
+            "scored_tokens": 11664,
+            "text_tokens": 11664,
+            "characters": 16828,
+            "utf8_bytes": 16906,
+            "blocks": 133
+          },
+          {
+            "index": 46,
+            "sha256": "8699d1c957022c41e35bd320dc0fc408c90568e9ed52c110ad953aa79986a4f0",
+            "nll_nats": 10208.20638641715,
+            "scored_tokens": 2048,
+            "text_tokens": 2048,
+            "characters": 3416,
+            "utf8_bytes": 3416,
+            "blocks": 27
+          },
+          {
+            "index": 47,
+            "sha256": "c0d3704491b9ca84ec75a3e66ec2143255859c42b677ef5473b099e2d0de3300",
+            "nll_nats": 32099.954569235444,
+            "scored_tokens": 8016,
+            "text_tokens": 8016,
+            "characters": 12316,
+            "utf8_bytes": 12316,
+            "blocks": 97
+          },
+          {
+            "index": 48,
+            "sha256": "1d4d93f918c4cbf2b3ce6de88068089fde1a4e1e96602b03371a5e5f1b865e98",
+            "nll_nats": 33038.76725962758,
+            "scored_tokens": 7771,
+            "text_tokens": 7771,
+            "characters": 10630,
+            "utf8_bytes": 10630,
+            "blocks": 84
+          },
+          {
+            "index": 49,
+            "sha256": "03fb3878ee412176288eab94bdeb8ede55dc2a623095cf8a39ac9c54510c02db",
+            "nll_nats": 12629.621281936765,
+            "scored_tokens": 2433,
+            "text_tokens": 2433,
+            "characters": 3664,
+            "utf8_bytes": 3664,
+            "blocks": 29
+          }
+        ]
+      },
+      "train_loss_since_last_eval": 2.5719494342803957
+    },
+    {
+      "step": 400,
+      "exposure": {
+        "raw_chars": 812195,
+        "raw_bytes": 812641,
+        "target_tokens": 486740,
+        "padded_positions": 819200
+      },
+      "training_seconds": 23.676602964726044,
+      "validation": {
+        "metric": "canonical_token_sequence_nll",
+        "include_eos": false,
+        "document_count": 2167,
+        "nll_nats": 705889.7171024233,
+        "scored_tokens": 169544,
+        "text_tokens": 169544,
+        "characters": 273529,
+        "utf8_bytes": 273747,
+        "nats_per_token": 4.163460323588114,
+        "perplexity": 64.2936148348071,
+        "bits_per_character": 3.7231284225006465,
+        "bits_per_utf8_byte": 3.7201634877393337,
+        "characters_per_token": 1.6133216156278016,
+        "context_policy": "chunks",
+        "context_length": 128,
+        "window_count": 2167,
+        "raw_block_bytes": 128,
+        "source_documents": [
+          {
+            "index": 0,
+            "sha256": "64842ba326be8949cabe43338a0480e7179700cdcce8338a7ec6ba7912780d42",
+            "nll_nats": 7051.928714752197,
+            "scored_tokens": 1738,
+            "text_tokens": 1738,
+            "characters": 2730,
+            "utf8_bytes": 2730,
+            "blocks": 22
+          },
+          {
+            "index": 1,
+            "sha256": "69d228c257b1de4a789d9a7aa9c276c1db9f09220037de655db5a462c0dc4b97",
+            "nll_nats": 22449.464628905058,
+            "scored_tokens": 5090,
+            "text_tokens": 5090,
+            "characters": 8702,
+            "utf8_bytes": 8702,
+            "blocks": 68
+          },
+          {
+            "index": 2,
+            "sha256": "41d49c3e8f26434dedbf0c668c5fb920d16f856b1279882a57460d635697a4d3",
+            "nll_nats": 16385.65622317791,
+            "scored_tokens": 3527,
+            "text_tokens": 3527,
+            "characters": 6686,
+            "utf8_bytes": 6686,
+            "blocks": 53
+          },
+          {
+            "index": 3,
+            "sha256": "7dd86486dccadd530862870c0e9d5332eee31e3f3fa2764a96f0e078be0a11ed",
+            "nll_nats": 12605.263979420066,
+            "scored_tokens": 3363,
+            "text_tokens": 3363,
+            "characters": 4985,
+            "utf8_bytes": 4985,
+            "blocks": 39
+          },
+          {
+            "index": 4,
+            "sha256": "d9cfa9511ce2cbec7482c7789ea49e9f2001a12e1bb612cbf962786a30143bf6",
+            "nll_nats": 11309.495973795652,
+            "scored_tokens": 3238,
+            "text_tokens": 3238,
+            "characters": 5028,
+            "utf8_bytes": 5028,
+            "blocks": 40
+          },
+          {
+            "index": 5,
+            "sha256": "db9ea4f16342f2fe8783e45093ee21de0e422ec07187b3e4f7718ecc14e846a7",
+            "nll_nats": 30303.483767092228,
+            "scored_tokens": 7716,
+            "text_tokens": 7716,
+            "characters": 12297,
+            "utf8_bytes": 12297,
+            "blocks": 97
+          },
+          {
+            "index": 6,
+            "sha256": "d61cfee9d8745745771e9b226ac18f33b0dc61ab0c3b2b3c75eeee675fcf805e",
+            "nll_nats": 5687.218696698546,
+            "scored_tokens": 1367,
+            "text_tokens": 1367,
+            "characters": 2271,
+            "utf8_bytes": 2272,
+            "blocks": 18
+          },
+          {
+            "index": 7,
+            "sha256": "a2b3878b37ddc864f1e0537c6086baae17a6640e92a6ed0b509722e32c7d40a0",
+            "nll_nats": 12939.591296598315,
+            "scored_tokens": 2918,
+            "text_tokens": 2918,
+            "characters": 5046,
+            "utf8_bytes": 5046,
+            "blocks": 40
+          },
+          {
+            "index": 8,
+            "sha256": "715f827f7032bf13c8230e4384e130b4a69efa325ba39396d15addeec543a11d",
+            "nll_nats": 4052.832533851266,
+            "scored_tokens": 991,
+            "text_tokens": 991,
+            "characters": 1485,
+            "utf8_bytes": 1485,
+            "blocks": 12
+          },
+          {
+            "index": 9,
+            "sha256": "2cb2434e12e8174e7e7be6cc7b643f6fadc56ae95f4271a2fb131bf404eaca89",
+            "nll_nats": 3402.171645537019,
+            "scored_tokens": 693,
+            "text_tokens": 693,
+            "characters": 1310,
+            "utf8_bytes": 1310,
+            "blocks": 11
+          },
+          {
+            "index": 10,
+            "sha256": "c179902eb6517f833258dca0d26de1f359bd22784b47b189d34da6208661fbca",
+            "nll_nats": 3893.854752987623,
+            "scored_tokens": 1096,
+            "text_tokens": 1096,
+            "characters": 1775,
+            "utf8_bytes": 1775,
+            "blocks": 14
+          },
+          {
+            "index": 11,
+            "sha256": "37d7ad747698956ce5628f2d9df8b61a8989cb7d4c432cdb8134bc9b56509785",
+            "nll_nats": 7451.969512522221,
+            "scored_tokens": 1949,
+            "text_tokens": 1949,
+            "characters": 3019,
+            "utf8_bytes": 3019,
+            "blocks": 24
+          },
+          {
+            "index": 12,
+            "sha256": "1aa8684320c2c95ffa24e23e19e900593894de5b2036e316e0c4f885aeecb5fb",
+            "nll_nats": 22296.3546436131,
+            "scored_tokens": 6327,
+            "text_tokens": 6327,
+            "characters": 9741,
+            "utf8_bytes": 9741,
+            "blocks": 77
+          },
+          {
+            "index": 13,
+            "sha256": "40153d6d095803c9d8428e12aafa99eb9ce979c1134160d18585e4eb55cdb72a",
+            "nll_nats": 23959.279353007674,
+            "scored_tokens": 5913,
+            "text_tokens": 5913,
+            "characters": 9474,
+            "utf8_bytes": 9474,
+            "blocks": 75
+          },
+          {
+            "index": 14,
+            "sha256": "3be06a880cfab71f9339d1005fbb2dffda0378589819ff4071876171704af1ff",
+            "nll_nats": 3052.749753654003,
+            "scored_tokens": 742,
+            "text_tokens": 742,
+            "characters": 1089,
+            "utf8_bytes": 1089,
+            "blocks": 9
+          },
+          {
+            "index": 15,
+            "sha256": "9443f5f130017c2f9ed4d4c04cfb1f1943a1f43c44f739ac043ad5ca001686cf",
+            "nll_nats": 3328.159504696727,
+            "scored_tokens": 775,
+            "text_tokens": 775,
+            "characters": 1412,
+            "utf8_bytes": 1412,
+            "blocks": 12
+          },
+          {
+            "index": 16,
+            "sha256": "ed3f522a325b1905543bcaf162b752b05ba8b8d609b3172c513c56408d3bef18",
+            "nll_nats": 7135.06635671854,
+            "scored_tokens": 1550,
+            "text_tokens": 1550,
+            "characters": 2778,
+            "utf8_bytes": 2778,
+            "blocks": 22
+          },
+          {
+            "index": 17,
+            "sha256": "0d14ded758a33468adc77e5322a2dd5ab6147889476c877dc529d362eb9ef8a3",
+            "nll_nats": 2566.045733317733,
+            "scored_tokens": 715,
+            "text_tokens": 715,
+            "characters": 1185,
+            "utf8_bytes": 1185,
+            "blocks": 10
+          },
+          {
+            "index": 18,
+            "sha256": "81362ea86c39b52e71a670fd5de41f9609a0b8cc6ddff47dffca53d862352c56",
+            "nll_nats": 28161.866289809346,
+            "scored_tokens": 6105,
+            "text_tokens": 6105,
+            "characters": 10785,
+            "utf8_bytes": 10785,
+            "blocks": 85
+          },
+          {
+            "index": 19,
+            "sha256": "b83240567ceec6e42ed7db229b4d3f0754d706cbae5ff381103d0c7e5fb74348",
+            "nll_nats": 40852.021225363016,
+            "scored_tokens": 8458,
+            "text_tokens": 8458,
+            "characters": 10687,
+            "utf8_bytes": 10822,
+            "blocks": 85
+          },
+          {
+            "index": 20,
+            "sha256": "8971694006f1621e51f17f9ea96407798865aa4ab28a71278c6f01826db90747",
+            "nll_nats": 6387.951775193214,
+            "scored_tokens": 1406,
+            "text_tokens": 1406,
+            "characters": 2467,
+            "utf8_bytes": 2467,
+            "blocks": 20
+          },
+          {
+            "index": 21,
+            "sha256": "2ba082b36718a967f1e7e471b7968f06323379da783a51a8af3ea387ff053484",
+            "nll_nats": 9923.582889303565,
+            "scored_tokens": 2362,
+            "text_tokens": 2362,
+            "characters": 4080,
+            "utf8_bytes": 4080,
+            "blocks": 32
+          },
+          {
+            "index": 22,
+            "sha256": "d14f2c2c93686714fb5d6a7f4ad14e3949d09d8b4a7b8e2f1fa96b01f9701993",
+            "nll_nats": 25443.253823921084,
+            "scored_tokens": 6393,
+            "text_tokens": 6393,
+            "characters": 11474,
+            "utf8_bytes": 11478,
+            "blocks": 90
+          },
+          {
+            "index": 23,
+            "sha256": "b5eb812b90aa9be8833f35091a78b290501392a23c8b733b0a0637909db59f26",
+            "nll_nats": 5840.121758192778,
+            "scored_tokens": 1410,
+            "text_tokens": 1410,
+            "characters": 2214,
+            "utf8_bytes": 2214,
+            "blocks": 18
+          },
+          {
+            "index": 24,
+            "sha256": "8550ed86da9cf42f8e25fb28d6a12bfd9937f2d5397a27d8fbd8df633950704e",
+            "nll_nats": 3713.9241658449173,
+            "scored_tokens": 880,
+            "text_tokens": 880,
+            "characters": 1425,
+            "utf8_bytes": 1425,
+            "blocks": 12
+          },
+          {
+            "index": 25,
+            "sha256": "ade0c71aea063a4957d86c11bce993352ff95456b63d7d294d216c42826e54e8",
+            "nll_nats": 3926.8494025468826,
+            "scored_tokens": 856,
+            "text_tokens": 856,
+            "characters": 1680,
+            "utf8_bytes": 1680,
+            "blocks": 14
+          },
+          {
+            "index": 26,
+            "sha256": "568ef9633889c94d6c303f5f1b58274e04a19d3059d88000a0721f237c7558a0",
+            "nll_nats": 9922.235330462456,
+            "scored_tokens": 2732,
+            "text_tokens": 2732,
+            "characters": 4527,
+            "utf8_bytes": 4527,
+            "blocks": 36
+          },
+          {
+            "index": 27,
+            "sha256": "db37d7c262eb4081423fd51160f961ff3f0c69e7d6a5c62956eea5a1175424e3",
+            "nll_nats": 2976.661120340228,
+            "scored_tokens": 718,
+            "text_tokens": 718,
+            "characters": 1300,
+            "utf8_bytes": 1300,
+            "blocks": 11
+          },
+          {
+            "index": 28,
+            "sha256": "17b9acdc557927ef6cb362c91ec0b98486764a5ffbd847332dae4aa739bdf7f1",
+            "nll_nats": 32972.43489666283,
+            "scored_tokens": 7781,
+            "text_tokens": 7781,
+            "characters": 11858,
+            "utf8_bytes": 11858,
+            "blocks": 93
+          },
+          {
+            "index": 29,
+            "sha256": "fa8905a904ec661b88158229bb21636aeac17c2d8b3f5be97ef68a2e5e1ab970",
+            "nll_nats": 4361.18155926466,
+            "scored_tokens": 906,
+            "text_tokens": 906,
+            "characters": 1666,
+            "utf8_bytes": 1666,
+            "blocks": 14
+          },
+          {
+            "index": 30,
+            "sha256": "9db9c1aec98b065bf52a2ecfa979b9f5175737e19923ba346bacb1669190d12e",
+            "nll_nats": 5355.727591305971,
+            "scored_tokens": 1381,
+            "text_tokens": 1381,
+            "characters": 2259,
+            "utf8_bytes": 2259,
+            "blocks": 18
+          },
+          {
+            "index": 31,
+            "sha256": "25316f79744c258e4c29f26a8a36028a6e86c8e6e5a2c7e442ab5fecfe2f7de1",
+            "nll_nats": 33066.44869047403,
+            "scored_tokens": 8852,
+            "text_tokens": 8852,
+            "characters": 14475,
+            "utf8_bytes": 14475,
+            "blocks": 114
+          },
+          {
+            "index": 32,
+            "sha256": "983f09dfd2a824c642962e79b55d28178fb1c600de6520ce8047466ac610c411",
+            "nll_nats": 10219.747322037816,
+            "scored_tokens": 2334,
+            "text_tokens": 2334,
+            "characters": 4045,
+            "utf8_bytes": 4045,
+            "blocks": 32
+          },
+          {
+            "index": 33,
+            "sha256": "f967698f0772fd45bfeb821476a30f3cbdc545b76d7d952208219f124ae0f168",
+            "nll_nats": 3114.6803450137377,
+            "scored_tokens": 613,
+            "text_tokens": 613,
+            "characters": 1239,
+            "utf8_bytes": 1239,
+            "blocks": 10
+          },
+          {
+            "index": 34,
+            "sha256": "ecdc75246f0a56000faae974420f5e2c56268215578852217f8f17a6797fefd4",
+            "nll_nats": 4098.344306707382,
+            "scored_tokens": 1073,
+            "text_tokens": 1073,
+            "characters": 1586,
+            "utf8_bytes": 1586,
+            "blocks": 13
+          },
+          {
+            "index": 35,
+            "sha256": "98e02ce579c3285d55f256bfceba30a4bafc11e4d6d0709d5cfd19bd6901f6e2",
+            "nll_nats": 7520.538096755743,
+            "scored_tokens": 1918,
+            "text_tokens": 1918,
+            "characters": 3292,
+            "utf8_bytes": 3292,
+            "blocks": 26
+          },
+          {
+            "index": 36,
+            "sha256": "cdd6a218bc7d629c1b8199abcae7caab3c155a6fb1b0c57b20e525a25e3966c4",
+            "nll_nats": 18433.501232415438,
+            "scored_tokens": 3264,
+            "text_tokens": 3264,
+            "characters": 7157,
+            "utf8_bytes": 7157,
+            "blocks": 56
+          },
+          {
+            "index": 37,
+            "sha256": "315716870ed7da08467e28cedc90274d3350284905684d6b026aaed296638ea7",
+            "nll_nats": 8941.335597738624,
+            "scored_tokens": 2134,
+            "text_tokens": 2134,
+            "characters": 3404,
+            "utf8_bytes": 3404,
+            "blocks": 27
+          },
+          {
+            "index": 38,
+            "sha256": "7ec7bd5cb19d1e01759f739c115f46e7b18659aaf62dce3f9d001520ed79e129",
+            "nll_nats": 10085.499466225505,
+            "scored_tokens": 1889,
+            "text_tokens": 1889,
+            "characters": 3368,
+            "utf8_bytes": 3368,
+            "blocks": 27
+          },
+          {
+            "index": 39,
+            "sha256": "48ededf64fe117efc7aa28118b48c3da0cc10fa459a79c8f45f3794a2fe4769c",
+            "nll_nats": 2781.4320097863674,
+            "scored_tokens": 766,
+            "text_tokens": 766,
+            "characters": 1112,
+            "utf8_bytes": 1112,
+            "blocks": 9
+          },
+          {
+            "index": 40,
+            "sha256": "7c1ad43f8754aa5b8d8dc8dd9b60c403a3e19a2e34b18203955e619bf70b44d5",
+            "nll_nats": 35844.869227707386,
+            "scored_tokens": 8491,
+            "text_tokens": 8491,
+            "characters": 14991,
+            "utf8_bytes": 14991,
+            "blocks": 118
+          },
+          {
+            "index": 41,
+            "sha256": "bb58a49a61c9c807a3cd97abfaa0f22cce1df2d3551a7d0b1b1b16094d1ae5fe",
+            "nll_nats": 17415.575322970748,
+            "scored_tokens": 4940,
+            "text_tokens": 4940,
+            "characters": 8138,
+            "utf8_bytes": 8138,
+            "blocks": 64
+          },
+          {
+            "index": 42,
+            "sha256": "0d595a393babd9c3177bb515f43d235dd03ceed56d50c782b760f3053eb22e65",
+            "nll_nats": 12761.661151126027,
+            "scored_tokens": 3015,
+            "text_tokens": 3015,
+            "characters": 5076,
+            "utf8_bytes": 5076,
+            "blocks": 40
+          },
+          {
+            "index": 43,
+            "sha256": "81dd53b58899e2b3a815babe32083d37f21b96ae7212f9203055561d076eb67e",
+            "nll_nats": 15585.043696969748,
+            "scored_tokens": 4620,
+            "text_tokens": 4620,
+            "characters": 7070,
+            "utf8_bytes": 7070,
+            "blocks": 56
+          },
+          {
+            "index": 44,
+            "sha256": "7827307e09e3f59c320aab28b4ab6d0ab26e64558aaaf565604201d9fb1a0369",
+            "nll_nats": 9185.396372288465,
+            "scored_tokens": 2607,
+            "text_tokens": 2607,
+            "characters": 4287,
+            "utf8_bytes": 4287,
+            "blocks": 34
+          },
+          {
+            "index": 45,
+            "sha256": "ffd5fb617310f1905ff7f2085ba6619a674133659c54759ae906f6833dc797c8",
+            "nll_nats": 50193.06380185485,
+            "scored_tokens": 11664,
+            "text_tokens": 11664,
+            "characters": 16828,
+            "utf8_bytes": 16906,
+            "blocks": 133
+          },
+          {
+            "index": 46,
+            "sha256": "8699d1c957022c41e35bd320dc0fc408c90568e9ed52c110ad953aa79986a4f0",
+            "nll_nats": 10098.289080351591,
+            "scored_tokens": 2048,
+            "text_tokens": 2048,
+            "characters": 3416,
+            "utf8_bytes": 3416,
+            "blocks": 27
+          },
+          {
+            "index": 47,
+            "sha256": "c0d3704491b9ca84ec75a3e66ec2143255859c42b677ef5473b099e2d0de3300",
+            "nll_nats": 31656.997144907713,
+            "scored_tokens": 8016,
+            "text_tokens": 8016,
+            "characters": 12316,
+            "utf8_bytes": 12316,
+            "blocks": 97
+          },
+          {
+            "index": 48,
+            "sha256": "1d4d93f918c4cbf2b3ce6de88068089fde1a4e1e96602b03371a5e5f1b865e98",
+            "nll_nats": 32728.63195860386,
+            "scored_tokens": 7771,
+            "text_tokens": 7771,
+            "characters": 10630,
+            "utf8_bytes": 10630,
+            "blocks": 84
+          },
+          {
+            "index": 49,
+            "sha256": "03fb3878ee412176288eab94bdeb8ede55dc2a623095cf8a39ac9c54510c02db",
+            "nll_nats": 12450.26337993145,
+            "scored_tokens": 2433,
+            "text_tokens": 2433,
+            "characters": 3664,
+            "utf8_bytes": 3664,
+            "blocks": 29
+          }
+        ]
+      },
+      "train_loss_since_last_eval": 2.4992379212379454
+    },
+    {
+      "step": 500,
+      "exposure": {
+        "raw_chars": 1014157,
+        "raw_bytes": 1014716,
+        "target_tokens": 608471,
+        "padded_positions": 1024000
+      },
+      "training_seconds": 29.732728004804812,
+      "validation": {
+        "metric": "canonical_token_sequence_nll",
+        "include_eos": false,
+        "document_count": 2167,
+        "nll_nats": 703698.8707122505,
+        "scored_tokens": 169544,
+        "text_tokens": 169544,
+        "characters": 273529,
+        "utf8_bytes": 273747,
+        "nats_per_token": 4.150538330535144,
+        "perplexity": 63.46815795067893,
+        "bits_per_character": 3.7115730728943825,
+        "bits_per_utf8_byte": 3.7086173403022777,
+        "characters_per_token": 1.6133216156278016,
+        "context_policy": "chunks",
+        "context_length": 128,
+        "window_count": 2167,
+        "raw_block_bytes": 128,
+        "source_documents": [
+          {
+            "index": 0,
+            "sha256": "64842ba326be8949cabe43338a0480e7179700cdcce8338a7ec6ba7912780d42",
+            "nll_nats": 7022.489814996719,
+            "scored_tokens": 1738,
+            "text_tokens": 1738,
+            "characters": 2730,
+            "utf8_bytes": 2730,
+            "blocks": 22
+          },
+          {
+            "index": 1,
+            "sha256": "69d228c257b1de4a789d9a7aa9c276c1db9f09220037de655db5a462c0dc4b97",
+            "nll_nats": 22409.675240546465,
+            "scored_tokens": 5090,
+            "text_tokens": 5090,
+            "characters": 8702,
+            "utf8_bytes": 8702,
+            "blocks": 68
+          },
+          {
+            "index": 2,
+            "sha256": "41d49c3e8f26434dedbf0c668c5fb920d16f856b1279882a57460d635697a4d3",
+            "nll_nats": 16351.092352971435,
+            "scored_tokens": 3527,
+            "text_tokens": 3527,
+            "characters": 6686,
+            "utf8_bytes": 6686,
+            "blocks": 53
+          },
+          {
+            "index": 3,
+            "sha256": "7dd86486dccadd530862870c0e9d5332eee31e3f3fa2764a96f0e078be0a11ed",
+            "nll_nats": 12594.518944382668,
+            "scored_tokens": 3363,
+            "text_tokens": 3363,
+            "characters": 4985,
+            "utf8_bytes": 4985,
+            "blocks": 39
+          },
+          {
+            "index": 4,
+            "sha256": "d9cfa9511ce2cbec7482c7789ea49e9f2001a12e1bb612cbf962786a30143bf6",
+            "nll_nats": 11276.674390077591,
+            "scored_tokens": 3238,
+            "text_tokens": 3238,
+            "characters": 5028,
+            "utf8_bytes": 5028,
+            "blocks": 40
+          },
+          {
+            "index": 5,
+            "sha256": "db9ea4f16342f2fe8783e45093ee21de0e422ec07187b3e4f7718ecc14e846a7",
+            "nll_nats": 30240.7236315161,
+            "scored_tokens": 7716,
+            "text_tokens": 7716,
+            "characters": 12297,
+            "utf8_bytes": 12297,
+            "blocks": 97
+          },
+          {
+            "index": 6,
+            "sha256": "d61cfee9d8745745771e9b226ac18f33b0dc61ab0c3b2b3c75eeee675fcf805e",
+            "nll_nats": 5676.861741811037,
+            "scored_tokens": 1367,
+            "text_tokens": 1367,
+            "characters": 2271,
+            "utf8_bytes": 2272,
+            "blocks": 18
+          },
+          {
+            "index": 7,
+            "sha256": "a2b3878b37ddc864f1e0537c6086baae17a6640e92a6ed0b509722e32c7d40a0",
+            "nll_nats": 12886.210838019848,
+            "scored_tokens": 2918,
+            "text_tokens": 2918,
+            "characters": 5046,
+            "utf8_bytes": 5046,
+            "blocks": 40
+          },
+          {
+            "index": 8,
+            "sha256": "715f827f7032bf13c8230e4384e130b4a69efa325ba39396d15addeec543a11d",
+            "nll_nats": 4035.3962005525827,
+            "scored_tokens": 991,
+            "text_tokens": 991,
+            "characters": 1485,
+            "utf8_bytes": 1485,
+            "blocks": 12
+          },
+          {
+            "index": 9,
+            "sha256": "2cb2434e12e8174e7e7be6cc7b643f6fadc56ae95f4271a2fb131bf404eaca89",
+            "nll_nats": 3392.489886984229,
+            "scored_tokens": 693,
+            "text_tokens": 693,
+            "characters": 1310,
+            "utf8_bytes": 1310,
+            "blocks": 11
+          },
+          {
+            "index": 10,
+            "sha256": "c179902eb6517f833258dca0d26de1f359bd22784b47b189d34da6208661fbca",
+            "nll_nats": 3882.2024426311255,
+            "scored_tokens": 1096,
+            "text_tokens": 1096,
+            "characters": 1775,
+            "utf8_bytes": 1775,
+            "blocks": 14
+          },
+          {
+            "index": 11,
+            "sha256": "37d7ad747698956ce5628f2d9df8b61a8989cb7d4c432cdb8134bc9b56509785",
+            "nll_nats": 7435.533452451229,
+            "scored_tokens": 1949,
+            "text_tokens": 1949,
+            "characters": 3019,
+            "utf8_bytes": 3019,
+            "blocks": 24
+          },
+          {
+            "index": 12,
+            "sha256": "1aa8684320c2c95ffa24e23e19e900593894de5b2036e316e0c4f885aeecb5fb",
+            "nll_nats": 22180.504619926214,
+            "scored_tokens": 6327,
+            "text_tokens": 6327,
+            "characters": 9741,
+            "utf8_bytes": 9741,
+            "blocks": 77
+          },
+          {
+            "index": 13,
+            "sha256": "40153d6d095803c9d8428e12aafa99eb9ce979c1134160d18585e4eb55cdb72a",
+            "nll_nats": 23881.03614386916,
+            "scored_tokens": 5913,
+            "text_tokens": 5913,
+            "characters": 9474,
+            "utf8_bytes": 9474,
+            "blocks": 75
+          },
+          {
+            "index": 14,
+            "sha256": "3be06a880cfab71f9339d1005fbb2dffda0378589819ff4071876171704af1ff",
+            "nll_nats": 3053.9909202605486,
+            "scored_tokens": 742,
+            "text_tokens": 742,
+            "characters": 1089,
+            "utf8_bytes": 1089,
+            "blocks": 9
+          },
+          {
+            "index": 15,
+            "sha256": "9443f5f130017c2f9ed4d4c04cfb1f1943a1f43c44f739ac043ad5ca001686cf",
+            "nll_nats": 3319.5496415942907,
+            "scored_tokens": 775,
+            "text_tokens": 775,
+            "characters": 1412,
+            "utf8_bytes": 1412,
+            "blocks": 12
+          },
+          {
+            "index": 16,
+            "sha256": "ed3f522a325b1905543bcaf162b752b05ba8b8d609b3172c513c56408d3bef18",
+            "nll_nats": 7113.399126842618,
+            "scored_tokens": 1550,
+            "text_tokens": 1550,
+            "characters": 2778,
+            "utf8_bytes": 2778,
+            "blocks": 22
+          },
+          {
+            "index": 17,
+            "sha256": "0d14ded758a33468adc77e5322a2dd5ab6147889476c877dc529d362eb9ef8a3",
+            "nll_nats": 2559.153516471386,
+            "scored_tokens": 715,
+            "text_tokens": 715,
+            "characters": 1185,
+            "utf8_bytes": 1185,
+            "blocks": 10
+          },
+          {
+            "index": 18,
+            "sha256": "81362ea86c39b52e71a670fd5de41f9609a0b8cc6ddff47dffca53d862352c56",
+            "nll_nats": 28035.581630662084,
+            "scored_tokens": 6105,
+            "text_tokens": 6105,
+            "characters": 10785,
+            "utf8_bytes": 10785,
+            "blocks": 85
+          },
+          {
+            "index": 19,
+            "sha256": "b83240567ceec6e42ed7db229b4d3f0754d706cbae5ff381103d0c7e5fb74348",
+            "nll_nats": 40754.323725655675,
+            "scored_tokens": 8458,
+            "text_tokens": 8458,
+            "characters": 10687,
+            "utf8_bytes": 10822,
+            "blocks": 85
+          },
+          {
+            "index": 20,
+            "sha256": "8971694006f1621e51f17f9ea96407798865aa4ab28a71278c6f01826db90747",
+            "nll_nats": 6368.370289042592,
+            "scored_tokens": 1406,
+            "text_tokens": 1406,
+            "characters": 2467,
+            "utf8_bytes": 2467,
+            "blocks": 20
+          },
+          {
+            "index": 21,
+            "sha256": "2ba082b36718a967f1e7e471b7968f06323379da783a51a8af3ea387ff053484",
+            "nll_nats": 9898.727864727378,
+            "scored_tokens": 2362,
+            "text_tokens": 2362,
+            "characters": 4080,
+            "utf8_bytes": 4080,
+            "blocks": 32
+          },
+          {
+            "index": 22,
+            "sha256": "d14f2c2c93686714fb5d6a7f4ad14e3949d09d8b4a7b8e2f1fa96b01f9701993",
+            "nll_nats": 25381.019203737378,
+            "scored_tokens": 6393,
+            "text_tokens": 6393,
+            "characters": 11474,
+            "utf8_bytes": 11478,
+            "blocks": 90
+          },
+          {
+            "index": 23,
+            "sha256": "b5eb812b90aa9be8833f35091a78b290501392a23c8b733b0a0637909db59f26",
+            "nll_nats": 5831.397409662604,
+            "scored_tokens": 1410,
+            "text_tokens": 1410,
+            "characters": 2214,
+            "utf8_bytes": 2214,
+            "blocks": 18
+          },
+          {
+            "index": 24,
+            "sha256": "8550ed86da9cf42f8e25fb28d6a12bfd9937f2d5397a27d8fbd8df633950704e",
+            "nll_nats": 3708.590619787574,
+            "scored_tokens": 880,
+            "text_tokens": 880,
+            "characters": 1425,
+            "utf8_bytes": 1425,
+            "blocks": 12
+          },
+          {
+            "index": 25,
+            "sha256": "ade0c71aea063a4957d86c11bce993352ff95456b63d7d294d216c42826e54e8",
+            "nll_nats": 3915.2018858790398,
+            "scored_tokens": 856,
+            "text_tokens": 856,
+            "characters": 1680,
+            "utf8_bytes": 1680,
+            "blocks": 14
+          },
+          {
+            "index": 26,
+            "sha256": "568ef9633889c94d6c303f5f1b58274e04a19d3059d88000a0721f237c7558a0",
+            "nll_nats": 9890.55268843472,
+            "scored_tokens": 2732,
+            "text_tokens": 2732,
+            "characters": 4527,
+            "utf8_bytes": 4527,
+            "blocks": 36
+          },
+          {
+            "index": 27,
+            "sha256": "db37d7c262eb4081423fd51160f961ff3f0c69e7d6a5c62956eea5a1175424e3",
+            "nll_nats": 2964.9672245830297,
+            "scored_tokens": 718,
+            "text_tokens": 718,
+            "characters": 1300,
+            "utf8_bytes": 1300,
+            "blocks": 11
+          },
+          {
+            "index": 28,
+            "sha256": "17b9acdc557927ef6cb362c91ec0b98486764a5ffbd847332dae4aa739bdf7f1",
+            "nll_nats": 32859.596657902,
+            "scored_tokens": 7781,
+            "text_tokens": 7781,
+            "characters": 11858,
+            "utf8_bytes": 11858,
+            "blocks": 93
+          },
+          {
+            "index": 29,
+            "sha256": "fa8905a904ec661b88158229bb21636aeac17c2d8b3f5be97ef68a2e5e1ab970",
+            "nll_nats": 4354.660966128111,
+            "scored_tokens": 906,
+            "text_tokens": 906,
+            "characters": 1666,
+            "utf8_bytes": 1666,
+            "blocks": 14
+          },
+          {
+            "index": 30,
+            "sha256": "9db9c1aec98b065bf52a2ecfa979b9f5175737e19923ba346bacb1669190d12e",
+            "nll_nats": 5324.869156315923,
+            "scored_tokens": 1381,
+            "text_tokens": 1381,
+            "characters": 2259,
+            "utf8_bytes": 2259,
+            "blocks": 18
+          },
+          {
+            "index": 31,
+            "sha256": "25316f79744c258e4c29f26a8a36028a6e86c8e6e5a2c7e442ab5fecfe2f7de1",
+            "nll_nats": 32980.85312020779,
+            "scored_tokens": 8852,
+            "text_tokens": 8852,
+            "characters": 14475,
+            "utf8_bytes": 14475,
+            "blocks": 114
+          },
+          {
+            "index": 32,
+            "sha256": "983f09dfd2a824c642962e79b55d28178fb1c600de6520ce8047466ac610c411",
+            "nll_nats": 10187.659702986479,
+            "scored_tokens": 2334,
+            "text_tokens": 2334,
+            "characters": 4045,
+            "utf8_bytes": 4045,
+            "blocks": 32
+          },
+          {
+            "index": 33,
+            "sha256": "f967698f0772fd45bfeb821476a30f3cbdc545b76d7d952208219f124ae0f168",
+            "nll_nats": 3107.7290126383305,
+            "scored_tokens": 613,
+            "text_tokens": 613,
+            "characters": 1239,
+            "utf8_bytes": 1239,
+            "blocks": 10
+          },
+          {
+            "index": 34,
+            "sha256": "ecdc75246f0a56000faae974420f5e2c56268215578852217f8f17a6797fefd4",
+            "nll_nats": 4089.303518921137,
+            "scored_tokens": 1073,
+            "text_tokens": 1073,
+            "characters": 1586,
+            "utf8_bytes": 1586,
+            "blocks": 13
+          },
+          {
+            "index": 35,
+            "sha256": "98e02ce579c3285d55f256bfceba30a4bafc11e4d6d0709d5cfd19bd6901f6e2",
+            "nll_nats": 7487.860369369388,
+            "scored_tokens": 1918,
+            "text_tokens": 1918,
+            "characters": 3292,
+            "utf8_bytes": 3292,
+            "blocks": 26
+          },
+          {
+            "index": 36,
+            "sha256": "cdd6a218bc7d629c1b8199abcae7caab3c155a6fb1b0c57b20e525a25e3966c4",
+            "nll_nats": 18373.11831049621,
+            "scored_tokens": 3264,
+            "text_tokens": 3264,
+            "characters": 7157,
+            "utf8_bytes": 7157,
+            "blocks": 56
+          },
+          {
+            "index": 37,
+            "sha256": "315716870ed7da08467e28cedc90274d3350284905684d6b026aaed296638ea7",
+            "nll_nats": 8912.071678116918,
+            "scored_tokens": 2134,
+            "text_tokens": 2134,
+            "characters": 3404,
+            "utf8_bytes": 3404,
+            "blocks": 27
+          },
+          {
+            "index": 38,
+            "sha256": "7ec7bd5cb19d1e01759f739c115f46e7b18659aaf62dce3f9d001520ed79e129",
+            "nll_nats": 10043.076343074441,
+            "scored_tokens": 1889,
+            "text_tokens": 1889,
+            "characters": 3368,
+            "utf8_bytes": 3368,
+            "blocks": 27
+          },
+          {
+            "index": 39,
+            "sha256": "48ededf64fe117efc7aa28118b48c3da0cc10fa459a79c8f45f3794a2fe4769c",
+            "nll_nats": 2773.9550558179617,
+            "scored_tokens": 766,
+            "text_tokens": 766,
+            "characters": 1112,
+            "utf8_bytes": 1112,
+            "blocks": 9
+          },
+          {
+            "index": 40,
+            "sha256": "7c1ad43f8754aa5b8d8dc8dd9b60c403a3e19a2e34b18203955e619bf70b44d5",
+            "nll_nats": 35761.40209928155,
+            "scored_tokens": 8491,
+            "text_tokens": 8491,
+            "characters": 14991,
+            "utf8_bytes": 14991,
+            "blocks": 118
+          },
+          {
+            "index": 41,
+            "sha256": "bb58a49a61c9c807a3cd97abfaa0f22cce1df2d3551a7d0b1b1b16094d1ae5fe",
+            "nll_nats": 17356.304657772183,
+            "scored_tokens": 4940,
+            "text_tokens": 4940,
+            "characters": 8138,
+            "utf8_bytes": 8138,
+            "blocks": 64
+          },
+          {
+            "index": 42,
+            "sha256": "0d595a393babd9c3177bb515f43d235dd03ceed56d50c782b760f3053eb22e65",
+            "nll_nats": 12716.3753734231,
+            "scored_tokens": 3015,
+            "text_tokens": 3015,
+            "characters": 5076,
+            "utf8_bytes": 5076,
+            "blocks": 40
+          },
+          {
+            "index": 43,
+            "sha256": "81dd53b58899e2b3a815babe32083d37f21b96ae7212f9203055561d076eb67e",
+            "nll_nats": 15537.330800309777,
+            "scored_tokens": 4620,
+            "text_tokens": 4620,
+            "characters": 7070,
+            "utf8_bytes": 7070,
+            "blocks": 56
+          },
+          {
+            "index": 44,
+            "sha256": "7827307e09e3f59c320aab28b4ab6d0ab26e64558aaaf565604201d9fb1a0369",
+            "nll_nats": 9154.990807950497,
+            "scored_tokens": 2607,
+            "text_tokens": 2607,
+            "characters": 4287,
+            "utf8_bytes": 4287,
+            "blocks": 34
+          },
+          {
+            "index": 45,
+            "sha256": "ffd5fb617310f1905ff7f2085ba6619a674133659c54759ae906f6833dc797c8",
+            "nll_nats": 49957.5506144017,
+            "scored_tokens": 11664,
+            "text_tokens": 11664,
+            "characters": 16828,
+            "utf8_bytes": 16906,
+            "blocks": 133
+          },
+          {
+            "index": 46,
+            "sha256": "8699d1c957022c41e35bd320dc0fc408c90568e9ed52c110ad953aa79986a4f0",
+            "nll_nats": 10065.146218016744,
+            "scored_tokens": 2048,
+            "text_tokens": 2048,
+            "characters": 3416,
+            "utf8_bytes": 3416,
+            "blocks": 27
+          },
+          {
+            "index": 47,
+            "sha256": "c0d3704491b9ca84ec75a3e66ec2143255859c42b677ef5473b099e2d0de3300",
+            "nll_nats": 31557.44985958934,
+            "scored_tokens": 8016,
+            "text_tokens": 8016,
+            "characters": 12316,
+            "utf8_bytes": 12316,
+            "blocks": 97
+          },
+          {
+            "index": 48,
+            "sha256": "1d4d93f918c4cbf2b3ce6de88068089fde1a4e1e96602b03371a5e5f1b865e98",
+            "nll_nats": 32618.858346283436,
+            "scored_tokens": 7771,
+            "text_tokens": 7771,
+            "characters": 10630,
+            "utf8_bytes": 10630,
+            "blocks": 84
+          },
+          {
+            "index": 49,
+            "sha256": "03fb3878ee412176288eab94bdeb8ede55dc2a623095cf8a39ac9c54510c02db",
+            "nll_nats": 12418.47259517014,
+            "scored_tokens": 2433,
+            "text_tokens": 2433,
+            "characters": 3664,
+            "utf8_bytes": 3664,
+            "blocks": 29
+          }
+        ]
+      },
+      "train_loss_since_last_eval": 2.5323753476142885
+    }
+  ],
+  "exposure": {
+    "raw_chars": 1014157,
+    "raw_bytes": 1014716,
+    "target_tokens": 608471,
+    "padded_positions": 1024000
+  },
+  "training_seconds": 29.732728004804812,
+  "evidence_export": {
+    "original_metrics_sha256": "94144ff5018e06a9116078663fc53b6fd831bf238b2e52bfd1d2bb9e241956d9",
+    "omitted": "per-block records; all per-source statistics retained"
+  }
+}

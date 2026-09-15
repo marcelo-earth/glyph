@@ -1,0 +1,1602 @@
+{
+  "deduplication": {
+    "general_removed": 8,
+    "near_duplicates": {
+      "cross_repository_removed": 239,
+      "limitation": "No semantic-clone detection; comments and strings contribute lexical tokens",
+      "method": "exact lexical 5-token-shingle set Jaccard with complete global-prefix candidate index",
+      "removals": [
+        {
+          "cross_repository": true,
+          "jaccard": 0.93717277486911,
+          "removed_sha256": "00a66abb59d1f23b1b8914a85452f9ed7eb2891743e1230df10b484f83cdaeb6",
+          "retained_sha256": "c00a1ba00e0f76118def11fe6b27ff75c0c53d865ef57022bc095925b3a008de"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9682539682539683,
+          "removed_sha256": "fdea905dd5e36d83a8fe36c1d5a437c24fe49f8eeb693506129b6e02c2f8c7d9",
+          "retained_sha256": "778cec2055f2d5ad3dc99367f297f13dcb706b8d4bbdc5e6bf7184ba13453be2"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9479166666666666,
+          "removed_sha256": "61145d34ee6686f35f8bb4acd78109949c64931f7e39caa4f58ac6f107fec532",
+          "retained_sha256": "248b91af7a40b115e0eb6092c438bb07c78653db0215dee41defe96cd361d632"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9487179487179487,
+          "removed_sha256": "f531666ec631dac1af2d9ae1363f340cccddf4f21052093da29848aff905e152",
+          "retained_sha256": "ea3de252162ec3d37b2a36dbbe77f59a273c556501d6bce92953b10d5891c7cf"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9381443298969072,
+          "removed_sha256": "41344a982c72e89a262fbbab858a4d2c4c775b7b23d9cc889369b408bd3d67f5",
+          "retained_sha256": "248b91af7a40b115e0eb6092c438bb07c78653db0215dee41defe96cd361d632"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9390862944162437,
+          "removed_sha256": "71b1e580223969c60596b78b46712f831e979621693c2f1dd5898c6985005e1b",
+          "retained_sha256": "ea3de252162ec3d37b2a36dbbe77f59a273c556501d6bce92953b10d5891c7cf"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8878048780487805,
+          "removed_sha256": "d8ca907c5d7291fd6302288641e5125259c76876b0d4a29b763334775b2aabff",
+          "retained_sha256": "35c4515a23e4389c4cae8b3420cc37bcd0dffa0fecb55c57b2d7ce7b9d78c711"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.91,
+          "removed_sha256": "2b20cad4524c08d643bd4af7536c1f69fe8a1001f9c963b6f4aec30921129086",
+          "retained_sha256": "248b91af7a40b115e0eb6092c438bb07c78653db0215dee41defe96cd361d632"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8523809523809524,
+          "removed_sha256": "7c279c8794cc26dcff402ee695e08b1480d8686937bdba50288b10699c4d2400",
+          "retained_sha256": "ea3de252162ec3d37b2a36dbbe77f59a273c556501d6bce92953b10d5891c7cf"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8878048780487805,
+          "removed_sha256": "c05f4b2c25045c0c7fcc898eff231c08c8d9e90b96074a45aad316f8c532d47d",
+          "retained_sha256": "248b91af7a40b115e0eb6092c438bb07c78653db0215dee41defe96cd361d632"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8878048780487805,
+          "removed_sha256": "21829ed45d81adb041a138bde3397333467b1752fda6f1bc750d8f109f8fe30a",
+          "retained_sha256": "248b91af7a40b115e0eb6092c438bb07c78653db0215dee41defe96cd361d632"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8878048780487805,
+          "removed_sha256": "24ad22daeaadae7a5e70c045af87ea1d8b99c5527bf591dc854044226a30f4aa",
+          "retained_sha256": "248b91af7a40b115e0eb6092c438bb07c78653db0215dee41defe96cd361d632"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8878048780487805,
+          "removed_sha256": "0d88668710b05d49018a4342f6432642d2f7ef91b97f0662fb041fd16b5919b1",
+          "retained_sha256": "248b91af7a40b115e0eb6092c438bb07c78653db0215dee41defe96cd361d632"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8878048780487805,
+          "removed_sha256": "25e3c91593744a8ca3976fcb95eb920c1cfa1fd8f67a1d000b220af67e4d1feb",
+          "retained_sha256": "248b91af7a40b115e0eb6092c438bb07c78653db0215dee41defe96cd361d632"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8878048780487805,
+          "removed_sha256": "ff10acd81056db6e1e9453957b22055255af68085c4eb03edd55f944dfb8d6f7",
+          "retained_sha256": "248b91af7a40b115e0eb6092c438bb07c78653db0215dee41defe96cd361d632"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8878048780487805,
+          "removed_sha256": "ed828f241b7d22578eabfa54dd040ba6f22609684cb8f86ee112d62ce98a5131",
+          "retained_sha256": "248b91af7a40b115e0eb6092c438bb07c78653db0215dee41defe96cd361d632"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8878048780487805,
+          "removed_sha256": "a625b7f159168420e968b1139f3f159b3fda36ef0c315190a1592dd58daab3e4",
+          "retained_sha256": "248b91af7a40b115e0eb6092c438bb07c78653db0215dee41defe96cd361d632"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8878048780487805,
+          "removed_sha256": "a415d08f0b6d703e35209c6d42cd4009f6538de3b9c80b8370f02e1579f8ca9b",
+          "retained_sha256": "248b91af7a40b115e0eb6092c438bb07c78653db0215dee41defe96cd361d632"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8878048780487805,
+          "removed_sha256": "d5675c18dacba63c10802d5b02a8c70d26b8f30a18b45b814e399aad252fe835",
+          "retained_sha256": "248b91af7a40b115e0eb6092c438bb07c78653db0215dee41defe96cd361d632"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8878048780487805,
+          "removed_sha256": "28434fa6b4938719b188172e06f9b89ecfb4d70cae46a0f0baa7d26a542454c0",
+          "retained_sha256": "248b91af7a40b115e0eb6092c438bb07c78653db0215dee41defe96cd361d632"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8878048780487805,
+          "removed_sha256": "5007534d75fb8b46783534715f8e65a29a6ef3f2d2e6d7909140f4bb647db38f",
+          "retained_sha256": "248b91af7a40b115e0eb6092c438bb07c78653db0215dee41defe96cd361d632"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8878048780487805,
+          "removed_sha256": "974024047dc6b885bea30d7bbd007247b9a1bd2c0c0e180875a49cc465c2c547",
+          "retained_sha256": "248b91af7a40b115e0eb6092c438bb07c78653db0215dee41defe96cd361d632"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8878048780487805,
+          "removed_sha256": "044ae872e7f73a2762757e440dd1db78c5ea02fc27a6f6dfca18484c4baa5fde",
+          "retained_sha256": "248b91af7a40b115e0eb6092c438bb07c78653db0215dee41defe96cd361d632"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8792270531400966,
+          "removed_sha256": "f132995f7c465efafff39455343a3fa07ffa0aa5e34773d84c10ef8e5d751ad0",
+          "retained_sha256": "248b91af7a40b115e0eb6092c438bb07c78653db0215dee41defe96cd361d632"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8792270531400966,
+          "removed_sha256": "01adfb6eac4c0d570ba847ec431a631011f5740386074649da197f71bdc93427",
+          "retained_sha256": "248b91af7a40b115e0eb6092c438bb07c78653db0215dee41defe96cd361d632"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8792270531400966,
+          "removed_sha256": "1a18c961644a901449ce7fc46a9b331f2fa0fca73181b9cfc82e7526f0a14e18",
+          "retained_sha256": "248b91af7a40b115e0eb6092c438bb07c78653db0215dee41defe96cd361d632"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8851674641148325,
+          "removed_sha256": "d84beec49f45be75480e9181f6c9391757e7d37e938f3229643d0fa15ba4f02e",
+          "retained_sha256": "ea3de252162ec3d37b2a36dbbe77f59a273c556501d6bce92953b10d5891c7cf"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8851674641148325,
+          "removed_sha256": "dbfe7218f72b75a382ba2e39275be2f6cc62317290461b5d5fc0e14cec3971ef",
+          "retained_sha256": "ea3de252162ec3d37b2a36dbbe77f59a273c556501d6bce92953b10d5891c7cf"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8792270531400966,
+          "removed_sha256": "709d911f74c5c3f9615049658e25d2df4150433cc8e18a081544da394b436480",
+          "retained_sha256": "248b91af7a40b115e0eb6092c438bb07c78653db0215dee41defe96cd361d632"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8792270531400966,
+          "removed_sha256": "dfae6946dc72eafc89e4c8cc5145bdf5e91dc3b90f0def268a520e039c500659",
+          "retained_sha256": "248b91af7a40b115e0eb6092c438bb07c78653db0215dee41defe96cd361d632"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8792270531400966,
+          "removed_sha256": "7cdca1c52bb50e5549b63e066f6f55c69d8edb0245bd72b77fe3388a8766c92b",
+          "retained_sha256": "248b91af7a40b115e0eb6092c438bb07c78653db0215dee41defe96cd361d632"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8792270531400966,
+          "removed_sha256": "e1083bb19bf1bfc555c724d7320a08df49b688fab101585bec615f85e45e0d13",
+          "retained_sha256": "248b91af7a40b115e0eb6092c438bb07c78653db0215dee41defe96cd361d632"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8708133971291866,
+          "removed_sha256": "53162ccc91164090b6188750d09478e948405b2a98807d808a497a1f849a820f",
+          "retained_sha256": "248b91af7a40b115e0eb6092c438bb07c78653db0215dee41defe96cd361d632"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8708133971291866,
+          "removed_sha256": "60d3a88d92eabdf4527488465e3e37859c5d277b19bc1ebc10cbd97fb4efdcdc",
+          "retained_sha256": "248b91af7a40b115e0eb6092c438bb07c78653db0215dee41defe96cd361d632"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8708133971291866,
+          "removed_sha256": "fc19e0cbba9807670a9578a5cf0872f9a94cdd0b47ffb4e1b29068238c60f8dd",
+          "retained_sha256": "248b91af7a40b115e0eb6092c438bb07c78653db0215dee41defe96cd361d632"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8708133971291866,
+          "removed_sha256": "a0ab81552c567b329cbff6be7fa7930c04c5c444fd6be90ce8fcf57fa7ed63dd",
+          "retained_sha256": "248b91af7a40b115e0eb6092c438bb07c78653db0215dee41defe96cd361d632"
+        },
+        {
+          "cross_repository": false,
+          "jaccard": 0.8558558558558559,
+          "removed_sha256": "d76b3685d643b02e0660113c1c3008ab02c8d4775d3d343e81a65ffe0cdd076e",
+          "retained_sha256": "04ac05611463db6662de81277cb360af0f1ac258947457323a55561bd2a2accd"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8625592417061612,
+          "removed_sha256": "d5564bcbda065faf30047b40c7ea0dfe54972948b2fff4081d7ff2f2ed76b6ad",
+          "retained_sha256": "248b91af7a40b115e0eb6092c438bb07c78653db0215dee41defe96cd361d632"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8625592417061612,
+          "removed_sha256": "f6052828e9e794c12ef5fc9c76f2693aa12af4da001bd2890ca08dca8fe92212",
+          "retained_sha256": "248b91af7a40b115e0eb6092c438bb07c78653db0215dee41defe96cd361d632"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8616071428571429,
+          "removed_sha256": "13e065ac254f190f6ebd8bb5ac91517db33b6a1528062d85d611349357b7dc3e",
+          "retained_sha256": "6fe5a240fbcca306bb2c007039d4b3b46474725a4a134e22d9a6b2b8d605ca2d"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8616071428571429,
+          "removed_sha256": "0666f93f161c29c4065e2902e5fe3346a4400929c6f7c9b4bc1eb646034a299c",
+          "retained_sha256": "6fe5a240fbcca306bb2c007039d4b3b46474725a4a134e22d9a6b2b8d605ca2d"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9259259259259259,
+          "removed_sha256": "ab663c1a4e8dafe15587ff217c27c6fedbbca57b3397f5d89ce078c3d12751f7",
+          "retained_sha256": "04ac05611463db6662de81277cb360af0f1ac258947457323a55561bd2a2accd"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8823529411764706,
+          "removed_sha256": "1647d7a9a70ec3438d6d9e2a8bc6e73d8b99f76b3c1541463a7ab6b19ebcd7eb",
+          "retained_sha256": "04ac05611463db6662de81277cb360af0f1ac258947457323a55561bd2a2accd"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8823529411764706,
+          "removed_sha256": "134e503dc001b7f03de43581bf341925f49b29c14d72e9256600a79785fc5159",
+          "retained_sha256": "04ac05611463db6662de81277cb360af0f1ac258947457323a55561bd2a2accd"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8525345622119815,
+          "removed_sha256": "eb20f0bfb5430eeb2a1c2f6337d692537624552f6dcc120099bc1b4a85d84b47",
+          "retained_sha256": "ea3de252162ec3d37b2a36dbbe77f59a273c556501d6bce92953b10d5891c7cf"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9181818181818182,
+          "removed_sha256": "18fe726bd65b76e0e137f379e8da72881ff87befc8ec95ef53e96332dcee98aa",
+          "retained_sha256": "75bc86070bfd4692f79dbc98f4d28ca263ddb2e4b91d0218dec2bcc51aa6a336"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8944954128440367,
+          "removed_sha256": "dbd2fa804aa585a33f47189328a07dcec6c67a3368dbc41edc89b70a38bfc57e",
+          "retained_sha256": "e53565c877d803a9f267b7d76a253c580435adb64235f1e94d548189634fe98e"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.920704845814978,
+          "removed_sha256": "8d38bcaf30892b3714a932669485f44bf152ae8df1fb7e61ae644656d2c5d7aa",
+          "retained_sha256": "22aa50ae6d50b207a93054f79cba8073172f3027658b55e73763842cbc84eaf9"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.956140350877193,
+          "removed_sha256": "aa8d163b8920fba15d063d7ad3c1ccd155be9d1305bd14b1ebae3ec04e06fd07",
+          "retained_sha256": "150cf3c52d48720de470d16f58c6dc551348218cd99885b3b20031fc33dbe9a1"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8536585365853658,
+          "removed_sha256": "8434dd1c78337ee2c4b344e83a35ee167f9719431750aa0c81bdc60976d94eae",
+          "retained_sha256": "0036deeadd6bc265a435c20b5f53dd7f52e274ef55128d93aab10074b6a9c2c8"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9539748953974896,
+          "removed_sha256": "c8e047eadaf6ca9c32fc1e333328ee73c41d265451a065ec48aba1048c1e45a5",
+          "retained_sha256": "febdcf2574fb4aaafc2333105718bdfcb6429339365e85026f2604f9d3a94ef2"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8605577689243028,
+          "removed_sha256": "f6ee6f9b59c1fedeab14f89533eddd40e479aca968be01fb4f1936f356946e47",
+          "retained_sha256": "febdcf2574fb4aaafc2333105718bdfcb6429339365e85026f2604f9d3a94ef2"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9581589958158996,
+          "removed_sha256": "0e0e30a780ddafe5a78afa2433b75cdab5915f2b1e5f44689b0d1f428f757c80",
+          "retained_sha256": "febdcf2574fb4aaafc2333105718bdfcb6429339365e85026f2604f9d3a94ef2"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.950207468879668,
+          "removed_sha256": "c7411b8cc0956aaabf8f111ef66602cd39c68ca1b889f9e971300dc4a66dfbb8",
+          "retained_sha256": "2e27986b6d6032b62ade671477e452384fcf7be1103769149c3c6576c63bc811"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9233716475095786,
+          "removed_sha256": "4d0a8d4b4e120dc21feafa4e6b35701038dfd7965c1051031d8f0956832f5a3b",
+          "retained_sha256": "1a2c2d857ef213d24549d42b791d0e72e156eee94094a61a3e05e673a727b1e4"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9301470588235294,
+          "removed_sha256": "3100607a90bb3794bf39dc434ef495610ed3224c7cf5adc9a82ac6aa95d4d256",
+          "retained_sha256": "7df4a2b7618ba8548b36ec6f333425f7d8aa2852bf943f23ad27f154ad14d903"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.900709219858156,
+          "removed_sha256": "8114490c3a6230a491025f24bbc4c73144cd18aa39518b6ed7878badacf315d5",
+          "retained_sha256": "51641eea34782abd72a434ff24504bc8fd418f3996d9bd2e249cf44a3eb10da0"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8939929328621908,
+          "removed_sha256": "75f29e52da46d46e5c89cc693c2f939e5f6f21ca7a57e5b0eb7666f11e626689",
+          "retained_sha256": "b6d1815104cdf04f7f2e7523828f02e5c7bf224f906a10206a26b0de050beba2"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8532423208191127,
+          "removed_sha256": "9a2179744f7cbcf30190cd6debf8cd9a76d8f1f82ca9330d10fb74f6c3e990b1",
+          "retained_sha256": "d9bfa8e23c045a0d1a51240ed92a97de1c9698267e5cea3cbac957107158565a"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9646643109540636,
+          "removed_sha256": "0a7c4d5a1c672e2866e86343c87b36c2b1e8dec2bb79ccb6aafe2b8ed42086bb",
+          "retained_sha256": "c398660d96734eaf1343f1a894f9ad8884f4c1aa6d96d3a37da4901e26111ef5"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9858156028368794,
+          "removed_sha256": "649d46406967c4c000c1136fbdc4758cebe398496cfe057d30fafae984ac27ce",
+          "retained_sha256": "63c33249d279be10872e7bc5bf2009c544868c7f0d6f8e400ddb173abe353e15"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9340277777777778,
+          "removed_sha256": "43f6f130c1070885a56640b1341fecd7704d777b973b7c6b44341a07e8a8aadc",
+          "retained_sha256": "26d78e5c7916b6f480a11ade9e4918621a233694dea1199c443b36b6fefe3bbc"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.872852233676976,
+          "removed_sha256": "29803381d33f7eb38675d9ca2718a23118782f6d6c43bdf4d301b5bafd5f7c12",
+          "retained_sha256": "34cacacd874ff1ad1252ea2666b7a934ec8650511bc349873ca7baec7615fd69"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8664495114006515,
+          "removed_sha256": "1e6a24ecc5d25b441317ee930853df46aa47955ab5cce8a1a923271df5f2b2fa",
+          "retained_sha256": "e84359a8cdc1d68cb5c16830c8a275412431eb9740763644f370fa0fa39062b1"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8610271903323263,
+          "removed_sha256": "63cd65f0668712a30298cb5b8687497d3b802e6a779e553e0b452b4d3cf701fc",
+          "retained_sha256": "48d40e589f7faea6337af5a80d7e062bd16d71530df7d15ea95911a218127e86"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.851963746223565,
+          "removed_sha256": "030e3e8c1ee89167d8ec01d6d7b79bb65cc91b480ba71b04db456d39430121a9",
+          "retained_sha256": "6e74034d1c2339efae0d59263bc2ae5baf83b0ddbe78d2fbcd687b68275e39e6"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9119496855345912,
+          "removed_sha256": "5dceeadaaaef478fc35fd8d98c776e8dfb524a1b84f4c28ae6f4916aeef2a703",
+          "retained_sha256": "3a9b0f8aedf61cb332968af0dd1584e555440201d0cf7bf949c5c28184d7d80c"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.861198738170347,
+          "removed_sha256": "5ced3f20360ad7f8582422bedac55b8be3aed158a853ce3812132decfd2ea7a8",
+          "retained_sha256": "c398660d96734eaf1343f1a894f9ad8884f4c1aa6d96d3a37da4901e26111ef5"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8724035608308606,
+          "removed_sha256": "c895479f9a6ca2c2c917f7035ee4d830e9688cbf3fba38135e393759e0375b1b",
+          "retained_sha256": "81ee2a326055feb3be5a9bf308258fada3f759ecf36e1d43e8362152e38b3d21"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9570552147239264,
+          "removed_sha256": "8bbf208881b144b602c3091f6ff35f52f05ae6db5001ae5c92ac8ea0f3a551e5",
+          "retained_sha256": "7a9f5c7359210bea495d8be850960679002de2af22d58348b9fc535ae58d9713"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9235294117647059,
+          "removed_sha256": "a977e566ad0442e5a5f49003279df00753a2cbedcc8303a1e6b423ce44ae1007",
+          "retained_sha256": "baa698d1eb0109a228073a55dc536ef509c6f9efc8c4cf6040eba6e97e4f6231"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.884272997032641,
+          "removed_sha256": "29845cb44b2c164851baff5586000d2ae2e307e499d76804e694dc71f891ad28",
+          "retained_sha256": "4a79979add8dc2126116ebdbaf8c4e2be5c193eba0e9ccc4bd4146af2c69fb49"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9710144927536232,
+          "removed_sha256": "ca687a72b717154950df4969b2f28ee5e184f8265c38d2484287baea289d4666",
+          "retained_sha256": "b8a221ded142a5b1e9c62e1d3ba5928922fa9b38971d527cd71277197395759a"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8736263736263736,
+          "removed_sha256": "18d2e38bd24b79c100136234d45cff55c5923200428076b32855074fbfe36cf4",
+          "retained_sha256": "dd9c0dd531fef584903bf7425a939df128ae5baf1f4ce750862ba6c2ede94284"
+        },
+        {
+          "cross_repository": false,
+          "jaccard": 0.8552971576227391,
+          "removed_sha256": "690b5473fe70781d36d62eb14cf5abe40fceb5c3b8fe9f20a9c70a69e5b3f66c",
+          "retained_sha256": "5977289359e82168584a0a6a0560c245bac3d87daa7fad1d71df6e4fe4f7e145"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9725274725274725,
+          "removed_sha256": "79cb72c54a1ac8acee2d58b176cd0f9fee6e1c0336323881391707658483e261",
+          "retained_sha256": "0533f4db7b1dea601a3f8aa70c2960050d15b3d696f5692e3601c2f1bfbcd263"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9115281501340483,
+          "removed_sha256": "ca9170b11d300a195f0de1e83c1c16e0aabfd919dbc84000c00b0e8593607a38",
+          "retained_sha256": "0cb4cb4bfc25ca209e7593e948b8758092fe13f14effdbbce5ec795dc999f5b7"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9349593495934959,
+          "removed_sha256": "2e03d6a04f47896dd58a7ba3639f015a9e671ff5b3aa2b5797feb2d572bb5f55",
+          "retained_sha256": "b656da110f7de0fe818fe5258976a0316e18bb50ff9de1aca4339a40b2f91e55"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9358288770053476,
+          "removed_sha256": "b7de496bc2838372ed29c3dd990164d07e5ddf8f0d3b80c829aba7e9b15d9df5",
+          "retained_sha256": "cbb5d63e1b8ebfb4240c1bf1e2a9307a19aa469ab02f39fbe455a7fb6e66bdc7"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9112271540469974,
+          "removed_sha256": "70640cd0c80275f1c94ddd2114dda50de16163a2319c56748b65213334ef3335",
+          "retained_sha256": "0cf80bbda9f7371c0aca463d3d8d9329bae0d486c02d54e62a53b92fb87869e0"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9259259259259259,
+          "removed_sha256": "7c454bb8f0d96e4992d860b648c36acf5a89ba69b6db1aae31cd5b9a5ff0b3c9",
+          "retained_sha256": "5247a15fa07a90e2aadb58e36d93320ed8dfe20be4128e8df92d87525e3b9e7c"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9267015706806283,
+          "removed_sha256": "3a1a5025276e29036484f648a24c6083c4e9bd4a227abed1a7f16cae8add4e56",
+          "retained_sha256": "0cf80bbda9f7371c0aca463d3d8d9329bae0d486c02d54e62a53b92fb87869e0"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9211822660098522,
+          "removed_sha256": "ee2509b73bb5ea3096fbe0562f2bed5a23c62a6c24dbf8b872aa6bf4a5601f03",
+          "retained_sha256": "3efb7aefe930fde11552e882bcaaba865ff63e0419871e6c8adf12e818dd497e"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.91,
+          "removed_sha256": "279f476a13ad4e809fb24f2c974c95b80d038cd6be3011ed4ea4312334019d3c",
+          "retained_sha256": "e24e631d1ca65c3d0da9df6f17fd58e923ea5cd38273cea229f11b8f35172bd2"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.99,
+          "removed_sha256": "64c0dec112be9a394aef6b33188223cd89cb227fb33cfd1680950c8ca799e938",
+          "retained_sha256": "cd8db1e6d057cef80b5a01775d193f08493e5fc43c2fd6eaa444aa5a7d7723fd"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8720379146919431,
+          "removed_sha256": "29d3783e648b666a3225373ee232a0fbb37020aa7998837ca5ba662d3764bc28",
+          "retained_sha256": "ecd2ce4c42d7da36d824146c20bbcf7c80fe73e9804879ec9319ea51510cde63"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9514563106796117,
+          "removed_sha256": "0505288db3f0bcf7addae5ed16fef10dc9c2903ca5964765942566aa084c7b14",
+          "retained_sha256": "a21d673cda1e48887f8c84ef0361b3b9663fcb395e0107443bd7c49b2947755d"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9733656174334141,
+          "removed_sha256": "faf752e0af615d002472f14b82766a3666a1ff2c87ecd67623a81168a5f61305",
+          "retained_sha256": "d5415de53229f4cc81a78c609d9a32419b1c6553cfaf4b5645a5cd479c3fbddb"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9878640776699029,
+          "removed_sha256": "2ee5db21eab82b2375cf5f73092561913b96286a0d8daa54ba84d9b1719b433b",
+          "retained_sha256": "ce4d8e1dfe354a68233143a521290a58bd25c5fc992756aa204e7e919f20f200"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9450800915331807,
+          "removed_sha256": "719cf7385c40e3843179507282c1cc850b9e1afadbf4ae2c45843d1ef210ca65",
+          "retained_sha256": "e2bfc30ae2c86bd3f12572adc1418523b1e496100c769a099d5ab576d0bf7801"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8627450980392157,
+          "removed_sha256": "bc5bc84448e59db6013c651a859796528630cfe68e714d1b98f728f77ff274d3",
+          "retained_sha256": "b621faea286edb19a6b499d135f06f2f4040f8253e62e74b1f3391e4df2eef77"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9142212189616253,
+          "removed_sha256": "92e25c9366ac4d8ad7f703565d9b0928421f853ad96cc10024a858a66e2bce70",
+          "retained_sha256": "6c1050719b8e5c8e2dcd095c43d87b4c98f63ac338f2222615a54ae576699636"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9431818181818182,
+          "removed_sha256": "1bf0ea41733fdd7946896f1cb91aa8f85164c2f454473940fb8b0b5fd3d9e9f1",
+          "retained_sha256": "3e7637585cdac4fbcfbb606f983ab1463af0a04f1b70ad37ba54df4ea65a7f68"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8516129032258064,
+          "removed_sha256": "85656f1d5165b1ca8f9d2d10fddfed10e8b4f59c49dd28f75ec39714e3fa3767",
+          "retained_sha256": "b621faea286edb19a6b499d135f06f2f4040f8253e62e74b1f3391e4df2eef77"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.891156462585034,
+          "removed_sha256": "49a4493329bf711e2a46430cf413eeb2ef0dc2c202fd870511202dfb608c768c",
+          "retained_sha256": "1406ee89e9ccbc885eff92ddc9e94d9a87f6cf91c268a979a5ca17cf051fa00c"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9736842105263158,
+          "removed_sha256": "829c9a52771115f9691554ba2b6ebff227f2da413b5ac62705c443eb0108fdfc",
+          "retained_sha256": "4f36967fb84fb44ed59785f83fb34941136e49d2567af100b62ab50135b1321d"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9245689655172413,
+          "removed_sha256": "790404aae43cf5e0238bc933c69b32d5c92a5e302e8bc699634b36afe86be530",
+          "retained_sha256": "cae544f6bd7f77bd0a27013bd86d579610a27eb15bf62b6433e59fdb01ebf9ce"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8507157464212679,
+          "removed_sha256": "e373d4cb1f844b41602d61a98d19711680ec9f9c6ea3c4436cb0d95968ce3424",
+          "retained_sha256": "055b7ac88ac33172687e503927a0c921cb0951f5bf5c479584ecde9534c50cfe"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.978401727861771,
+          "removed_sha256": "345e91972eba6e295653eb1d50b5e309d420375b91c5f15179d7a27dc44bce45",
+          "retained_sha256": "36f2e516c76df2287f4384b67a4405dc2246d27397b37d9823e1b4e3f01d4f68"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8762677484787018,
+          "removed_sha256": "3f03dd6d865f23d401921e4c39cea4a70d9d36c55c11ba35c74138b608364664",
+          "retained_sha256": "f514e43423b278332b022e05e39ff42c49ed3da5506b226c67dbef3bd9d30946"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9281183932346723,
+          "removed_sha256": "2bed3e700c77ea65ff3c6faa3d9c28b06f592c2962463aae290e271e226fbf38",
+          "retained_sha256": "055b7ac88ac33172687e503927a0c921cb0951f5bf5c479584ecde9534c50cfe"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9352818371607515,
+          "removed_sha256": "c064d455db4990e6f14d69abac74a5f2c20e0903be6897d3106651c5b085632f",
+          "retained_sha256": "c84bf657658c4e11104168cf07e5973a212b9295dd0daf253f1ecda4f5da696e"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9832985386221295,
+          "removed_sha256": "334684daec24ea66e24ace548dc9acb42740268a0d7a28e9f2bfb2d0333fb5c4",
+          "retained_sha256": "fbe2509a33527a51f6cfc106e7d9a1f481846a2942cb69df7bed894e3872c995"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.979296066252588,
+          "removed_sha256": "020915e650e9da0868cdbfc9f15fd43d9d2eb9d4d64f3de2b122bda14be8ef9d",
+          "retained_sha256": "cbb5dea5d62595eb32105b930ea5a3816ff18f1279fc97b213d1da6812609623"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9483471074380165,
+          "removed_sha256": "3a5e0effdb03d95aa4938dae0dcf9813d4a3d74d8f5f28df564fb909db763a97",
+          "retained_sha256": "f514e43423b278332b022e05e39ff42c49ed3da5506b226c67dbef3bd9d30946"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8962075848303394,
+          "removed_sha256": "c8555ab8b8ca1ef3f225d67108461d8ab619110662fe37e9f453ad743da7fdd1",
+          "retained_sha256": "83c8d2a34dca262d597d70e0601ece756089740f130fb5e5db99f1350f5e1bfe"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8846153846153846,
+          "removed_sha256": "c9223a7c39d7f4c9be496c0e250bf0431b3625872f954ede100598444197dd37",
+          "retained_sha256": "0f12ef2c12492ed89815acfebc674bf01258f7caedb9d269419d464ee5827902"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9502982107355865,
+          "removed_sha256": "ca9e299bc3f2f42ce62970fe159ac46483c90d3346c39f25dd43e2dd31e9149c",
+          "retained_sha256": "0bb5a39d0de931831aaffcdb404a21364d9392219786f60f4d3a573902b4e58e"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8836363636363637,
+          "removed_sha256": "4c03911ec240a356071e06c9b87911af2c490600f9a82dcf9e84d4ce41995b9a",
+          "retained_sha256": "78da33b32eb752e66c927bb475e6f923873acc060ade43d5d5f428de9a57321f"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9831144465290806,
+          "removed_sha256": "b71909baeb53e8f94ca9716dcccb266f0b35e30343bba177e2c357e93feaa7b0",
+          "retained_sha256": "f3d20b4a1d71f07e6f5cf0b627100d005d660a92a9808b9c86a229ba7ae18353"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8806509945750453,
+          "removed_sha256": "bf30a1110e454797aa9a246d64b7d3b1142bed97331d02a55963e2350917a107",
+          "retained_sha256": "246ac93d5d9819ab73c2b7b197d912b7c67c42d9856e84591fdcb0b0b2bf30c0"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9537892791127541,
+          "removed_sha256": "7701b815c219d1e85593ee5e73c4c36e166a3bfe704383b38551dab97a6dc563",
+          "retained_sha256": "0f7d14ff233d0c7eba6a63cc7e48d2d8d5680604d584cc7c541b21124ba88df6"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 1.0,
+          "removed_sha256": "617dc8a5b2b1156e7b8090d19dc199e9c7a30b102053ea4ce7ef4809aec93741",
+          "retained_sha256": "ef895fbe0a31a89cde5541bc6a850c674cbea505f179701c892b450ed9d1f4be"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9821428571428571,
+          "removed_sha256": "00dc63eb51bef21b79e5f263fc139b94a174c665761c74c36ae22f4f8916e3b9",
+          "retained_sha256": "fe08ab5326921129633eabb8e5ac49cbde783c7c6dbbb39850619adb30807e88"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.983957219251337,
+          "removed_sha256": "d85481d1e971f75721d1b51f65408bd9ee39b2addfc1d7d4796b63a030076286",
+          "retained_sha256": "557fc47929f9f3a9945c9462311f2fdf6d0fd34ff5a831eed3d677551b75e2b9"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8932874354561101,
+          "removed_sha256": "9a6008038db38e8e5e2b0b25b4102436978095b476a810b28bd910a9213139c0",
+          "retained_sha256": "97d5b51c5512b01a7dac4554bffc2990d78fedced31c7bbb454cb783b2a559e1"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9623931623931624,
+          "removed_sha256": "79acba662891ab8b8cc6c8368cc00c024afd88bf707bd27d6db65c1e6c62f64a",
+          "retained_sha256": "bd1dcc1ea3d8c500be868820f3c371a9492590c83df83fc7ca73e35ba91e79e3"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9641638225255973,
+          "removed_sha256": "1f0cce229e97d9a78291149aa68ad8d2d700addcbd805cfde8174738327a4244",
+          "retained_sha256": "e3865e3c6b1c75379d43536af9101b4d612bb9372b3e42a141dd0903ded6a7b8"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8870967741935484,
+          "removed_sha256": "a0c3989b40f9f85a639f99b29b7bd7808aa3cb18304439499f35cbd2b1632dec",
+          "retained_sha256": "f51ba763a637f79856b5a2eb6fb0e0ee47312b213cc73caad6a670b3526c8abd"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9304635761589404,
+          "removed_sha256": "c7e24bdab9f2d4b1168b3b3b2e5961215418ca384e79f189b20e76958546e020",
+          "retained_sha256": "d4063d35c8c65e1dca5d4a917058bef6c27b412cf6f4ab123b75448bd00e6523"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9675324675324676,
+          "removed_sha256": "3d1b1501c592a1a10391fbc6332988e0d3950a28bda46148f8c8bdcd0f401011",
+          "retained_sha256": "a184a8746349a5f4e1b3f6386877492fee4259e0e26e5bf6ec75ad998da36f7e"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9567901234567902,
+          "removed_sha256": "3685b96879ca7c74aa2baffef8dfaacb690fe9258047c5a8f3f3ecc888377422",
+          "retained_sha256": "301e19ff9c3e0d5c7f20a491faf8af0f88fca26753ba18ce204ba5a20e7237b1"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8619631901840491,
+          "removed_sha256": "f44da500647e17893b9152cae57859e7282d6a106984638b17e2a770e1127c44",
+          "retained_sha256": "fd39b15ff3f28785d1ddcdb226b823491adb12f6cea44eb6fdc144c18431ccac"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8667642752562226,
+          "removed_sha256": "e9b86a435e5ed94231c0190655610dd7997d91e63a1b09d465878f99cbc8da73",
+          "retained_sha256": "8be9bbd4bf28e11a097e16c8730914c4501c93d7a1100d1e7f885088b93db6a0"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9182209469153515,
+          "removed_sha256": "61db10fffaf378c4e49243efafd476d1c204b750b3f724b8f3e8065e014a489d",
+          "retained_sha256": "02d4fd6311b9709dbb26403e0aa722982240db463cb80209731dc35ba2e77c3e"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8992592592592593,
+          "removed_sha256": "15ad2d6ddcefae8ba9ee1b7bd7a7e1f1a4c28beab441f73f3f21bcc215140d47",
+          "retained_sha256": "c33a133a9a0d1cd78b3df2b3a7bc8e17e2f3e156d19a4d92e762740ea44f68be"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.91027496382055,
+          "removed_sha256": "52688e048a158e43b56fef5073cc548944dcc184dd35c50886071629dbf0c036",
+          "retained_sha256": "9609a8a7e3c7975b87c1e06d1b763b0d7340dacf16c94756dd8ccc03abddea0e"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9094594594594595,
+          "removed_sha256": "3678c9544291708a337ae6e8b53dbc1364790660d132712522bf3a8f6aaa1349",
+          "retained_sha256": "0e204d3f0452472ebbb14dbac127f15eaad4b1da5aeeb4ecf2ac0de8556aa88f"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9506849315068493,
+          "removed_sha256": "41398b06a73821843c0da4b6b2c13f99d576be29157025035934758af7954088",
+          "retained_sha256": "414280e45a71570c335ed22e55bd501118805b1c51407e04a930b224131e0bc3"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9710743801652892,
+          "removed_sha256": "5b440f1693d8dcb498713946d235f980b3e0452ffab08fabb2e9f2b9b192102c",
+          "retained_sha256": "f60939ab51d82e34dce6fd76da7f754137dfc5ecb598e114efc33f8e3b8453cd"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.983957219251337,
+          "removed_sha256": "8f14c41ef2bc68bbea8d665b3de394e3c80531c1bb0b73d6037df20f6f189749",
+          "retained_sha256": "79819598cd1e366eaa8f2a4fee2d638b6ef0686e490402fae792ccce58d876c0"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9947575360419397,
+          "removed_sha256": "dedbd7d57f118ca9181a35ee76d1a1a9f232f23814714108e152e1481b804d0d",
+          "retained_sha256": "0c239e27b8ee66604551a16df3a6fbfc292e82dbd950f0718e6c197eab6955ed"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.932349323493235,
+          "removed_sha256": "813affa455a1e3877438943a83433efa3482562a3a929fc547b25500b471b4a2",
+          "retained_sha256": "bb5dc900e7810b1c10f6b6fa4fcf2b454322e141fd0c066c8ebb912ddeaef245"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9070631970260223,
+          "removed_sha256": "009bd8110fa3ac46eb2fe9ce0ccb88076ba2e3057d883cc78b37489d970133c9",
+          "retained_sha256": "103270c9cc9a969303f3d0e2185e6914d0993864c1401643b4b37ca0e0226a57"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8921800947867299,
+          "removed_sha256": "4a2795fe47858c370c7aeeaeb7362d3e9a6d42fed2643c53b8fbf2ca6df9528e",
+          "retained_sha256": "75200596432d5a1be945f2ef7370c302356a3e914a73cd16778cc21b676ed4f8"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9664670658682635,
+          "removed_sha256": "b17acd6a94c3e8d5dd33d277235d62758c839bb797ce86db1b36ff5113ebc696",
+          "retained_sha256": "7cdc0e08be6bd847ed3c686009818c2aed37d870bc715f8902bf65a741e64e83"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9879951980792316,
+          "removed_sha256": "d831586348025a5970cda8734f73e6bd4141416a476abc3bd174caa2c44899ea",
+          "retained_sha256": "c4e1e71a5af5ef75a584fc72ccc635fe2897d21b570e55340caaf2bec24ef234"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8524203069657615,
+          "removed_sha256": "171c36a5fab0a97f0c096e0cd611f4871ebcd2e8f18bfaf0fc1c375f73768c07",
+          "retained_sha256": "79819598cd1e366eaa8f2a4fee2d638b6ef0686e490402fae792ccce58d876c0"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9324796274738067,
+          "removed_sha256": "37738c65876182948c51191d258b0d6649f20039bef5379659b129e06a15e333",
+          "retained_sha256": "c4e1e71a5af5ef75a584fc72ccc635fe2897d21b570e55340caaf2bec24ef234"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9763593380614657,
+          "removed_sha256": "7427c89726eb6fc715662da47e98c4db1a3bde6fefe70988011e25bb0a17c73a",
+          "retained_sha256": "5334db92b5d7fcd1bda11ba898fb62b777d92d5273fa9b774bb4980f76558625"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9294797687861271,
+          "removed_sha256": "5783116a12736e8ffa9c09a7f7a0eb0c5196c6be6244d0ed11fd206d874fd5ba",
+          "retained_sha256": "c4e1e71a5af5ef75a584fc72ccc635fe2897d21b570e55340caaf2bec24ef234"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9755529685681025,
+          "removed_sha256": "dff915800482d95bf895df87331a8466efc3c68008501f76658f75e8bf7361cf",
+          "retained_sha256": "c0d5dd0f3b65a64b126a2004c9fbaa5ca51eee87f6ec4d3130d9668090ae5462"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9885321100917431,
+          "removed_sha256": "5d4b8cdcbd0eea89995778a364c20ab0b9349525824d1a8b4915830807f4b35d",
+          "retained_sha256": "f681413fa3e13ed888b2bcf47470d102744c2dc1ce96d8695cd01f72c6b2b2bb"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9246119733924612,
+          "removed_sha256": "dedb35630ae2a8d7918d95d4eb151a04ca7beac01a6f00d146e5c83ffbfb9a69",
+          "retained_sha256": "a2a2c5d0c2c731ae75946fcdaf67977140c524b3165fccfe7f6ff0b2eaa5342f"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9445676274944568,
+          "removed_sha256": "caf1cda99823862fade632445124ca77bf88d9aaa08640ff52d3041ce6a70902",
+          "retained_sha256": "fa4edd8e1ddd18a9e00069eddd67eea0937b69c0dc59c98700fa2385a51deeae"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9820224719101124,
+          "removed_sha256": "109b0789a0e2faf9269bfa64ad859cc684bb3c45dd0ca2b9f25948c6e92d9494",
+          "retained_sha256": "23581f038885340287e01388d7143c36ed923d2422183f974ce18afd0c4dc115"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9819209039548022,
+          "removed_sha256": "0e2e835fbf50294b30d0d7586e07a04ecd28355c71f25fc371ceb50fa87b1968",
+          "retained_sha256": "a28882596bb7a6f63c56219814d6e3e1be78c6c1dec503a52528dcb9c9cde2ec"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9757442116868799,
+          "removed_sha256": "1648a0498877330432e8bdf3f15268bba814548d4ecb907e938c26305f4a16f7",
+          "retained_sha256": "868c28beeef01de1051283a0aabfae9940cafc01fa73fc7d7ad42a33129b5f42"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9829787234042553,
+          "removed_sha256": "5846e98147c5f8b095aee945170536b165fa29fb1e1f4104a0f2cd89d5405808",
+          "retained_sha256": "b479929c2ed650a8f9ec86e3a9417ceb80248b14a49aa9e4b411f80eeeebc167"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9683210137275607,
+          "removed_sha256": "97e5d499422ce8cba9ae2149f65e4bf4ec2101267ba70e21b2ab63d2b6b15503",
+          "retained_sha256": "b479929c2ed650a8f9ec86e3a9417ceb80248b14a49aa9e4b411f80eeeebc167"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9021852237252862,
+          "removed_sha256": "5b778cc8fcc7cdea87d39692270709a533abbf62709b42f3b772bdd0b81eb01f",
+          "retained_sha256": "d144e77a881404ad5f71de15f487d577c08f1d5bf7b206b82c2bd1d131734323"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9946695095948828,
+          "removed_sha256": "64ef9d074abd75b1880e39faa19567e11f7af7041540d7db007101c8838fa41a",
+          "retained_sha256": "b07927b43f44afbfd61761c2cc69f1b68c4fbdeddb992db03ff0c73052518cd4"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9288659793814433,
+          "removed_sha256": "9192704591893433560d7787fc6afbe1e0d6addfb008ff2b41e85b6425a62f11",
+          "retained_sha256": "b479929c2ed650a8f9ec86e3a9417ceb80248b14a49aa9e4b411f80eeeebc167"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9766702014846236,
+          "removed_sha256": "f7aba73cffa58bf601667fadade6e833cc54a55b9dbc43d6e0343952c605ab5e",
+          "retained_sha256": "f63f5cd0eb5e66b086dacf23f50eb230387ee14eda8535f024b5f0eda40ebb2d"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8818737270875764,
+          "removed_sha256": "8fb29ee377953e8ffa8e633f4c989bd415b3282e0887b1ad8996808808dbbece",
+          "retained_sha256": "a139fbcedb23f57c58c3e7f4a22a8a2198f34eea277a268c179e5589df84e7eb"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9367469879518072,
+          "removed_sha256": "f34308d9c70ced51aa715b5bf11ed3830efedc3c59552a3e5d33e291664c0758",
+          "retained_sha256": "da51ab756ac2c0ab46593da823abaacf7af2dfee502b6c8b3220fc58459703f6"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9802176063303659,
+          "removed_sha256": "0b64a7ffd355faed81e98fd98e22a3e222319b1cf07201b9459b94cb90fb17ba",
+          "retained_sha256": "986664a7f77e08647094b194fdd07afbc5796c159073f17bbb4b99e8882413fc"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8516129032258064,
+          "removed_sha256": "e6fa5df1f92f76304bcc496c06c3806336d081c0222a3d737a38a2430a9a6d1a",
+          "retained_sha256": "3016693c817082633e424390bfd5b9a2f80137b6bcff6d8be27729f012cd3a42"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9397473275024295,
+          "removed_sha256": "012195c5131ceaacdd91b8a9c5f9afc911f67238f1e3c1e20185196d9c6a5cac",
+          "retained_sha256": "c24e1f1cd05e8a0e6d15b871f1e669e6adea115b13ef2c613a5add54ee3eeb8c"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9077625570776255,
+          "removed_sha256": "87e136c7a5d20b394d8f2718586d057b809fd5219d688cd436ed870a98693190",
+          "retained_sha256": "95ddc5b1a9f2be75045d8096c8275fc98cc1fe22855014115068ac9cda92e070"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9418282548476454,
+          "removed_sha256": "39c853b65268e6ef59332dbd69549871be90e15b4e82fc47dfcf7ce65ce53688",
+          "retained_sha256": "9b24b19d1d626e0ce1088aaab1f426abbc04071e0cbed7572b2f21b4eb173bbf"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9815327793167128,
+          "removed_sha256": "0984624447a66058bf0ceb8e53aeac2ecbe8aab476efb584ee422f41e74ef8fc",
+          "retained_sha256": "38a9cf431a44e259409a87d4359f6e25f795c47bc6a3f762129694a2be952fd5"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9733455882352942,
+          "removed_sha256": "2e404122d56c1410a0a657e2f6c0ec51effeec181832ccfd71acfd633078e0e5",
+          "retained_sha256": "38a9cf431a44e259409a87d4359f6e25f795c47bc6a3f762129694a2be952fd5"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8840070298769771,
+          "removed_sha256": "2fea11937961a4b9347ef938dd2f4f7f3bcb7abcaedc5cf3c726dedbf3f4046a",
+          "retained_sha256": "e9067560f759838bf9bead31e78eeb73b5c58a71cd1133dda3157f68c77b5bbd"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9963336388634281,
+          "removed_sha256": "59552f3df4b33419e2c3dcca543a0b97dcb9928daa2818dbce41fe6d340c4a04",
+          "retained_sha256": "d3a5e00634ef13255851603e8ffeb38677d732977e23165dcd3f39a690057d88"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8552971576227391,
+          "removed_sha256": "91e4f48801c202568beb55e830a2933a0a7d72e1b7bbac5dc951c8989bab13e8",
+          "retained_sha256": "586dd6d771d0da1eee632edc7774050e512e4b0e8e85d508cc265bc70d32bbe1"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9589285714285715,
+          "removed_sha256": "62b35133c44152633c82e5ca51015ade4c23e97bd067bf19f229c4ea5f982be1",
+          "retained_sha256": "d3a5e00634ef13255851603e8ffeb38677d732977e23165dcd3f39a690057d88"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9884032114183765,
+          "removed_sha256": "f996c186ea0aadf3b1fe9800fb9dc7faa470e99f5ebd13fcff3d4a74a23bcafc",
+          "retained_sha256": "d4affb420e4ef0da6724bb6f5435d9a2b33e21cf438c968e4d8c43f6634d7b32"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9595426561125769,
+          "removed_sha256": "95789f4b7b7da6efb5da72571bcdd5c7dd09ce30162b49c5445958ca104c1cd9",
+          "retained_sha256": "349c66e50a62bfd1756795429485f05ca1a6268082103499999b61250652d91b"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9911032028469751,
+          "removed_sha256": "8f36a799c6bcda475c8b80c1af82a0aef4d49a05a5a6a79c75e497896469e112",
+          "retained_sha256": "8c6a4488d89c77b7ced229ac94830ca71c135307cf1585e877baa5be33c070d6"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9475982532751092,
+          "removed_sha256": "33163131cd6e6ec947b7c58bda5fd8825900e147cb6489aaabfba0236f13def8",
+          "retained_sha256": "d3a5e00634ef13255851603e8ffeb38677d732977e23165dcd3f39a690057d88"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9726261762189906,
+          "removed_sha256": "04d12ad3a44ac763dfea585a166f34c453a4d567bcd04e6dd0c7df70c0ebcd65",
+          "retained_sha256": "031b722fe8b0fdb0f867a5e618f27d5d56570542cf70c1e0349ce947fc937978"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8626016260162601,
+          "removed_sha256": "85c8086c2ebf2acd93ab449940afe5c714df8918fec131a64036e00e820b79ea",
+          "retained_sha256": "7119c3752bdf131c1b380f3f2255a76bd5b1b33896976d0e1b6c287caa623eb9"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8987447698744769,
+          "removed_sha256": "c2e81256ee48f0590db7cac2e6f8dc11e218caf852f8d5c68ba614ce709ef9e8",
+          "retained_sha256": "f69f93fb04498126e9af5219dd26b8591ffab3000fa2e9e0971532f1a1f4b149"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9780405405405406,
+          "removed_sha256": "714011405af5a132d778908342b0d19143fbefc02f48cce14829c6f152c2579f",
+          "retained_sha256": "2b753d587a3ad9ff64a8636d165654cdeead191512bcb1adb644df77b2b7ea14"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9468085106382979,
+          "removed_sha256": "40241c16c3f48e78d27ddc9c6abdda8794e25aeb91faac661fa12c4b169a6d78",
+          "retained_sha256": "c0c4b046d47ff87ec61ab213e62e595b2089426c1082e96865f59462ce20c20f"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9700162074554295,
+          "removed_sha256": "724d06668fb3219337881874e6ac7ef4e53e924ee05abd872e20eafc5702ca45",
+          "retained_sha256": "ff53c5b493a1f89f5dd8a0f91a2c96e298c81f7888384b55235debc9df98e17a"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8792710706150342,
+          "removed_sha256": "719279f01ab48deb1ff41912ad250677742778410b03ef5f04828e4076908891",
+          "retained_sha256": "ac7467ab768d4989137c5aa97c64033402ec99a1d4d7ee5b60c42287e4bc789c"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9164785553047404,
+          "removed_sha256": "66b2af17a0cf66ea1f035159f4890a49d4d3010d63edaa8e888d211d6d9ea653",
+          "retained_sha256": "15026a0838144c51d0bde1ee6ca5db4be09f9ddc93b2cafe9d04cb0137add1fa"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.96327467482785,
+          "removed_sha256": "c13054e6fd40c72325c0efd78183d62b7e29ebb01855b63304f9b27f627c18ce",
+          "retained_sha256": "3f04665afe47a9e6e103fcddc3f73db655720809270cd3b4fc5cbdf397d70066"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8524714828897338,
+          "removed_sha256": "100f51de9684cc1c8ecb4836a282485e2925a2015e92d9a0fe9cc78dde94180f",
+          "retained_sha256": "04843ff92158f8fb61f732d02ac08e51c7b19c34cc2d0a06043043572b21e2af"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9069247952345495,
+          "removed_sha256": "2ef5f8343d747d6807f393ee6c658dc65a2a04618eb89cef2a31817ad92c889f",
+          "retained_sha256": "15026a0838144c51d0bde1ee6ca5db4be09f9ddc93b2cafe9d04cb0137add1fa"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9567164179104478,
+          "removed_sha256": "2112999996606d18877c6d9674f593f1f87696d3255d5b50fbe5f8b286c90c56",
+          "retained_sha256": "fa0e278bca43802ce79ff69b80e23e68ac770548340c8cf37c4aacb56f0b85c5"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9730538922155688,
+          "removed_sha256": "1f2eac0052bbf9e8373ebe2199bd0755c877e23b1e254d5e3d8bab2134e4e014",
+          "retained_sha256": "473633a6c8054b33401fe8b446275aab533ad9bcabba532a2b0543e67b85d52a"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9698058950395398,
+          "removed_sha256": "e007557e329fa52230b0982b2783e75ed450e92ed4154de2164a8433fa7d0cf7",
+          "retained_sha256": "7f87157f56b1252db13104362090cffc221a47cff85145a729d5ca1fb6da1d05"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8501672240802676,
+          "removed_sha256": "75487ba65c1c64dc0a995ce688d8e32ed1722e743a796c01578dd24d346db516",
+          "retained_sha256": "f614601b82a0de94039a666cefcc5b73bd69bb7877e2f96b247130a4df56c76c"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8647375504710633,
+          "removed_sha256": "073d04bc4aaa9471d28ae30a424b7a93b6124b46c47def86af4da58bea631fa7",
+          "retained_sha256": "99ec968d72edd2a80f7ea335e0a19a5ac65a91b81afb0b875ecbb68241f243eb"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9823446327683616,
+          "removed_sha256": "db75b2b543928a5200345059c2b16f2d7a38b4b666ec785cf7531c740095aaa8",
+          "retained_sha256": "a5cd83903ee790aee0da9aea76c81e3097be54de0ebe174ddde45c8fcead237e"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9880701754385965,
+          "removed_sha256": "bcee590e2541bcc6f1556093c9576752ad5435b0c249e5e6402994d6bcc3560d",
+          "retained_sha256": "ab81b3d6586d06961f5de60f9faebe41c5bcec57059f07bd0f3b536f57755746"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9835503769705277,
+          "removed_sha256": "ae66f1250cf988ada52bc888ebb87b3c41e30006225db22bde64b1467cb2824b",
+          "retained_sha256": "0cff249c1989e317dd3f304189bcec602b886bec75e116e596d8e92e3d54f794"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.986156888595913,
+          "removed_sha256": "9ce1b092028116111e16c228212a97b5b9ee955845bb5e9d88b22c7ec21c2b69",
+          "retained_sha256": "4e11b5a726ee5f7729ef4496ab21f61a141b8f386a3aa57ebdffd1f37e66a929"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9966931216931217,
+          "removed_sha256": "baac2c577e75019a95d34f1f6fb3ac7056f266de9d462723410ad40342b4d62c",
+          "retained_sha256": "60f1f635feabb01b0463c1150a6a1ed6c84b2ff9b1956618081053126f0dc944"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9425654116145501,
+          "removed_sha256": "d13b8a1c76bd020fb4dd4e4232eb1c044e6b83cf09c97fdef68cae3800978cee",
+          "retained_sha256": "a0b4fe3c2937c8dfed2e1ce3169b9dafa8be9bdc441d9a49a0c9d28001f33431"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9422077922077922,
+          "removed_sha256": "02844320027f264762e3fe8e2c22fcb23e59349c018fb8fedd46722647a44ec7",
+          "retained_sha256": "49f5b6c5c53bccc4ae8cc82c16c85d20101c02ef737504b709a628f5d0a975d5"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.961611076148521,
+          "removed_sha256": "6010c9b026634a9eb60968f19929247bd927f6b8471e3db90aeb3ace12515b77",
+          "retained_sha256": "031a3542d880b6cbee10d66afc1be15b93de5b0da7ad7dfdfb8aa84a256907ac"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8615023474178404,
+          "removed_sha256": "46c9e26198fd447b28d28d691cc24293fcb601dddee5dbb5cd426a7c4b19432e",
+          "retained_sha256": "a4f2be59a8cedc94085c430f0988b5e2a1138a63a9f3cfb6ac88aa8d5192a1a7"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9836888331242158,
+          "removed_sha256": "247568669c714829d0f137973253f66f493bab98d975521f4df71aaef1411333",
+          "retained_sha256": "44bc68e1c318596a15cf49910f6ae4ae4c3971412e86dfc09b6d10d0dbf16c64"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8705882352941177,
+          "removed_sha256": "ff8c6bf44433eb4d0e2fdd1d0c835b428a8955e2835c26dea9625e2a96f84bad",
+          "retained_sha256": "a4f2be59a8cedc94085c430f0988b5e2a1138a63a9f3cfb6ac88aa8d5192a1a7"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8615654205607477,
+          "removed_sha256": "5239d5182c16561577ed45099e8f316fecc179b997259d3f48054a9250131f33",
+          "retained_sha256": "a4f2be59a8cedc94085c430f0988b5e2a1138a63a9f3cfb6ac88aa8d5192a1a7"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8663567693201627,
+          "removed_sha256": "12c7a5f7f156ef9a836f8f23d5565c1cc4c35b265635251daaf129b9e7ec063a",
+          "retained_sha256": "a4f2be59a8cedc94085c430f0988b5e2a1138a63a9f3cfb6ac88aa8d5192a1a7"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8587962962962963,
+          "removed_sha256": "df8733ec6def5609c56be9179eb1a193a29ced1ba1d0d38873edb2ced99c3522",
+          "retained_sha256": "a4f2be59a8cedc94085c430f0988b5e2a1138a63a9f3cfb6ac88aa8d5192a1a7"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9336521219366407,
+          "removed_sha256": "956f74e4c2bbffca9034ddfbbfa1e8fba449d9cf310a82470f8a8f18664763dc",
+          "retained_sha256": "16f40c7755fddc89a533015bffa9316c9d69e1aaaffb8fd24b2da2e8cd144cfc"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8938053097345132,
+          "removed_sha256": "fe7b48fe902b66ff81af0abb7ef1e3303f7794042f18018f191bdae2580ee66c",
+          "retained_sha256": "4ec4eb06d8af9d765e0a10146d9f96ff7d1ee30c4fe5025bf0b48dfdb60d751c"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8834841628959276,
+          "removed_sha256": "a2659dc19c339a4b440f4591464ad85f9a655106cf8b08147410b860e15bf608",
+          "retained_sha256": "7626b7f1bdd0110a03e298f6164f2d5b70e1a161db61c3f7eed941af03c3cca7"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9931623931623932,
+          "removed_sha256": "7ad6ceeb2425c95e3aad6963f664b256a40e5ab8281e0c89d354eeb789566649",
+          "retained_sha256": "d4729cab9369d0f8143528e172c76365559b828bb1a7929e2fff0c8d4b94b8a3"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9657303370786516,
+          "removed_sha256": "811d3a4fec3bd6eafeb4743fdf590fff88e93a770f27859cd5d3aa4ef62eb2bf",
+          "retained_sha256": "d900bc9247ca9890ea719dadf11563ea28fdc6bdc957952e94b4e148cadcf958"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.86084142394822,
+          "removed_sha256": "6b1c6a83225e670339dd658abac964a95414802b898c1ca7b3e1cf6a24d18843",
+          "retained_sha256": "a941aa41b9ab018bf25b7eef212fb9097d9bcf5a4cf02860bb2e37ca321e220a"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9197889182058048,
+          "removed_sha256": "49d29aa2e99007e4ddcbb7a5e6095c8634fe978b311fcdf2226838b3e47a5769",
+          "retained_sha256": "aa029b48b73e80e4a118b1b0ebd148b4d5398898efdca56a7a85af7b94d7c34d"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8898085876875323,
+          "removed_sha256": "e5e03718747f2f5e2acfae8d53a82bfafe556ca62cbdd12a3af09cb31d682caa",
+          "retained_sha256": "43821d6180f72708cdbdce3dafbb46b19b7b8c1ea7564441a211e9bd294e358e"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.870136186770428,
+          "removed_sha256": "9f6934d605d8d0d99eb6894ee4ad0766dad2b2c67dc9724488ae4cfe70ce07cc",
+          "retained_sha256": "b5dc44452e4d9870e333bbf2f5cf3af1420c94ac41729a016ab915438f015e41"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.874515503875969,
+          "removed_sha256": "801f1bb4c6ffdb64b92521093efd32f7a9bb6f7344a2382cbacca7dd0b4da43d",
+          "retained_sha256": "9a8465857f12ad677f28e8448860fa6dd430a1344a01f5571d797e2680902e63"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9445534838076546,
+          "removed_sha256": "770e53856bea433e47ce101b1afafe7b2e73490015170d1f0c2c9193253b8fe6",
+          "retained_sha256": "7f4aaf8a1fdf976d8c725065a3208076fd432c77f1ee009a6516ac1dc43949d9"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9940209267563528,
+          "removed_sha256": "0212be98728a21486aa6acae654c5814df7f6a7dc6d58ed025958bddfff3c4df",
+          "retained_sha256": "cf0dc1979572d94450a5e611b44f3fdb88d9cd980d669a723f0ed63057b5e2c4"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.978900883218842,
+          "removed_sha256": "ce98f2394ccfa8a38ae5eb72fcd8d18d1a64c7eae32dc206b82994949ed1acc7",
+          "retained_sha256": "00c6e1ee7faa6b7aa74585748af5c6579d7a4e38a567eb12abe7dafc7359fd16"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.940413262854397,
+          "removed_sha256": "d7bfc4f3a003cdf18ca97404720de75b5c98ddfbc3b60dd45b6ac5f9e9563f7d",
+          "retained_sha256": "b9ec4542d343b15a3340989f06994504e3176be49d49d2405e56de4fae80113c"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9357109338338808,
+          "removed_sha256": "029ebaff3c2a5e6ac0bd6431695f9d9abe3af924edc3fecd81a6b03820855fb4",
+          "retained_sha256": "c948aa3be1701622b9c9341c5883d590f361d68d520a47905189057237586b5f"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.927570093457944,
+          "removed_sha256": "e6b806a1c8270481c12e5e01582f312f7dbc903c87392fe3d5c8b18882ecb0d0",
+          "retained_sha256": "c948aa3be1701622b9c9341c5883d590f361d68d520a47905189057237586b5f"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.979047619047619,
+          "removed_sha256": "7ef7b95631291e7499ea1a3c58da900d7cbb22b494a96a121d2df75dfbe2985e",
+          "retained_sha256": "0b27ce6559621ff22ce1cf2fa17fd5b5f9636f444b2a7e0f87273bcafa4cdb93"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9842632331902719,
+          "removed_sha256": "6c82d2e17164b392676b59aecb29b622a580455ee2ef41b3b381f2973b5c27f2",
+          "retained_sha256": "db9ea4f16342f2fe8783e45093ee21de0e422ec07187b3e4f7718ecc14e846a7"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9826209488022546,
+          "removed_sha256": "714c315b93778cfcad44d0c6b659b2ac7f38eea61903ab15b82b2c1643cd3fb6",
+          "retained_sha256": "6c3b00266b259309978f27273e31235ad7cb06f873d2e778cf793bb5d7b3515b"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9179138321995465,
+          "removed_sha256": "d989a0e6c6fa1e2c9831acf89237480969c476df14be429dd36b0cdbb1c6ef40",
+          "retained_sha256": "db9ea4f16342f2fe8783e45093ee21de0e422ec07187b3e4f7718ecc14e846a7"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9482001755926251,
+          "removed_sha256": "00096b4d40db0fb835fbc0920f466e2bc1b3a76011b965b6bf340bde92f5412e",
+          "retained_sha256": "d7bf21d240b7da2579c141d2f3666f692b4da44e47b2e75f96c494f5f221fd15"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9160613397901534,
+          "removed_sha256": "0227893e556dcf0f48f1e652f16b4d28bdf1facc2bbd33bd97b0805dc7198b45",
+          "retained_sha256": "e31dbaedd65419bf0c38ab36cdbd2278584e1c30d512c4b4319d0433922aeb0d"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9460629921259842,
+          "removed_sha256": "32ec5d45565bf682c096484f7857a8d489071a3dc08b381a841d973a8d07594d",
+          "retained_sha256": "e534830051dbdfeeb27acae09052b344f10e4c68f18f3f0ae9d0b27a316c7adf"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.993791230112534,
+          "removed_sha256": "f3b393b4d6ac8d4503068d36d80668a29117a436e935c2b5e48ecc3ce5feb206",
+          "retained_sha256": "dadfff4b09e271fc9df6445c2d8c9b45039e5e57eb11d04a4d7f786febdd61cc"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8767424798239178,
+          "removed_sha256": "eba9ce814a570d38b78dd24bc5ab72688f729a684b692652e873fd92631238a5",
+          "retained_sha256": "c5d1bd0e12cc8445c3d4792e6ebc1a1128a6122c4061efa9dc27340622a4e9c6"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9810534293292914,
+          "removed_sha256": "6e43cc5dc39fe12eb780e22c717c68eced9633c8a804f6f755bf9fe272c04519",
+          "retained_sha256": "44fec4e38b7b3bd6db46943b8834cd22961d6e2adf52776563106f0c175f57a7"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9699021820917983,
+          "removed_sha256": "86990f9426faefb17b0bf92694ed4f4c790289c44cb2dc35d84c13a775d0f444",
+          "retained_sha256": "fbb1151c5484fd1d7ed1b3dde71ff975c6873d45cb985a2d87ad2dadad198d61"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9619289340101523,
+          "removed_sha256": "12e13dfe89850044a9be4b6dd3fbdc67ba9b89a74c9b1af071c9203def41329b",
+          "retained_sha256": "741dc9fe536c2c04d594b4161c85815b3a61caaf4ccc45b8933fde9fcde6127b"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9496166484118291,
+          "removed_sha256": "49fb4bf56a5c34fa252fa65edd8a09b39c520d359c5dd774ad3a2a77a700cba8",
+          "retained_sha256": "44fec4e38b7b3bd6db46943b8834cd22961d6e2adf52776563106f0c175f57a7"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9059859154929577,
+          "removed_sha256": "5746f32f8ee8c70559f79116b6cc52b610d8c314580eb8219eb47ff92db6088e",
+          "retained_sha256": "0c1503c940e6a9fe33a4ba6aa56e7b104ed612849039af931e28fb1b4e771996"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9553111034719834,
+          "removed_sha256": "1ce06be97c3840e608eac0f7befb6e4a861174c6906019d3d08720a565304f1d",
+          "retained_sha256": "877e4e58b347af2bd5f6801c59032373c8ca25840d0345ddb46f8624b8ae0c2f"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8703643985811028,
+          "removed_sha256": "ac4429cdaa55276df26c16c980238d9b23498e53446b7a5835a6223f1029219a",
+          "retained_sha256": "385bd2f3acb4edf0e6a7e62fbf11302890984c706b444f4b49ebb507b930022e"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9217821782178218,
+          "removed_sha256": "1f04145896b743533ca29f2ec678d44ed4651c22f2db8917a0b92ba8a3709c83",
+          "retained_sha256": "89e989cafd5097f7d21ed3bed3c78986cf67297c1555134842f9970ff77b1017"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9321865696328151,
+          "removed_sha256": "83416eed4d795677096113937b63855df75083486cfeb7001b9e63fd0ecbca5a",
+          "retained_sha256": "053b24cc1de796ccc13c571f4685c531ddadc5d5a64fdbfbc2272701d42f57cd"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9828224991579656,
+          "removed_sha256": "f86690284853c2f818d94a1edf7117e4dc2c4b3481b052fa2029f04791e1feb3",
+          "retained_sha256": "d4dd84340168f94a96d6630af8ef3f35b4a99d207ef97d3bada64ae0b98fb805"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8879009209272785,
+          "removed_sha256": "43c2a1051ae4858587a4730a1cc741e9a47531a47c52b28d19878743791bcac2",
+          "retained_sha256": "6b6cc8d1bb80cca29a3d050fc66a5f9e3fbc88428a571b39140cd441bf75b801"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9928940568475452,
+          "removed_sha256": "cecce4751d0eea88ea2efc98d3d2757e5da42f6ad8f92597b64efe00c787f9d1",
+          "retained_sha256": "3431c08ad5312383b993b456ef8c88be2a9d2486527b36fad279275e58602cf6"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8909840895698291,
+          "removed_sha256": "cfd608f97c3db868b08a07365c9d861d70027210289423a5d5584c424a553aa3",
+          "retained_sha256": "e00c49ed44515012c13c648492cd4dd4d58437a5ab3d9dc4e0d77ccc4e7ac490"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.8711051930758988,
+          "removed_sha256": "53470d5a4a831c0a6940507097c701dad5b1118cfb7531833253e96a0994d237",
+          "retained_sha256": "bc6cac1801ec4c649b494c0406d1d9f8cb73e789d4fed4b071cf039671df33b0"
+        },
+        {
+          "cross_repository": true,
+          "jaccard": 0.9758771929824561,
+          "removed_sha256": "954be7b33e5fc11e5984d5fc82a87b49b1427669be2375734606bd23da95cb1c",
+          "retained_sha256": "08c3f506c1b24e8e918d7fec84972b8a7b5d6d7bcf872a16efc8e31182a90100"
+        }
+      ],
+      "removed": 241,
+      "threshold": 0.85,
+      "verified_candidate_pairs": 906
+    },
+    "near_duplicates_checked": true,
+    "target_exact_and_whitespace": {
+      "outside_size_bounds": 1205,
+      "scanned": 11221,
+      "selected_before_shingle_filter": 10000,
+      "whitespace_duplicates": 16
+    }
+  },
+  "loading": {
+    "file_truncation": false,
+    "max_chars": 20000,
+    "max_scanned": 100000,
+    "min_chars": 200,
+    "sampling": "bounded sequential prefix of pinned shards",
+    "selection_stats": {
+      "outside_size_bounds": 1205,
+      "scanned": 11221,
+      "selected_before_shingle_filter": 10000,
+      "whitespace_duplicates": 16
+    },
+    "streaming": true
+  },
+  "partitions": {
+    "fit_tokenizer": {
+      "characters": 4000000,
+      "documents": 723,
+      "file": "fit_tokenizer.jsonl",
+      "file_sha256": "6202161ad3c026b6bf6a13e2eb76505fce165cd605492f995aa46009267108b4",
+      "ordered_text_sha256": "8fd455012a9ab10167c9884362363bd3a9c5fc06d3fe514f5b2a6f1b06533c26",
+      "utf8_bytes": 4001559
+    },
+    "general": {
+      "characters": 10679990,
+      "documents": 16208,
+      "file": "general.jsonl",
+      "file_sha256": "ac20a720012e7bad86ec2d70cb2f7c79456ff690f93007c07d74983b365eff80",
+      "ordered_text_sha256": "b518ee2445f2ff5d9b344946d1e508de35164177520a7c016fe9ebd94f3867a9",
+      "utf8_bytes": 10700778
+    },
+    "general_tokenizer": {
+      "characters": 4000000,
+      "documents": 6081,
+      "file": "general_tokenizer.jsonl",
+      "file_sha256": "330dd752bde1542f129268bede134d1477b0ac65ff605b7dea4cc89e019bbc41",
+      "ordered_text_sha256": "9523e899bfaf1c76647eca662e50e8333aac939a0ff01f709249bcc6006e78d1",
+      "utf8_bytes": 4007911
+    },
+    "test": {
+      "characters": 1643414,
+      "documents": 300,
+      "file": "test.jsonl",
+      "file_sha256": "db83302216e40e7aa871f1154a33e4737729a7abd0cf216735d1c69f251839a4",
+      "ordered_text_sha256": "107cb60167b2bacd2a49885bfc199436831d6535cf6c7ff6d390c573dcf0ed85",
+      "utf8_bytes": 1645436
+    },
+    "train": {
+      "characters": 50553666,
+      "documents": 9158,
+      "file": "train.jsonl",
+      "file_sha256": "8f42eadac4a9e5cfe20b1dd82a7d7e5ebb083d16e02831cd131c3afe1ccadf23",
+      "ordered_text_sha256": "da38458810522f588d8265ed0e259e1979c07f11100033dd3946db2119669ef0",
+      "utf8_bytes": 50588403
+    },
+    "validation": {
+      "characters": 1654066,
+      "documents": 301,
+      "file": "validation.jsonl",
+      "file_sha256": "c276442c058a9c379d519047b3035a3d366f81521d58937cbcad5257672119da",
+      "ordered_text_sha256": "d5fa45c8d383b438013d8ae3d0d45403373ebbd7987dd9e49c82f0239dc8efc6",
+      "utf8_bytes": 1654670
+    }
+  },
+  "repository_metadata": {
+    "test": {
+      "file": "test.metadata.jsonl",
+      "file_sha256": "4366dadac05c8b77e3fc54fcc141db52779fb5ca70ba4a9a08a5393754d1f7bd",
+      "repositories": 268,
+      "repository_families": 177
+    },
+    "train": {
+      "file": "train.metadata.jsonl",
+      "file_sha256": "c11c5e5bc8335213169abec618e94f88678932472c7a7657d30cea42a5151347",
+      "repositories": 7652,
+      "repository_families": 4569
+    },
+    "validation": {
+      "file": "validation.metadata.jsonl",
+      "file_sha256": "ea5d851743b1642645ca8548b2022f618e6c9166333e8cff19843d778589d9d6",
+      "repositories": 260,
+      "repository_families": 204
+    }
+  },
+  "schema_version": 1,
+  "snapshot_sha256": "5734e0f427e23df9c53281c302b1b00646bd81f0468f519d9d62ff2b0ac1bf17",
+  "source_specs_sha256": "f3ec983cea58a02015931046d94d320a8e0ebc55543d3b92231bddc89494fd8f",
+  "sources": {
+    "general": {
+      "name": "wikitext2",
+      "spec": {
+        "name": "wikitext-2-raw-v1",
+        "path": "Salesforce/wikitext",
+        "revision": "b08601e04326c79dfdd32d625aee71d232d685c3",
+        "split": "train",
+        "text_column": "text",
+        "url": "https://huggingface.co/datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-2-raw-v1/train-00000-of-00001.parquet"
+      }
+    },
+    "target": {
+      "max_docs": 10000,
+      "name": "python",
+      "spec": {
+        "path": "codeparrot/codeparrot-clean",
+        "revision": "35a59fb025bc0a102f7d96eac09d145b896d487b",
+        "shards_read": [
+          "file-000000000001.json.gz"
+        ],
+        "split": "train",
+        "text_column": "content"
+      }
+    }
+  },
+  "split": {
+    "group": "case-folded repository basename; conservatively groups same-name forks",
+    "limitation": "Renamed forks can evade family grouping; near-duplicate filtering adds content control",
+    "method": "Shuffle sorted repository families, assign whole families to holdout minima then train",
+    "repository_family_overlap_count": 0,
+    "repository_overlap_count": 0,
+    "seed": 2026,
+    "test_docs_minimum": 300,
+    "val_docs_minimum": 300
+  },
+  "tokenizer_training": {
+    "available_characters": {
+      "general": 10679990,
+      "train": 50553666
+    },
+    "character_unit": "Unicode code points; no inserted separators",
+    "characters_per_corpus": 4000000,
+    "fit_source": "train",
+    "general_source": "general",
+    "selection": "ordered prefix; final document truncated if necessary"
+  }
+}

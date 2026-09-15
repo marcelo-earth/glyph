@@ -1,0 +1,133 @@
+{
+  "scope": "development only; incomplete pairs omitted, no final test inference",
+  "snapshot_sha256": "00486d0a44d5bc7fb40340d53165a595b8e2bdd31d665fd1fd5ac9b402abd09b",
+  "pairs": [
+    {
+      "regime": "raw",
+      "seed": 42,
+      "steps": 500,
+      "pair_audit": {
+        "passed": true,
+        "matched_exposure_fields": [
+          "padded_positions",
+          "raw_bytes",
+          "raw_chars"
+        ],
+        "shared_initial_weights_sha256": "943a49a9f08c6b705a4ef77f65b43b5ec2d8c5fb7759af117913ccdfff657662"
+      },
+      "fit_bpb": 3.2403632249648475,
+      "general_bpb": 3.7086173403022777,
+      "fit_minus_general_bpb": -0.4682541153374302,
+      "bootstrap_unit": "repository_family",
+      "bootstrap": {
+        "group_count": 43,
+        "replicates": 4000,
+        "rng_seed": 31415,
+        "fit_minus_general_bpb_95_interval": [
+          -0.5146524370038175,
+          -0.42266848803394425
+        ],
+        "scope": "source-group sampling only; training-seed variation is separate"
+      },
+      "training_exposure": {
+        "fit": {
+          "raw_chars": 1014157,
+          "raw_bytes": 1014716,
+          "target_tokens": 335950,
+          "padded_positions": 1024000
+        },
+        "general": {
+          "raw_chars": 1014157,
+          "raw_bytes": 1014716,
+          "target_tokens": 608471,
+          "padded_positions": 1024000
+        }
+      },
+      "training_seconds": {
+        "fit": 30.876612755237147,
+        "general": 29.732728004804812
+      },
+      "metrics_sha256": {
+        "fit": "2ad3c2b553bc87ec235a88f78223cc525ccc613c019ce8b41b3d7a42b0dd0b49",
+        "general": "94144ff5018e06a9116078663fc53b6fd831bf238b2e52bfd1d2bb9e241956d9"
+      },
+      "full_training_unigram_bpb": {
+        "fit": 3.295420885833066,
+        "general": 4.306803511743346
+      },
+      "model_gain_over_full_training_unigram_bpb": {
+        "fit": 0.055057660868218505,
+        "general": 0.5981861714410681
+      },
+      "exposure_matched_unigram_bpb": {
+        "fit": 3.299885214844258,
+        "general": 4.3116342187018475
+      },
+      "model_gain_over_exposure_unigram_bpb": {
+        "fit": 0.0595219898794106,
+        "general": 0.6030168783995697
+      }
+    },
+    {
+      "regime": "token",
+      "seed": 42,
+      "steps": 500,
+      "pair_audit": {
+        "passed": true,
+        "matched_exposure_fields": [
+          "padded_positions",
+          "target_tokens"
+        ],
+        "shared_initial_weights_sha256": "943a49a9f08c6b705a4ef77f65b43b5ec2d8c5fb7759af117913ccdfff657662"
+      },
+      "fit_bpb": 3.1333428600291855,
+      "general_bpb": 3.6170824466709925,
+      "fit_minus_general_bpb": -0.48373958664180705,
+      "bootstrap_unit": "repository_family",
+      "bootstrap": {
+        "group_count": 43,
+        "replicates": 4000,
+        "rng_seed": 31415,
+        "fit_minus_general_bpb_95_interval": [
+          -0.5373588321398339,
+          -0.4329574129802521
+        ],
+        "scope": "source-group sampling only; training-seed variation is separate"
+      },
+      "training_exposure": {
+        "fit": {
+          "raw_chars": 3167612,
+          "raw_bytes": 3169810,
+          "target_tokens": 1024000,
+          "padded_positions": 1024000
+        },
+        "general": {
+          "raw_chars": 1713238,
+          "raw_bytes": 1714612,
+          "target_tokens": 1024000,
+          "padded_positions": 1024000
+        }
+      },
+      "training_seconds": {
+        "fit": 30.024870794994058,
+        "general": 47.23399033531314
+      },
+      "metrics_sha256": {
+        "fit": "6b591edc8a0bb72847223dcbad4cff519378190c60063e2a3d00cbdee343246e",
+        "general": "9ba5e22817a9c67093d5e0759225fac62dbc59c8b7e0769514901b6d52ae773e"
+      },
+      "full_training_unigram_bpb": {
+        "fit": 3.295420885833066,
+        "general": 4.306803511743346
+      },
+      "model_gain_over_full_training_unigram_bpb": {
+        "fit": 0.16207802580388053,
+        "general": 0.6897210650723533
+      }
+    }
+  ],
+  "training_seed_count_by_regime": {
+    "raw": 1,
+    "token": 1
+  }
+}

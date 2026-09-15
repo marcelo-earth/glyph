@@ -1,0 +1,105 @@
+{
+  "deduplication": {
+    "general_loaded": 15000,
+    "general_removed": 8,
+    "method": "exact UTF-8 text SHA-256; target first, general excludes all target documents",
+    "near_duplicates_checked": false,
+    "target_loaded": 12000,
+    "target_removed": 0
+  },
+  "loading": {
+    "min_chars": 50,
+    "streaming": true
+  },
+  "partitions": {
+    "fit_tokenizer": {
+      "characters": 4000000,
+      "documents": 4599,
+      "file": "fit_tokenizer.jsonl",
+      "file_sha256": "5fb1b0ed6f472c7004683a782eab3c73839dc97aaa15055e6aeb2dfd22713b75",
+      "ordered_text_sha256": "fa9ee0e66050c3422356e3553b26218b29874e89c8e56be0e1ee874baa33835b",
+      "utf8_bytes": 4008077
+    },
+    "general": {
+      "characters": 9923349,
+      "documents": 14992,
+      "file": "general.jsonl",
+      "file_sha256": "54d6579d14cfabd4df6fc8030109f1c5d52ff5ce0412a01d9adcee059cc0885e",
+      "ordered_text_sha256": "47e8b45ad356be4db75a09992c8b09443f34e0d1155020ad5c7da76102981845",
+      "utf8_bytes": 9942063
+    },
+    "general_tokenizer": {
+      "characters": 4000000,
+      "documents": 6094,
+      "file": "general_tokenizer.jsonl",
+      "file_sha256": "655198d747ec512e82da4b57f380dabb34f029dcafbd26c9af973bc26e28da5b",
+      "ordered_text_sha256": "641b5f1878deb14d71ce7dfda276a58403effa8d17192babc3a853c3d547e8f7",
+      "utf8_bytes": 4007962
+    },
+    "test": {
+      "characters": 450261,
+      "documents": 500,
+      "file": "test.jsonl",
+      "file_sha256": "87ecd795da3e51301426e0754d5319adb89c5e92da8e9ed2fd28f363f2514f1f",
+      "ordered_text_sha256": "77aa7f931553a809faa0c8a3bd6c8092ad68bb21fd82d09267c5a60644e8d37e",
+      "utf8_bytes": 451109
+    },
+    "train": {
+      "characters": 9594477,
+      "documents": 11000,
+      "file": "train.jsonl",
+      "file_sha256": "d3eed2d6e0f8bb870f2adeeaa19108b982d77bfdac6336b64a474c52cb9ddaaa",
+      "ordered_text_sha256": "1852c3e4fd84086b0b55722d86bbd97abe64340013a770c3069877d8523dd763",
+      "utf8_bytes": 9613629
+    },
+    "validation": {
+      "characters": 435303,
+      "documents": 500,
+      "file": "validation.jsonl",
+      "file_sha256": "3dfdccccafd91284f49ec085bace9c960fc24bfd560157e94d4f50d18582e849",
+      "ordered_text_sha256": "5f5ee51377119de37e182a3ab59b1725840f556ec9a5ce07e66b60befda0d1bd",
+      "utf8_bytes": 435696
+    }
+  },
+  "schema_version": 1,
+  "snapshot_sha256": "a212e0d7bc06cf585f7b80c5a5a95e56c46400a7ff7e5d2da09a2290ee955d4e",
+  "source_specs_sha256": "78ecd6c2722147cf6e9c7b1789239c2f501023576ab7b5c651468a483310b352",
+  "sources": {
+    "general": {
+      "max_docs": 15000,
+      "name": "wikitext2",
+      "spec": {
+        "name": "wikitext-2-raw-v1",
+        "path": "Salesforce/wikitext",
+        "split": "train",
+        "text_column": "text"
+      }
+    },
+    "target": {
+      "max_docs": 12000,
+      "name": "tinystories",
+      "spec": {
+        "path": "roneneldan/TinyStories",
+        "split": "train",
+        "text_column": "text"
+      }
+    }
+  },
+  "split": {
+    "method": "Python random.Random shuffle of unique source-training documents",
+    "seed": 20260915,
+    "test_docs": 500,
+    "val_docs": 500
+  },
+  "tokenizer_training": {
+    "available_characters": {
+      "general": 9923349,
+      "train": 9594477
+    },
+    "character_unit": "Unicode code points; no inserted separators",
+    "characters_per_corpus": 4000000,
+    "fit_source": "train",
+    "general_source": "general",
+    "selection": "ordered prefix; final document truncated if necessary"
+  }
+}

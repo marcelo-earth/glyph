@@ -56,6 +56,13 @@ class ExperimentTests(unittest.TestCase):
             self.assertEqual(data.batch([1])[2]['raw_bytes'],4)
 
     def test_checkpoint_resume_matches_uninterrupted_cpu(self):
+        self.check_resume('cpu')
+
+    @unittest.skipUnless(torch.backends.mps.is_available(), 'MPS unavailable')
+    def test_checkpoint_resume_matches_uninterrupted_mps(self):
+        self.check_resume('mps')
+
+    def check_resume(self, device):
         import evaluation
         torch.set_num_threads(1)
         with tempfile.TemporaryDirectory() as tmp, contextlib.redirect_stdout(io.StringIO()):
@@ -70,7 +77,7 @@ class ExperimentTests(unittest.TestCase):
                 'vocab_size':260,'fit':{'sha256':digest(tokpath),'training_chars':100},
                 'general':{'sha256':digest(root/'general.json'),'training_chars':100}})
             kwargs=dict(snapshot_dir=root/'snapshot',tokenizer_path=tokpath,label='fit',regime='raw',
-                        dim=16,layers=1,heads=2,seq_len=16,batch_size=2,steps=4,eval_every=2,val_docs=1,device='cpu')
+                        dim=16,layers=1,heads=2,seq_len=16,batch_size=64,steps=4,eval_every=2,val_docs=1,device=device)
             full=train_run(out_dir=root/'full',**kwargs)
             calls=0;original=evaluation.evaluate_documents
             def interrupt(*a,**kw):
@@ -84,9 +91,32 @@ class ExperimentTests(unittest.TestCase):
             resumed=train_run(out_dir=root/'resume',resume=True,**kwargs)
             a=torch.load(root/'full/checkpoint.pt',weights_only=False)
             b=torch.load(root/'resume/checkpoint.pt',weights_only=False)
-            for key in a['model']:self.assertTrue(torch.equal(a['model'][key],b['model'][key]),key)
+            for key in a['model']:
+                if device == 'cpu':
+                    self.assertTrue(torch.equal(a['model'][key],b['model'][key]),key)
+                else:
+                    # Repeated MPS runs show ~1e-8 FP32 variation; do not claim
+                    # bitwise accelerator determinism. Missing RNG/optimizer
+                    # restoration produces much larger errors than this bound.
+                    if key.endswith('in_proj_bias'):
+                        left_parts=a['model'][key].chunk(3);right_parts=b['model'][key].chunk(3)
+                        for index,(lhs,rhs) in enumerate(zip(left_parts,right_parts)):
+                            # Key bias adds the same logit shift to every key;
+                            # softmax cancels it. Near-zero roundoff gradients
+                            # are amplified by Adam, measured up to 2.4e-6.
+                            torch.testing.assert_close(lhs,rhs,rtol=1e-6,atol=1e-5 if index==1 else 1e-7)
+                    else:
+                        torch.testing.assert_close(a['model'][key],b['model'][key],rtol=1e-6,atol=1e-7)
             self.assertEqual(full['exposure'],resumed['exposure'])
-            self.assertEqual(full['history'][-1]['validation'],resumed['history'][-1]['validation'])
+            if device == 'cpu':
+                self.assertEqual(full['history'][-1]['validation'],resumed['history'][-1]['validation'])
+            else:
+                left=full['history'][-1]['validation'];right=resumed['history'][-1]['validation']
+                self.assertAlmostEqual(left['bits_per_utf8_byte'],right['bits_per_utf8_byte'],delta=1e-6)
+                for lhs,rhs in zip(left['source_documents'],right['source_documents']):
+                    self.assertEqual(lhs['sha256'],rhs['sha256'])
+                    self.assertEqual(lhs['scored_tokens'],rhs['scored_tokens'])
+                    self.assertEqual(lhs['utf8_bytes'],rhs['utf8_bytes'])
             self.assertEqual(full['initial_weights_sha256'],resumed['initial_weights_sha256'])
             self.assertEqual(train_run(out_dir=root/'full',**kwargs)['status'],'complete')
             with self.assertRaisesRegex(ValueError,'another configuration'):
