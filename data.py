@@ -26,15 +26,18 @@ CORPORA = {
         "text_column": "content",
     },
     # Encyclopedic prose. Clean, general, and not code.
+    # Uses the Salesforce parquet mirror: the original `wikitext` repo is
+    # script-based and no longer loadable now that the Hub has deprecated
+    # dataset loading scripts.
     "wikitext": {
-        "path": "wikitext",
+        "path": "Salesforce/wikitext",
         "name": "wikitext-103-raw-v1",
         "split": "train",
         "text_column": "text",
     },
     # Same source, ~40x smaller. For smoke runs.
     "wikitext2": {
-        "path": "wikitext",
+        "path": "Salesforce/wikitext",
         "name": "wikitext-2-raw-v1",
         "split": "train",
         "text_column": "text",
