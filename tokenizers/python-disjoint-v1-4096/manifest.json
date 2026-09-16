@@ -1,0 +1,25 @@
+{
+  "ablation": "Same LM snapshot and general tokenizer; fit tokenizer uses disjoint in-domain files",
+  "fit": {
+    "condition": "disjoint_in_domain",
+    "corpus_content_sha256": "7c07fcdaa4aea882a54856068a957b2ecfdfc51cffbd763eab8085411ee61309",
+    "corpus_manifest_file_sha256": "18d4f13777c51dc48173ebfe67dfa0c8df4473e97585067728281ccf11dd311d",
+    "reference_family_overlap_count": 0,
+    "sha256": "1a07dde6b15bcc0fd3a1c03399f1fbda736c1976269a49bdb74d7f5a709e0b37",
+    "training_bytes": 4004195,
+    "training_chars": 4000000,
+    "training_source": "external_python_repository_families"
+  },
+  "general": {
+    "sha256": "5bb00d4d98cffb41d942533e8261e2a843b631c54efaecf9f85e54277345cea8",
+    "training_bytes": 4007911,
+    "training_chars": 4000000
+  },
+  "settings": {
+    "add_prefix_space": false,
+    "byte_level": true,
+    "min_frequency": 2
+  },
+  "snapshot_sha256": "00486d0a44d5bc7fb40340d53165a595b8e2bdd31d665fd1fd5ac9b402abd09b",
+  "vocab_size": 4096
+}
