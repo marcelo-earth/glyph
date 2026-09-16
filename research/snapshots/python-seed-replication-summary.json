@@ -1,0 +1,80 @@
+{
+  "scope": "development seed replication; no final-test claim",
+  "expected_seeds": [
+    42,
+    43,
+    44
+  ],
+  "all_requested_pairs_complete": true,
+  "missing_complete_pairs": [],
+  "regimes": {
+    "raw": {
+      "seed_count": 3,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "fit_mean_bpb": 2.3670820070604157,
+      "general_mean_bpb": 2.5575771276616472,
+      "paired_mean_fit_minus_general_bpb": -0.19049512060123167,
+      "paired_differences_bpb": {
+        "42": -0.19035153328332388,
+        "43": -0.18833721723571006,
+        "44": -0.19279661128466108
+      },
+      "paired_difference_sample_sd": 0.002233161841280855,
+      "paired_difference_range": [
+        -0.19279661128466108,
+        -0.18833721723571006
+      ],
+      "relative_mean_difference": -0.07448264943446622,
+      "source_bootstrap_of_seed_mean": {
+        "group_count": 43,
+        "replicates": 4000,
+        "rng_seed": 31415,
+        "fit_minus_general_bpb_95_interval": [
+          -0.21621170270002643,
+          -0.16275696094565978
+        ],
+        "scope": "source-group sampling only; training-seed variation is separate"
+      },
+      "uncertainty_note": "Seed variation is shown separately; the bootstrap interval conditions on these trained seeds. Small seed counts cannot establish a precise population seed distribution.",
+      "source_unit": "repository_family"
+    },
+    "token": {
+      "seed_count": 3,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "fit_mean_bpb": 2.294198945109665,
+      "general_mean_bpb": 2.504311401360365,
+      "paired_mean_fit_minus_general_bpb": -0.21011245625069996,
+      "paired_differences_bpb": {
+        "42": -0.21445616697421155,
+        "43": -0.2033194768718367,
+        "44": -0.21256172490605163
+      },
+      "paired_difference_sample_sd": 0.005958662124894272,
+      "paired_difference_range": [
+        -0.21445616697421155,
+        -0.2033194768718367
+      ],
+      "relative_mean_difference": -0.08390029136814413,
+      "source_bootstrap_of_seed_mean": {
+        "group_count": 43,
+        "replicates": 4000,
+        "rng_seed": 31415,
+        "fit_minus_general_bpb_95_interval": [
+          -0.23649732460766973,
+          -0.18236176633407053
+        ],
+        "scope": "source-group sampling only; training-seed variation is separate"
+      },
+      "uncertainty_note": "Seed variation is shown separately; the bootstrap interval conditions on these trained seeds. Small seed counts cannot establish a precise population seed distribution.",
+      "source_unit": "repository_family"
+    }
+  }
+}

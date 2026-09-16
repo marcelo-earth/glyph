@@ -84,3 +84,28 @@ All four seed-42 arms completed, with both paired audits passing. Raw-control BP
 The same 5,000-update matrix is now being replicated with seeds 43 and 44 in `experiments/python-replication-5k`. Keep both complete seed pairs regardless of outcomes. The independent review prioritizes a fresh 20,000-update schedule afterward: current raw runs see ~20% of available source bytes, and cosine endpoint flatness is not convergence evidence. Full-validation endpoints, context-policy sensitivity and the disjoint-in-domain tokenizer ablation are being prepared independently. Test remains unscored.
 
 User explicitly requested committing all this work. The historical root `results.json` is preserved in Git as legacy smoke evidence; its prototype leakage/evaluation limitations remain clearly documented and it is not used in corrected analyses. Large local data/checkpoints retain existing ignore rules; verified source-level evidence and exact tokenizers are versioned.
+
+## Full validation and disjoint tokenizer preparation
+
+Full validation on all 301 Python files (1,654,670 UTF-8 bytes) confirms the seed-42 raw-pair ordering: fit 2.297952253 versus general 2.495968825 BPB, difference -0.198016572. Scores were computed on CPU with two threads while seed replication continued on MPS. These are validation results, not final test results. Source uncertainty does not establish training-seed robustness.
+
+The packed 5k exposure unigrams are 3.300873660 (fit) and 4.307984404 (general), giving model gains 1.009569617 and 1.802224195 BPB. Regenerated paired analysis includes both.
+
+Prepared the disjoint in-domain tokenizer using the same pinned CodeParrot revision: 808 files, 790 repository families, exactly 4 million Unicode characters, no family overlap with any LM split. Filtering removed 129 lexical near duplicates (124 matching LM files). General tokenizer is unchanged. This is preparation only; no ablation model has been trained. The bounded source prefix, family-name heuristic and lexical clone threshold remain limitations.
+
+All 15 new evaluator, disjoint-preparation and seed-summary tests passed together on CPU. New implementation, artifacts and independent interim review are committed as requested.
+
+## Seed-43/44 replication matrix complete
+
+The replication matrix (session 88636) finished all eight arms: raw/token regimes crossed
+with fit/general tokenizers at seeds 43 and 44. Every pair audit passed and each seed pair
+shares its initial weight hash, matching the seed-42 provenance already recorded.
+
+`summarize_replications.py` pools seeds 42/43/44 (`research/snapshots/python-seed-replication-summary.json`):
+raw paired difference −0.190495 BPB (seed range −0.192797 to −0.188337, sample SD 0.002233);
+token paired difference −0.210112 BPB (seed range −0.214456 to −0.203319, sample SD 0.005959).
+The corpus-fit tokenizer's advantage over the general tokenizer is consistent in sign and
+magnitude across three independent training seeds, in both regimes. This is a development
+finding at 5,000 updates only; the independent review's recommended 20k-update replication
+and the disjoint-in-domain tokenizer ablation remain outstanding, and the final test is
+still unscored.
