@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "matched_exposure_fields": [
+    "padded_positions",
+    "raw_bytes",
+    "raw_chars"
+  ],
+  "shared_initial_weights_sha256": "8c90ff79a364a93c4a6720ff3d97ccbeca3bc71ca8e71b21beb1616ceb877d03"
+}
