@@ -7,7 +7,7 @@
 - [x] Immutable Python snapshot with repository-family split and lexical near-deduplication.
 - [x] CPU checkpoint resume regression; code/runtime/snapshot identities enforced.
 - [x] Verify MPS checkpoint resume across sampler wraparound within declared FP32 tolerances; CPU exact. Longer-run numerical drift remains a caveat.
-- [ ] Complete paired development pilots in both regimes on Python; measure learning vs unigram.
+- [x] Complete 500- and 5,000-update seed-42 development matrices in both regimes; measure learning vs unigram.
 - [ ] Choose adequate full training budget on development only, replicate ≥3 paired seeds.
 - [ ] Context and exposure mechanism diagnostics; uncertainty at original repository units for Python.
 - [ ] Decisive comparison at larger model/budget; domain-disjoint fit tokenizer if informative.

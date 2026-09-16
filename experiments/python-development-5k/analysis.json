@@ -1,0 +1,133 @@
+{
+  "scope": "development only; incomplete pairs omitted, no final test inference",
+  "snapshot_sha256": "00486d0a44d5bc7fb40340d53165a595b8e2bdd31d665fd1fd5ac9b402abd09b",
+  "pairs": [
+    {
+      "regime": "raw",
+      "seed": 42,
+      "steps": 5000,
+      "pair_audit": {
+        "passed": true,
+        "matched_exposure_fields": [
+          "padded_positions",
+          "raw_bytes",
+          "raw_chars"
+        ],
+        "shared_initial_weights_sha256": "943a49a9f08c6b705a4ef77f65b43b5ec2d8c5fb7759af117913ccdfff657662"
+      },
+      "fit_bpb": 2.3740306390761168,
+      "general_bpb": 2.5643821723594407,
+      "fit_minus_general_bpb": -0.19035153328332388,
+      "bootstrap_unit": "repository_family",
+      "bootstrap": {
+        "group_count": 43,
+        "replicates": 4000,
+        "rng_seed": 31415,
+        "fit_minus_general_bpb_95_interval": [
+          -0.2159616199555651,
+          -0.16306748285251987
+        ],
+        "scope": "source-group sampling only; training-seed variation is separate"
+      },
+      "training_exposure": {
+        "fit": {
+          "raw_chars": 10114711,
+          "raw_bytes": 10121659,
+          "target_tokens": 3344564,
+          "padded_positions": 10240000
+        },
+        "general": {
+          "raw_chars": 10114711,
+          "raw_bytes": 10121659,
+          "target_tokens": 6089825,
+          "padded_positions": 10240000
+        }
+      },
+      "training_seconds": {
+        "fit": 485.80305872589815,
+        "general": 264.3052768408961
+      },
+      "metrics_sha256": {
+        "fit": "a7e3b5861fe307b38bf845838b75a215de62ca448ea108d6214609eb1a98d1be",
+        "general": "e3f25f0433fea98f360cfb6eb9c80036ac56f741290364932f67125e521960e4"
+      },
+      "full_training_unigram_bpb": {
+        "fit": 3.295420885833066,
+        "general": 4.306803511743346
+      },
+      "model_gain_over_full_training_unigram_bpb": {
+        "fit": 0.9213902467569492,
+        "general": 1.7424213393839052
+      },
+      "exposure_matched_unigram_bpb": {
+        "fit": 3.295416343704336,
+        "general": 4.306672439956756
+      },
+      "model_gain_over_exposure_unigram_bpb": {
+        "fit": 0.9213857046282192,
+        "general": 1.7422902675973155
+      }
+    },
+    {
+      "regime": "token",
+      "seed": 42,
+      "steps": 5000,
+      "pair_audit": {
+        "passed": true,
+        "matched_exposure_fields": [
+          "padded_positions",
+          "target_tokens"
+        ],
+        "shared_initial_weights_sha256": "943a49a9f08c6b705a4ef77f65b43b5ec2d8c5fb7759af117913ccdfff657662"
+      },
+      "fit_bpb": 2.2913040421697173,
+      "general_bpb": 2.505760209143929,
+      "fit_minus_general_bpb": -0.21445616697421155,
+      "bootstrap_unit": "repository_family",
+      "bootstrap": {
+        "group_count": 43,
+        "replicates": 4000,
+        "rng_seed": 31415,
+        "fit_minus_general_bpb_95_interval": [
+          -0.2413521504936918,
+          -0.1867483852961499
+        ],
+        "scope": "source-group sampling only; training-seed variation is separate"
+      },
+      "training_exposure": {
+        "fit": {
+          "raw_chars": 31663250,
+          "raw_bytes": 31684649,
+          "target_tokens": 10240000,
+          "padded_positions": 10240000
+        },
+        "general": {
+          "raw_chars": 17116341,
+          "raw_bytes": 17128839,
+          "target_tokens": 10240000,
+          "padded_positions": 10240000
+        }
+      },
+      "training_seconds": {
+        "fit": 246.31536253468948,
+        "general": 232.42864671655116
+      },
+      "metrics_sha256": {
+        "fit": "bef33513210c9313243a79398bd1f454a6ec0ea8403cd39d01c97555decb0366",
+        "general": "c91c8aa18a3aa64d252a5b6d7db6786710f4b90a8572ba39be7609c9a6e5d4a4"
+      },
+      "full_training_unigram_bpb": {
+        "fit": 3.295420885833066,
+        "general": 4.306803511743346
+      },
+      "model_gain_over_full_training_unigram_bpb": {
+        "fit": 1.0041168436633487,
+        "general": 1.801043302599417
+      }
+    }
+  ],
+  "training_seed_count_by_regime": {
+    "raw": 1,
+    "token": 1
+  }
+}

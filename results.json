@@ -1,0 +1,94 @@
+[
+  {
+    "label": "fit",
+    "tokenizer_path": "tokenizers/fit_tinystories_v4000.json",
+    "corpus": "tinystories",
+    "seed": 42,
+    "vocab_size": 4000,
+    "dim": 184,
+    "n_heads": 8,
+    "n_layers": 8,
+    "total_params": 4029232,
+    "embedding_pct": 18.266508356927574,
+    "train_fertility": 3.938685633276315,
+    "val_fertility": 3.9895574379082306,
+    "train_tokens": 662357,
+    "train_tokens_cap": 662357,
+    "val_tokens": 393007,
+    "train_losses": [
+      5.978389875807629
+    ],
+    "val_losses": [
+      5.698671852730956
+    ],
+    "val_perplexities": [
+      298.4707245253366
+    ],
+    "val_bits_per_char": [
+      2.0607412600378723
+    ],
+    "epoch_seconds": [
+      69.77644395828247
+    ],
+    "samples": [
+      {
+        "prompt": "def ",
+        "text": "def . He the\n\n\n They the\n but the\n\n He \"\n \"\n\n\n \"\nBut with a\n\n\n\n\" big time a\n\n\n\n\n\n He little her said a big little Ben a\n The the\n\n He he the I be you to"
+      },
+      {
+        "prompt": "import numpy as np\n",
+        "text": "import numpy as np\n\n\" She Lily and a\n\n\n It day.\n She the\n\n\" little a he was was but there to she there,\n\n little said his \" but play, a\n\" she so happy to happy.\n\n\n\n\n She it had Lily was had said was"
+      },
+      {
+        "prompt": "The purpose of this",
+        "text": "The purpose of this.\n It said the \n She so said the\n\n\n\n\n\n\n\n a He upon and very the\n\n\n\n\n\nOne a He there was\n\n\n\n She so time.\n\n park.\n\n The little his very a a\n\n\n\n It"
+      }
+    ]
+  },
+  {
+    "label": "general",
+    "tokenizer_path": "tokenizers/general_wikitext2_v4000.json",
+    "corpus": "tinystories",
+    "seed": 42,
+    "vocab_size": 4000,
+    "dim": 184,
+    "n_heads": 8,
+    "n_layers": 8,
+    "total_params": 4029232,
+    "embedding_pct": 18.266508356927574,
+    "train_fertility": 3.002905276922156,
+    "val_fertility": 3.047666808561093,
+    "train_tokens": 662357,
+    "train_tokens_cap": 662357,
+    "val_tokens": 514467,
+    "train_losses": [
+      6.0116058783634525
+    ],
+    "val_losses": [
+      5.75812899828907
+    ],
+    "val_perplexities": [
+      316.7551247675245
+    ],
+    "val_bits_per_char": [
+      2.725765207435093
+    ],
+    "epoch_seconds": [
+      60.66700196266174
+    ],
+    "samples": [
+      {
+        "prompt": "def ",
+        "text": "def .\n\n He\n\n\n\n\n\" She\n \" bed, \n\n\n\n They was hom so herhe and and h the L a\n\n\n They t.\n\n\n He a b m p a the m for her to a\n his t b with p"
+      },
+      {
+        "prompt": "import numpy as np\n",
+        "text": "import numpy as np\n\"\" L to with a\nO\nT t had p t and w.\" was a wing the was, was it.,\n\n\n It in.\"\n\n\n\n\"! \"\n\n\n\"\n He a the Shen andn, but!\"\n"
+      },
+      {
+        "prompt": "The purpose of this",
+        "text": "The purpose of this.\n\n\n\n\n\n\n\n\"\n\n L m the s the\" a so it the it had.\n He\"\n\n She hadom, she she was l a p wn.\n\n They\n\n\n\" \n\n they a a a\" He' a"
+      }
+    ]
+  }
+]

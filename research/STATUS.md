@@ -7,20 +7,22 @@ This is a progress checkpoint, not a completion claim. The full goal remains act
 - Branch: `codex/reliable-tokenizer-experiments`
 - Draft PR: https://github.com/marcelo-earth/glyph/pull/1
 - Completed: scientific/Vowel audit; corrected data/evaluation/training; six 500-update pilot runs; matched full-data and exposure unigrams; paired-budget audits; source-level uncertainty; scientific plot.
-- Completed longer arm: Python raw-fit, seed 42, 5,000 updates, validation BPB **2.3740306391**. The corresponding general arm is still running. Do not compare its unfinished score as an endpoint.
+- Completed 5k matrix, seed 42: raw fit/general **2.3740306391 / 2.5643821724**; token fit/general **2.2913040422 / 2.5057602091**. Both paired audits passed.
 - Final test has not been scored.
 
 ## Live job (verify before acting)
 
-At this checkpoint PID **97571** was confirmed live with:
+The original 5k matrix (session 57918, PID 97571) is terminal/completed. Do not restart it.
+
+New replication matrix launched in unified exec session **88636**:
 
 ```
-.venv/bin/python run_matrix.py --snapshot data/python-v1 --tokenizers tokenizers/python-v1-4096 --out experiments/python-development-5k --steps 5000 --eval-every 500 --val-docs 50
+.venv/bin/python run_matrix.py --snapshot data/python-v1 --tokenizers tokenizers/python-v1-4096 --out experiments/python-replication-5k --steps 5000 --eval-every 500 --val-docs 50 --seeds 43 44
 ```
 
-Unified exec session: **57918**. Matrix order: raw fit → raw general → token fit → token general, seed 42. Raw fit completed; raw general active. One model at a time uses MPS. Check process/session and terminal status before restarting; an output observation timeout is not a job failure. Outputs/checkpoints are under the matrix directory. For an actually interrupted job, same command with `--resume` verifies source/runtime/config identity and restores state.
+Verify its session/process before acting. Order: raw seed43 pair, raw seed44 pair, token seed43 pair, token seed44 pair. Frozen core implementation files must not change while this matrix is live, because each new arm hashes them for provenance.
 
-The 5k raw-fit exposure baseline completed: 3.2954163437 BPB, giving a 0.9213857046 BPB model gain. Its sampler replay exactly matched all recorded exposure counters. No helper remains running.
+Independent agents are reviewing interpretation (`research/INTERIM_REVIEW.md`), adding posthoc checkpoint evaluation (`evaluate_checkpoint.py`), and preparing a disjoint-in-domain tokenizer (`prepare_disjoint_tokenizer.py`). Parent handles commits after verification. No final-test scoring authorized by the current development protocol.
 
 ## Next scientific actions
 
