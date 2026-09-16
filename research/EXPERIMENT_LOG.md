@@ -109,3 +109,30 @@ magnitude across three independent training seeds, in both regimes. This is a de
 finding at 5,000 updates only; the independent review's recommended 20k-update replication
 and the disjoint-in-domain tokenizer ablation remain outstanding, and the final test is
 still unscored.
+
+## Fresh 20,000-update development matrix and extension decision
+
+All four seed-42 arms of `experiments/python-development-20k` completed with a
+new 20,000-step cosine schedule. This is not a resume of the 5k checkpoint.
+Both pair audits pass: raw fit/general share 40,490,022 raw bytes and padded
+positions, while packed fit/general share 40,960,000 target tokens and padded
+positions. Exposure-matched unigram gains on the 50-file monitor are 1.3431 /
+2.2592 BPB for raw fit/general and 1.4349 / 2.2610 BPB for packed fit/general.
+
+The complete 301-file, 204-family development validation split was scored on
+CPU in the primary 128-byte shared-raw-block protocol. Raw fit/general score
+1.887215393 / 1.981981061 BPB, a fit-minus-general difference of −0.094765668
+BPB. Packed-trained fit/general score 1.813698833 / 1.981879587 BPB under that
+same evaluation, a difference of −0.168180754 BPB. Repository-family bootstrap
+95% intervals are [−0.104921, −0.084891] and [−0.178282, −0.158056],
+respectively. They quantify validation-source variation only, not training-seed
+or tokenizer-sample uncertainty.
+
+The raw-control gap has fallen from the 5k three-seed monitor mean of about
+−0.1905 BPB to −0.0948 BPB on full validation, while both raw arms improve by
+well over 1% relative BPB from 5k to 20k. The interim-review extension condition
+is therefore met. Decision before seeing any 40k endpoint: run a fresh seed-42
+40k shared-raw-block pair with the same architecture, data, optimizer and
+paired controls. Score full validation at the endpoint. Do not open the final
+test, and do not treat this single 20k seed as a replacement for a longer-budget
+seed replication.

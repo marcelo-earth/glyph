@@ -22,20 +22,28 @@ These are coding costs for each tokenizer's deterministic encoding, **not exact 
 
 ## Current evidence: development only
 
-One corrected TinyStories pilot is complete: 2.59M parameters, 500 updates, seed 42, equal raw-block exposure, first 100 validation stories. No final test results yet.
+The primary Python experiment has completed a fresh 20,000-update seed-42
+schedule. Full validation contains all 301 held-out development files from 204
+repository families, scored in identical 128-byte raw blocks. No final test
+results exist.
 
-| Bits per UTF-8 byte ↓ | Fit tokenizer | WikiText tokenizer |
+| Full-validation bits per UTF-8 byte ↓ | Fit tokenizer | WikiText tokenizer |
 |---|---:|---:|
-| Uniform predictor | 3.140 | 3.994 |
-| Train unigram | 2.309 | 2.862 |
-| Trained transformer | 2.082 | 2.596 |
-| Improvement over unigram ↑ | 0.227 | 0.266 |
+| Shared raw-block training | 1.8872 | 1.9820 |
+| Packed fixed-token training, raw-block evaluation | 1.8137 | 1.9819 |
 
-A larger advantage is already present in the static unigram baseline. **This early pilot does not establish an extra benefit from contextual learning.** Multiple seeds, longer training and the primary Python experiment are still required. The full [experiment log](research/EXPERIMENT_LOG.md) records decisions and limitations.
+The paired full-validation differences are −0.0948 BPB for shared raw-block
+training and −0.1682 BPB for packed training. Their repository-family bootstrap
+intervals exclude zero, but they do not represent training-seed or
+tokenizer-sample variation. The 20k result has one training seed and remains a
+development result. Compared with the three-seed 5k development monitor, the
+raw-control advantage is smaller, so a fresh longer schedule is required before
+choosing a final budget. The full [experiment log](research/EXPERIMENT_LOG.md)
+records decisions and limitations.
 
 ### Python pilot
 
-The 500-update Python pair gives 3.240 vs 3.709 bits/byte with raw text and context controlled, and 3.133 vs 3.617 with equal packed-token budgets (fit vs mismatched). Its static unigram gap is larger than either trained-model gap. The fit model barely improves on the unigram at this budget, so longer training is underway before replication and final evaluation.
+The original 500-update Python pair gives 3.240 vs 3.709 bits/byte with raw text and context controlled, and 3.133 vs 3.617 with equal packed-token budgets (fit vs mismatched). Its static unigram gap is larger than either trained-model gap. That early fit model barely improved on unigram, motivating the longer fresh schedules rather than a conclusion from the pilot.
 
 ![Python pilot learning curves and gains over unigram](plots/python-pilot.svg)
 

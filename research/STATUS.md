@@ -31,13 +31,29 @@ BPB. The disjoint tokenizer has exactly 4 million training characters and no
 repository-family overlap with the LM snapshot. No final-test scoring authorized by the
 current development protocol.
 
+## 20k development extension (complete)
+
+A new seed-42 20,000-update schedule completed all four arms with fresh cosine
+schedules, not a continuation of the 5k checkpoint. The raw and packed pair
+audits pass. On the during-training 50-file monitor, raw fit/general are
+1.952328 / 2.047652 BPB and packed fit/general are 1.865939 / 2.047112 BPB.
+
+Authenticated CPU evaluation of the complete 301-file validation split under
+the primary 128-byte raw-block protocol gives raw fit/general 1.887215 /
+1.981981 BPB (difference −0.094766, repository-family bootstrap 95% interval
+[−0.104921, −0.084891]) and packed fit/general 1.813699 / 1.981880 BPB
+(difference −0.168181, interval [−0.178282, −0.158056]). These intervals cover
+only development-source sampling; this schedule has one training seed. The
+20k raw gap is materially smaller than the three-seed 5k monitor gap, so the
+budget is not locked and the final test remains sealed.
+
 ## Next scientific actions
 
 1. ~~Complete the seed-43/44 replication matrix, verify paired audits and export evidence.~~
    Done: all three seeds agree in sign and magnitude for both regimes (see above).
-2. Decide adequate training budget from development learning curves and static gains. The 500-update fit model was undertrained; the longer fit arm learns substantially more. A cosine endpoint flattening is not a convergence proof.
-3. Run the fresh 20k-update schedule the independent review recommends (raw first, then packed), holding architecture fixed, before committing to a larger model. Evaluate full validation at endpoints, preserving repository grouping.
-4. Train the disjoint-in-domain tokenizer ablation now that preparation is verified, and add context-policy diagnostics (shorter raw blocks, explicit token-context scorer) as inexpensive follow-ups.
+2. Run a fresh 40k shared-raw-block seed-42 pair. The predeclared extension condition is met: both raw arms improve by more than 1% relative BPB from 5k to 20k and their paired difference changes materially. Evaluate the full validation split at the endpoint, then decide whether packed 40k is needed before replication.
+3. Complete and record context-policy diagnostics: full-validation shorter 64- and 32-byte raw blocks with matching static baselines, plus an explicitly labeled fixed-token-context endpoint.
+4. Train the disjoint-in-domain tokenizer ablation now that preparation is verified. Do not compare a reduced-LM-data variant with the current runs as though only its tokenizer changed.
 5. Lock final evaluation choices before scoring test. Finish only after the protocol's robustness, mechanism and uncertainty gates; preserve genuine null/inconclusive results.
 
 ## Reproducibility details

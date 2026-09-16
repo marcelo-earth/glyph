@@ -1,0 +1,125 @@
+{
+  "scope": "development only; incomplete pairs omitted, no final test inference",
+  "snapshot_sha256": "00486d0a44d5bc7fb40340d53165a595b8e2bdd31d665fd1fd5ac9b402abd09b",
+  "pairs": [
+    {
+      "regime": "raw",
+      "seed": 42,
+      "steps": 20000,
+      "pair_audit": {
+        "passed": true,
+        "matched_exposure_fields": [
+          "padded_positions",
+          "raw_bytes",
+          "raw_chars"
+        ],
+        "shared_initial_weights_sha256": "943a49a9f08c6b705a4ef77f65b43b5ec2d8c5fb7759af117913ccdfff657662"
+      },
+      "fit_bpb": 1.9523281794497136,
+      "general_bpb": 2.047651883587706,
+      "fit_minus_general_bpb": -0.09532370413799218,
+      "bootstrap_unit": "repository_family",
+      "bootstrap": {
+        "group_count": 43,
+        "replicates": 4000,
+        "rng_seed": 31415,
+        "fit_minus_general_bpb_95_interval": [
+          -0.12071995842753888,
+          -0.07067025317540523
+        ],
+        "scope": "source-group sampling only; training-seed variation is separate"
+      },
+      "training_exposure": {
+        "fit": {
+          "raw_chars": 40461953,
+          "raw_bytes": 40490022,
+          "target_tokens": 13364039,
+          "padded_positions": 40960000
+        },
+        "general": {
+          "raw_chars": 40461953,
+          "raw_bytes": 40490022,
+          "target_tokens": 24344991,
+          "padded_positions": 40960000
+        }
+      },
+      "training_seconds": {
+        "fit": 1392.777918544336,
+        "general": 924.7166405271855
+      },
+      "metrics_sha256": {
+        "fit": "cc281e0a787375bfc0e6e36d8f99bf6333f927f2c5097783ddc224db9e44d51e",
+        "general": "c3019bb385dd48dfa005597ed7e33188db80ceb71ca8bdbdaa39f19a19d61bdf"
+      },
+      "exposure_matched_unigram_bpb": {
+        "fit": 3.2954102575045927,
+        "general": 4.306859037882777
+      },
+      "model_gain_over_exposure_unigram_bpb": {
+        "fit": 1.3430820780548791,
+        "general": 2.2592071542950714
+      }
+    },
+    {
+      "regime": "token",
+      "seed": 42,
+      "steps": 20000,
+      "pair_audit": {
+        "passed": true,
+        "matched_exposure_fields": [
+          "padded_positions",
+          "target_tokens"
+        ],
+        "shared_initial_weights_sha256": "943a49a9f08c6b705a4ef77f65b43b5ec2d8c5fb7759af117913ccdfff657662"
+      },
+      "fit_bpb": 1.8659393739135146,
+      "general_bpb": 2.0471121987246605,
+      "fit_minus_general_bpb": -0.18117282481114594,
+      "bootstrap_unit": "repository_family",
+      "bootstrap": {
+        "group_count": 43,
+        "replicates": 4000,
+        "rng_seed": 31415,
+        "fit_minus_general_bpb_95_interval": [
+          -0.21318972421351856,
+          -0.15140401906859707
+        ],
+        "scope": "source-group sampling only; training-seed variation is separate"
+      },
+      "training_exposure": {
+        "fit": {
+          "raw_chars": 126645501,
+          "raw_bytes": 126732628,
+          "target_tokens": 40960000,
+          "padded_positions": 40960000
+        },
+        "general": {
+          "raw_chars": 68500298,
+          "raw_bytes": 68547520,
+          "target_tokens": 40960000,
+          "padded_positions": 40960000
+        }
+      },
+      "training_seconds": {
+        "fit": 909.2570011651842,
+        "general": 909.8402840798371
+      },
+      "metrics_sha256": {
+        "fit": "882f4319eedd1392d2e234b6f4297b1484ec28d50c4e74e4fc3937732faeef99",
+        "general": "180c3cdc194d50780ea8ca0abd52da93fb2246c5ca59a4739a6f2238d756d199"
+      },
+      "exposure_matched_unigram_bpb": {
+        "fit": 3.300828367037088,
+        "general": 4.308106525356414
+      },
+      "model_gain_over_exposure_unigram_bpb": {
+        "fit": 1.4348889931235733,
+        "general": 2.2609943266317534
+      }
+    }
+  ],
+  "training_seed_count_by_regime": {
+    "raw": 1,
+    "token": 1
+  }
+}
