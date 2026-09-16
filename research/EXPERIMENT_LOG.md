@@ -109,3 +109,7 @@ magnitude across three independent training seeds, in both regimes. This is a de
 finding at 5,000 updates only; the independent review's recommended 20k-update replication
 and the disjoint-in-domain tokenizer ablation remain outstanding, and the final test is
 still unscored.
+
+## Fresh 20,000-update development matrix
+
+After three consistent paired seeds at 5k, started a fresh seed-42 20k schedule, raw then packed, unchanged architecture/data/tokenizers and 50-file development evaluation every 2k updates. This tests training-budget sensitivity without extending an already annealed scheduler. Current branch is codex/longer-budget-controls after intervening work landed on main. Disjoint tokenizer artifacts committed as 211f0f0. Final test remains unscored.

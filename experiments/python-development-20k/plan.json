@@ -1,0 +1,25 @@
+{
+  "snapshot": "data/python-v1",
+  "snapshot_sha256": "00486d0a44d5bc7fb40340d53165a595b8e2bdd31d665fd1fd5ac9b402abd09b",
+  "tokenizers": "tokenizers/python-v1-4096",
+  "tokenizer_manifest_sha256": "639b17ec19d046d10d6fbbc58904f4eef59a7022c86527025c824807677b5b4f",
+  "regimes": [
+    "raw",
+    "token"
+  ],
+  "seeds": [
+    42
+  ],
+  "training": {
+    "steps": 20000,
+    "eval_every": 2000,
+    "val_docs": 50,
+    "dim": 192,
+    "layers": 4,
+    "heads": 4,
+    "seq_len": 128,
+    "batch_size": 16,
+    "lr": 0.0003,
+    "device": null
+  }
+}

@@ -4,8 +4,8 @@ This is a progress checkpoint, not a completion claim. The full goal remains act
 
 ## Current work
 
-- Branch: `codex/reliable-tokenizer-experiments`
-- Draft PR: https://github.com/marcelo-earth/glyph/pull/1
+- Branch: `codex/longer-budget-controls`
+- Earlier PR reference is no longer resolvable through GitHub; current work continues on the branch above.
 - Completed: scientific/Vowel audit; corrected data/evaluation/training; six 500-update pilot runs; matched full-data and exposure unigrams; paired-budget audits; source-level uncertainty; scientific plot.
 - Completed 5k matrix, seed 42: raw fit/general **2.3740306391 / 2.5643821724**; token fit/general **2.2913040422 / 2.5057602091**. Both paired audits passed.
 - Final test has not been scored.
@@ -51,3 +51,7 @@ Pre-existing/newly observed root `results.json` belongs to the legacy prototype 
 New verification: the full suite (51 tests, including checkpoint-evaluator, disjoint-tokenizer
 and seed-summary tests) passed together on CPU. Full-validation checkpoint artifacts retain
 authenticated protocol and source scores.
+
+## Fresh 20k schedule launched
+
+Unified exec session 99111 runs `run_matrix.py --snapshot data/python-v1 --tokenizers tokenizers/python-v1-4096 --out experiments/python-development-20k --steps 20000 --eval-every 2000 --val-docs 50 --seeds 42`. Fresh initialization and cosine schedule; raw pair first, packed pair second. Verify process before restarting. Core source files remain frozen during the matrix. This extends development evidence; final test remains unscored.
