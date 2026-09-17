@@ -177,3 +177,17 @@ poetry.toml
 pyrightconfig.json
 
 # End of https://www.toptal.com/developers/gitignore/api/python
+
+# Glyph generated research artifacts. Source-level evidence is committed;
+# checkpoints, snapshots, tokenizer caches and per-block histories stay local.
+data/
+checkpoints/
+tokenizers/
+*.pt
+*.pth
+wandb/
+plots/*.png
+!plots/.gitkeep
+experiments/**/checkpoint.tmp
+experiments/**/run.log
+experiments/**/metrics.json
