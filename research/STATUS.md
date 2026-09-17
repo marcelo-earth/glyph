@@ -63,11 +63,25 @@ raw-trained pair (+0.379614 BPB fit minus general) and fit for the packed-traine
 pair (−0.301310). Those are context-policy diagnostics, not alternate primary
 endpoints or estimates of a tokenizer's intrinsic modeling capability.
 
+## 40k raw-control extension (complete)
+
+The fresh seed-42 40,000-update raw pair passes its paired audit with exactly
+80,988,420 raw bytes and 81,920,000 padded positions in each arm. The full
+validation primary endpoint is 1.699065 fit versus 1.744520 general BPB, a
+fit-minus-general difference of −0.045455 BPB (204-family bootstrap 95% interval
+[−0.053228, −0.037953]). Both arms improve by roughly 10% to 12% relative BPB
+from the 20k endpoint, but the controlled gap falls again from −0.094766 BPB.
+
+The source-level interval excludes zero only conditional on this seed. This
+continued shrinking gap means 40k is not an adequate final budget choice and
+the packed 40k pair is required before selecting longer-budget seed replication
+or a larger-model scope check. Final test remains sealed.
+
 ## Next scientific actions
 
 1. ~~Complete the seed-43/44 replication matrix, verify paired audits and export evidence.~~
    Done: all three seeds agree in sign and magnitude for both regimes (see above).
-2. Run a fresh 40k shared-raw-block seed-42 pair. The predeclared extension condition is met: both raw arms improve by more than 1% relative BPB from 5k to 20k and their paired difference changes materially. Evaluate the full validation split at the endpoint, then decide whether packed 40k is needed before replication.
+2. Run a fresh 40k packed-token seed-42 pair, then score its full-validation raw-block and fixed-token-context endpoints. The 40k raw control still improves materially but its fit advantage shrinks, so both training regimes are needed before deciding on a final budget or seed replication.
 3. Train the disjoint-in-domain tokenizer ablation now that preparation is verified. Do not compare a reduced-LM-data variant with the current runs as though only its tokenizer changed.
 5. Lock final evaluation choices before scoring test. Finish only after the protocol's robustness, mechanism and uncertainty gates; preserve genuine null/inconclusive results.
 

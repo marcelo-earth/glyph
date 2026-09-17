@@ -41,6 +41,12 @@ raw-control advantage is smaller, so a fresh longer schedule is required before
 choosing a final budget. The full [experiment log](research/EXPERIMENT_LOG.md)
 records decisions and limitations.
 
+The longer raw-control extension is now complete: at 40k, fit/general score
+1.6991 / 1.7445 BPB on full validation (difference −0.0455; family-bootstrap
+interval [−0.0532, −0.0380]). Both models improve from 20k while the controlled
+gap narrows again. The matching packed 40k schedule is the next planned
+development run; this result does not lock a final training budget.
+
 ### Python pilot
 
 The original 500-update Python pair gives 3.240 vs 3.709 bits/byte with raw text and context controlled, and 3.133 vs 3.617 with equal packed-token budgets (fit vs mismatched). Its static unigram gap is larger than either trained-model gap. That early fit model barely improved on unigram, motivating the longer fresh schedules rather than a conclusion from the pilot.

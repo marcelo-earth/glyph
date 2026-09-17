@@ -156,3 +156,22 @@ tokenizer-dependent raw history, and raw-trained checkpoints were not optimized
 for it. It is therefore a context-policy diagnostic rather than a replacement
 for the primary raw-block result, a semantic-quality endpoint, or a causal
 decomposition of the tokenizer effect.
+
+## Fresh 40,000-update raw-control extension
+
+The predeclared fresh 40k raw-control pair completed at seed 42. Pair auditing
+confirms identical raw-character/raw-byte exposure (80,932,794 / 80,988,420)
+and padded positions (81,920,000), with shared initialized weights. On the
+50-file during-training monitor, fit/general score 1.760387 / 1.800995 BPB.
+Exposure-matched unigram gains are 1.535043 / 2.505784 BPB.
+
+On the authenticated full 301-file validation endpoint, fit/general score
+1.699065437 / 1.744520098 BPB, a fit-minus-general difference of −0.045454661
+BPB. The repository-family bootstrap 95% interval is [−0.053228, −0.037953].
+This is a development-source interval conditional on one training seed.
+
+Both 40k arms improve materially from 20k, yet the primary raw-control gap
+narrows again, from −0.094766 to −0.045455 BPB. Decision after this endpoint:
+run the matching fresh 40k packed-token pair before choosing a longer-budget
+replication or a model-scale check. Do not open the final test or recast the
+raw-only extension as a complete practical-regime result.
