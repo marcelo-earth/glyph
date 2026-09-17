@@ -88,11 +88,25 @@ continued shrinking gap means 40k is not an adequate final budget choice and
 the packed 40k pair is required before selecting longer-budget seed replication
 or a larger-model scope check. Final test remains sealed.
 
+## 40k packed-token extension (complete)
+
+The matching fresh seed-42 packed pair passes its paired audit with exactly
+81,920,000 target tokens and padded positions in each arm. Its full-validation
+primary raw-block endpoint is 1.673131 fit versus 1.769945 general BPB, a
+fit-minus-general difference of −0.096814 BPB (204-family bootstrap 95% interval
+[−0.104338, −0.089188]). The explicitly separate 128-token chunk endpoint is
+1.326565 versus 1.556945 BPB, a difference of −0.230379.
+
+Both packed arms improve materially from 20k, while the primary raw-block gap
+falls from −0.168181 to −0.096814 BPB. The practical fixed-token effect remains
+larger than the raw-control effect at this budget, but neither endpoint selects
+a final budget or establishes an intrinsic capability difference.
+
 ## Next scientific actions
 
 1. ~~Complete the seed-43/44 replication matrix, verify paired audits and export evidence.~~
    Done: all three seeds agree in sign and magnitude for both regimes (see above).
-2. Run a fresh 40k packed-token seed-42 pair, then score its full-validation raw-block and fixed-token-context endpoints. The 40k raw control still improves materially but its fit advantage shrinks, so both training regimes are needed before deciding on a final budget or seed replication.
+2. Run a fresh 80k shared-raw-block seed-42 pair. Both 40k regimes improve materially over 20k while their primary gaps narrow, so this is the next predeclared budget check. Score full validation at the endpoint before deciding whether the corresponding packed 80k pair is needed.
 3. Train the disjoint-in-domain tokenizer ablation now that preparation is verified. Do not compare a reduced-LM-data variant with the current runs as though only its tokenizer changed.
 5. Lock final evaluation choices before scoring test. Finish only after the protocol's robustness, mechanism and uncertainty gates; preserve genuine null/inconclusive results.
 

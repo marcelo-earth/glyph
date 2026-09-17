@@ -22,30 +22,24 @@ These are coding costs for each tokenizer's deterministic encoding, **not exact 
 
 ## Current evidence: development only
 
-The primary Python experiment has completed a fresh 20,000-update seed-42
-schedule. Full validation contains all 301 held-out development files from 204
+The primary Python experiment has completed fresh 40,000-update seed-42
+schedules. Full validation contains all 301 held-out development files from 204
 repository families, scored in identical 128-byte raw blocks. No final test
 results exist.
 
 | Full-validation bits per UTF-8 byte ↓ | Fit tokenizer | WikiText tokenizer |
 |---|---:|---:|
-| Shared raw-block training | 1.8872 | 1.9820 |
-| Packed fixed-token training, raw-block evaluation | 1.8137 | 1.9819 |
+| Shared raw-block training | 1.6991 | 1.7445 |
+| Packed fixed-token training, raw-block evaluation | 1.6731 | 1.7699 |
 
-The paired full-validation differences are −0.0948 BPB for shared raw-block
-training and −0.1682 BPB for packed training. Their repository-family bootstrap
+The paired full-validation differences are −0.0455 BPB for shared raw-block
+training and −0.0968 BPB for packed training. Their repository-family bootstrap
 intervals exclude zero, but they do not represent training-seed or
-tokenizer-sample variation. The 20k result has one training seed and remains a
-development result. Compared with the three-seed 5k development monitor, the
-raw-control advantage is smaller, so a fresh longer schedule is required before
-choosing a final budget. The full [experiment log](research/EXPERIMENT_LOG.md)
-records decisions and limitations.
-
-The longer raw-control extension is now complete: at 40k, fit/general score
-1.6991 / 1.7445 BPB on full validation (difference −0.0455; family-bootstrap
-interval [−0.0532, −0.0380]). Both models improve from 20k while the controlled
-gap narrows again. The matching packed 40k schedule is the next planned
-development run; this result does not lock a final training budget.
+tokenizer-sample variation. The 40k result has one training seed and remains a
+development result. Both arms continue to improve while the controlled gaps
+narrow from their 20k values, so the training budget is not yet locked. The
+full [experiment log](research/EXPERIMENT_LOG.md) records decisions and
+limitations.
 
 ### Python pilot
 

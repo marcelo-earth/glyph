@@ -176,6 +176,26 @@ run the matching fresh 40k packed-token pair before choosing a longer-budget
 replication or a model-scale check. Do not open the final test or recast the
 raw-only extension as a complete practical-regime result.
 
+## Fresh 40,000-update packed-token extension
+
+The matching fresh 40k packed pair completed at seed 42 with exactly
+81,920,000 target tokens and padded positions per arm. The 50-file monitor
+ends at 1.722764 / 1.819660 BPB for fit/general. Exposure-matched unigram gains
+are 1.577989 / 2.488503 BPB.
+
+Full validation under the primary 128-byte raw-block endpoint gives fit/general
+1.673130757 / 1.769944707 BPB, a fit-minus-general difference of −0.096813950
+BPB and a repository-family bootstrap 95% interval [−0.104338, −0.089188]. The
+separate 128-token chunk diagnostic scores 1.326565350 / 1.556944776 BPB, a
+difference of −0.230379426. Those intervals condition on this single training
+seed; the token endpoint permits tokenizer-dependent raw history.
+
+Both packed arms improve materially from their 20k values, but the primary
+raw-block advantage narrows from −0.168181 to −0.096814 BPB. Decision before
+seeing another endpoint: run a fresh seed-42 80k shared-raw-block pair under
+the same architecture, optimizer and evaluation monitor. Score full validation
+at its endpoint, preserve all outcomes, and keep the final test sealed.
+
 ## Disjoint in-domain tokenizer static check
 
 Before allocating a model-training run, the prepared disjoint tokenizer pair
