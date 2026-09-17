@@ -196,6 +196,24 @@ seeing another endpoint: run a fresh seed-42 80k shared-raw-block pair under
 the same architecture, optimizer and evaluation monitor. Score full validation
 at its endpoint, preserve all outcomes, and keep the final test sealed.
 
+## Fresh 80,000-update raw-control extension
+
+The predeclared fresh 80k raw pair completed at seed 42. Pair auditing confirms
+identical raw-character/raw-byte exposure (161,853,366 / 161,964,764) and
+padded positions (163,840,000). The 50-file monitor ends at 1.612440 / 1.654939
+BPB for fit/general. Exposure-matched unigram gains are 1.683003 / 2.651852 BPB.
+
+On full validation, fit/general score 1.558622330 / 1.602506778 BPB, a
+fit-minus-general difference of −0.043884447 BPB. The repository-family
+bootstrap 95% interval is [−0.049777, −0.037913], conditional on this single
+training seed. The raw-control difference changes little from its 40k value of
+−0.045455 while both models improve materially.
+
+Decision before the next endpoint: run a fresh seed-42 80k packed-token pair
+with the same architecture and fixed-token controls, then score full validation
+under raw-block and fixed-token-context policies. Do not infer a final budget
+from the raw condition alone or open the final test.
+
 ## Disjoint in-domain tokenizer static check
 
 Before allocating a model-training run, the prepared disjoint tokenizer pair

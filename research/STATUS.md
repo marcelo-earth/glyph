@@ -102,11 +102,24 @@ falls from −0.168181 to −0.096814 BPB. The practical fixed-token effect rema
 larger than the raw-control effect at this budget, but neither endpoint selects
 a final budget or establishes an intrinsic capability difference.
 
+## 80k raw-control extension (complete)
+
+The fresh seed-42 80,000-update raw pair passes its paired audit with exactly
+161,964,764 raw bytes and 163,840,000 padded positions in each arm. Full
+validation gives 1.558622 fit versus 1.602507 general BPB, a fit-minus-general
+difference of −0.043884 BPB (204-family bootstrap 95% interval [−0.049777,
+−0.037913]). The raw-control difference is close to the 40k value of −0.045455,
+while both models improve materially from 40k.
+
+This one-seed raw result supports a provisional 80k budget candidate, not a
+final choice. The matching packed 80k pair is necessary to check whether its
+larger 40k practical gap also stabilizes. The final test remains sealed.
+
 ## Next scientific actions
 
 1. ~~Complete the seed-43/44 replication matrix, verify paired audits and export evidence.~~
    Done: all three seeds agree in sign and magnitude for both regimes (see above).
-2. Run a fresh 80k shared-raw-block seed-42 pair. Both 40k regimes improve materially over 20k while their primary gaps narrow, so this is the next predeclared budget check. Score full validation at the endpoint before deciding whether the corresponding packed 80k pair is needed.
+2. Run a fresh 80k packed-token seed-42 pair, then score its full-validation raw-block and fixed-token-context endpoints. The raw-control gap is nearly stable from 40k to 80k, but the larger packed 40k gap needs the matched-budget check before locking a budget or starting longer-budget seed replication.
 3. Train the disjoint-in-domain tokenizer ablation now that preparation is verified. Do not compare a reduced-LM-data variant with the current runs as though only its tokenizer changed.
 5. Lock final evaluation choices before scoring test. Finish only after the protocol's robustness, mechanism and uncertainty gates; preserve genuine null/inconclusive results.
 

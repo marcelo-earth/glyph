@@ -1,0 +1,68 @@
+{
+  "scope": "development only; incomplete pairs omitted, no final test inference",
+  "snapshot_sha256": "00486d0a44d5bc7fb40340d53165a595b8e2bdd31d665fd1fd5ac9b402abd09b",
+  "pairs": [
+    {
+      "regime": "raw",
+      "seed": 42,
+      "steps": 80000,
+      "pair_audit": {
+        "passed": true,
+        "matched_exposure_fields": [
+          "padded_positions",
+          "raw_bytes",
+          "raw_chars"
+        ],
+        "shared_initial_weights_sha256": "943a49a9f08c6b705a4ef77f65b43b5ec2d8c5fb7759af117913ccdfff657662"
+      },
+      "fit_bpb": 1.612439965310662,
+      "general_bpb": 1.6549392311060986,
+      "fit_minus_general_bpb": -0.042499265795436614,
+      "bootstrap_unit": "repository_family",
+      "bootstrap": {
+        "group_count": 43,
+        "replicates": 4000,
+        "rng_seed": 31415,
+        "fit_minus_general_bpb_95_interval": [
+          -0.05884878969598747,
+          -0.027164151639249987
+        ],
+        "scope": "source-group sampling only; training-seed variation is separate"
+      },
+      "training_exposure": {
+        "fit": {
+          "raw_chars": 161853366,
+          "raw_bytes": 161964764,
+          "target_tokens": 53461445,
+          "padded_positions": 163840000
+        },
+        "general": {
+          "raw_chars": 161853366,
+          "raw_bytes": 161964764,
+          "target_tokens": 97370579,
+          "padded_positions": 163840000
+        }
+      },
+      "training_seconds": {
+        "fit": 6208.755016737967,
+        "general": 3922.0313629290613
+      },
+      "metrics_sha256": {
+        "fit": "72e19e003b4a4518c01d16d25981c092a8eb564bd06171ba3423fa5248d5e086",
+        "general": "0604c3d5707533f4931882038945f7ffd0c3b8ac44f4e7815e5a86bca0d42a78"
+      },
+      "exposure_matched_unigram_bpb": {
+        "fit": 3.295442653706594,
+        "general": 4.306791553437691
+      },
+      "model_gain_over_exposure_unigram_bpb": {
+        "fit": 1.6830026883959321,
+        "general": 2.6518523223315924
+      }
+    }
+  ],
+  "training_seed_count_by_regime": {
+    "raw": 1,
+    "token": 0
+  }
+}
