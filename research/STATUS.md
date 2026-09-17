@@ -63,6 +63,17 @@ raw-trained pair (+0.379614 BPB fit minus general) and fit for the packed-traine
 pair (−0.301310). Those are context-policy diagnostics, not alternate primary
 endpoints or estimates of a tokenizer's intrinsic modeling capability.
 
+## Disjoint tokenizer static diagnostic (complete)
+
+The prepared disjoint-in-domain tokenizer was checked on all 301 validation
+files in shared 128-byte blocks before model training. It uses 4 million
+characters from repository families absent from every LM split. Its full-training
+unigram scores 3.228509 BPB versus 4.241392 for the fixed WikiText tokenizer,
+a difference of −1.012883 BPB (source-bootstrap interval [−1.046051,
+−0.984261]). Its compression and static code advantage therefore resemble the
+original in-domain fit condition. This is not an ablation result until paired
+LM training uses the same snapshot and declared budget.
+
 ## 40k raw-control extension (complete)
 
 The fresh seed-42 40,000-update raw pair passes its paired audit with exactly

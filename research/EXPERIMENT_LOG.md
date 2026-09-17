@@ -175,3 +175,16 @@ narrows again, from −0.094766 to −0.045455 BPB. Decision after this endpoint
 run the matching fresh 40k packed-token pair before choosing a longer-budget
 replication or a model-scale check. Do not open the final test or recast the
 raw-only extension as a complete practical-regime result.
+
+## Disjoint in-domain tokenizer static check
+
+Before allocating a model-training run, the prepared disjoint tokenizer pair
+was diagnosed on full validation in 128-byte raw blocks. The disjoint fit
+tokenizer uses exactly 4 million Python characters from repository families
+that are absent from all LM train/validation/test splits; the general WikiText
+tokenizer and LM snapshot are unchanged. The full-training unigram endpoint is
+3.228509 BPB for disjoint fit and 4.241392 for general, a fit-minus-general
+difference of −1.012883 BPB with a source-bootstrap 95% interval
+[−1.046051, −0.984261]. This records a static coding diagnostic only. A paired
+model-training ablation is still required to test whether that result survives
+contextual learning with no tokenizer/LM family overlap.
