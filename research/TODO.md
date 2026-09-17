@@ -9,7 +9,7 @@
 - [x] Verify MPS checkpoint resume across sampler wraparound within declared FP32 tolerances; CPU exact. Longer-run numerical drift remains a caveat.
 - [x] Complete 500- and 5,000-update seed-42 development matrices in both regimes; measure learning vs unigram.
 - [ ] Choose adequate full training budget on development only, replicate ≥3 paired seeds.
-- [ ] Context and exposure mechanism diagnostics; uncertainty at original repository units for Python.
+- [x] Context and exposure mechanism diagnostics; uncertainty at original repository units for Python.
 - [ ] Decisive comparison at larger model/budget; domain-disjoint fit tokenizer if informative.
 - [ ] Lock final evaluation choice, score held-out test once, report all seeds and uncertainty.
 - [ ] Reproducibility package, inspectable plots, honest restricted conclusion and stopping audit.

@@ -1,0 +1,55 @@
+{
+  "scope": "development only; posthoc checkpoint evaluation, no final test inference",
+  "bootstrap_unit": "repository_family",
+  "fit_evaluation_sha256": "e63fee39e0c58db504a65c2726c63ad486a27502881ed34c09519659d5154bc4",
+  "general_evaluation_sha256": "8d5a3cbd27fa700a7040d1d568c051f264a47124d2f633c4f0291ff029dd4185",
+  "protocol": {
+    "split": "validation",
+    "source_selection": "entire split",
+    "max_docs": null,
+    "source_documents": 301,
+    "split_file_sha256": "c276442c058a9c379d519047b3035a3d366f81521d58937cbcad5257672119da",
+    "ordered_source_sha256": "b20f6875475f23fb6a8994184e0aff1726e9a84ce304f1286d735c1c6223518e",
+    "mode": "raw",
+    "raw_block_bytes": 32,
+    "context_policy": "chunks",
+    "context_length": 128,
+    "include_eos": false,
+    "first_token_context": "BOS",
+    "special_token_literals": "ordinary source text",
+    "denominators": "all selected source Unicode code points and UTF-8 bytes",
+    "metric": "canonical_token_sequence_nll",
+    "batch_size": 16,
+    "device": "cpu",
+    "torch_version": "2.8.0",
+    "python_version": "3.11.12",
+    "torch_threads": 2,
+    "machine": "arm64",
+    "scoring_implementation_sha256": {
+      "evaluate_checkpoint.py": "edae9f3a0fecc34f576bd8799ab113618ea13ea932eb57d8efd1b7d0e8bf3a1d",
+      "diagnose_tokenizers.py": "a584d727a3b295117c4a4f01b2d076df307ba5721e4063e1212d101cf8b37860",
+      "experiment.py": "d6128ddd55c7add702ab68f9a74925829673dc488ee1f5f992cef0fb30661a12",
+      "evaluation.py": "96b7391c55da887bcdb35203db737b68f5866cf1b66be4d7441c1d3525d78623",
+      "model.py": "f1e83b78b2dde089cb2beaa867e405f51612ac1db3b37855165bd02cbb963417"
+    }
+  },
+  "fit_bpb": 2.476661290565164,
+  "general_bpb": 2.541019007221422,
+  "fit_minus_general_bpb": -0.06435771665625811,
+  "relative_fit_improvement": 0.025327522727440203,
+  "bootstrap": {
+    "group_count": 204,
+    "replicates": 4000,
+    "rng_seed": 31415,
+    "fit_minus_general_bpb_95_interval": [
+      -0.07334060319915159,
+      -0.05525946722183484
+    ],
+    "scope": "source-group sampling only; training-seed variation is separate"
+  },
+  "interpretation": [
+    "Negative fit-minus-general BPB favors the corpus-fit tokenizer.",
+    "The bootstrap covers validation repository-family sampling only, not training-seed or tokenizer-sample variation.",
+    "Canonical-token NLL is not exact decoded-string probability marginalized over tokenizations."
+  ]
+}

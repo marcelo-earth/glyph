@@ -136,3 +136,23 @@ is therefore met. Decision before seeing any 40k endpoint: run a fresh seed-42
 paired controls. Score full validation at the endpoint. Do not open the final
 test, and do not treat this single 20k seed as a replacement for a longer-budget
 seed replication.
+
+## Full-validation context and exposure diagnostics at 20k
+
+Shorter shared raw-block evaluations were run on all four completed checkpoints
+with matching full-training static baselines. Raw-trained fit-minus-general
+differences are −0.094766, −0.075889 and −0.039154 BPB at 128, 64 and 32 bytes.
+Packed-trained differences under those same raw evaluations are −0.168181,
+−0.113953 and −0.064358 BPB. Their repository-family bootstrap intervals all
+exclude zero, but they reflect development-source sampling conditional on one
+training seed. The fit tokenizer's full-training unigram advantage is −0.965104
+BPB at 64-byte blocks and −0.892986 at 32-byte blocks, so static coding remains
+a substantial part of the complete-system difference under each segmentation.
+
+An explicitly named 128-token chunk evaluation of whole source documents gives
+a contrasting result. The raw-trained pair has fit-minus-general +0.379614 BPB,
+whereas the packed-trained pair has −0.301310 BPB. This endpoint permits
+tokenizer-dependent raw history, and raw-trained checkpoints were not optimized
+for it. It is therefore a context-policy diagnostic rather than a replacement
+for the primary raw-block result, a semantic-quality endpoint, or a causal
+decomposition of the tokenizer effect.

@@ -47,13 +47,28 @@ only development-source sampling; this schedule has one training seed. The
 20k raw gap is materially smaller than the three-seed 5k monitor gap, so the
 budget is not locked and the final test remains sealed.
 
+## 20k context diagnostics (complete)
+
+The full validation raw-block endpoint remains fit-favoring as raw context is
+shortened, but the difference decreases with the available history. Raw-trained
+fit-minus-general BPB is −0.094766, −0.075889 and −0.039154 at 128, 64 and 32
+bytes. Packed-trained fit-minus-general BPB is −0.168181, −0.113953 and
+−0.064358. All six repository-family bootstrap intervals exclude zero, but all
+refer to this one training seed and development set.
+
+The static full-training unigram advantage also remains large at the short
+contexts: −0.965104 BPB at 64 bytes and −0.892986 at 32 bytes. The explicit
+128-token chunk endpoint changes the intervention: it favors general for the
+raw-trained pair (+0.379614 BPB fit minus general) and fit for the packed-trained
+pair (−0.301310). Those are context-policy diagnostics, not alternate primary
+endpoints or estimates of a tokenizer's intrinsic modeling capability.
+
 ## Next scientific actions
 
 1. ~~Complete the seed-43/44 replication matrix, verify paired audits and export evidence.~~
    Done: all three seeds agree in sign and magnitude for both regimes (see above).
 2. Run a fresh 40k shared-raw-block seed-42 pair. The predeclared extension condition is met: both raw arms improve by more than 1% relative BPB from 5k to 20k and their paired difference changes materially. Evaluate the full validation split at the endpoint, then decide whether packed 40k is needed before replication.
-3. Complete and record context-policy diagnostics: full-validation shorter 64- and 32-byte raw blocks with matching static baselines, plus an explicitly labeled fixed-token-context endpoint.
-4. Train the disjoint-in-domain tokenizer ablation now that preparation is verified. Do not compare a reduced-LM-data variant with the current runs as though only its tokenizer changed.
+3. Train the disjoint-in-domain tokenizer ablation now that preparation is verified. Do not compare a reduced-LM-data variant with the current runs as though only its tokenizer changed.
 5. Lock final evaluation choices before scoring test. Finish only after the protocol's robustness, mechanism and uncertainty gates; preserve genuine null/inconclusive results.
 
 ## Reproducibility details
